@@ -1,0 +1,42 @@
+-SOFTWAR TO DO:
+	
+	Add:
+		Battleware Functions:
+				
+			Slash		Increase Slash cards for 3 turns
+			Bomb		Increase Bomb cards for 3 turns
+			Blast		Increase Blast cards for 3 turns
+			Break		Ignore Shield 
+			Burn		Burn status
+			Freeze		Cancel 1 execution
+			Negate 		Negate 1 execution
+			Recover		
+			Boost		Increase (target) Card point for (turn) turns
+			Resist		Gain Resistance to (Fxn) Damage
+
+		
+		New Battleware:
+			Ave's Guns
+			SoftDrink
+
+Draw Phase:
+
+	Draw cards until 4
+Battle Phase:
+	Drop card to attack with
+	
+Return Phase:
+	Return Dropped card to hand
+
+RULES:
+	Player loses when HP hits 0
+	POW point declares card's damage to be reduced to opponent player
+	SPD point declares card's order of execution in the battle phase
+
+	When attacked:
+		Player can discard Battleware with higher SPD to negate the attack.
+		Make Status Variable an Array
+		.append("Frozen")
+		"Frozen" in Sts
+
+		Browser image displaying "Hacked by ???"

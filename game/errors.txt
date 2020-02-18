@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/battlev3.rpy", line 490: expected a keyword argument, colon, or end of line.
+    imagebutton idle "images/Cards/cardreturn.png" action Play("sound","sound/Phase.wav"), Rollback()) hovered Show("card6hover"), Play("sound","sfx/select.wav") unhovered Hide("card6hover") xpos 0.86 xanchor 0.5 yalign 0.95 
+                                                                                                     ^
+
+Ren'Py Version: Ren'Py 7.2.2.491
+Sun Nov 03 00:46:42 2019

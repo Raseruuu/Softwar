@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/battlev2.rpy", line 253: invalid syntax
+            Firewall,Shieldbit,
+                    ^
+    
+
+Ren'Py Version: Ren'Py 7.4.0.84
+Sat Jan 25 19:31:53 2020

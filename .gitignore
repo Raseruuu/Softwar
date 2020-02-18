@@ -1,0 +1,5 @@
+*.psd
+!spec/*.psd
+*.zip
+!spec/*.zip
+.DS_Store
