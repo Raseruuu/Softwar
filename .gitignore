@@ -3,3 +3,4 @@
 *.zip
 !spec/*.zip
 .DS_Store
+*.rpyc
