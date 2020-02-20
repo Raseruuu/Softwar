@@ -7,7 +7,7 @@
 
 ## Disable rollback
 define config.rollback_enabled = True
-define config.emphasize_audio_channels = [ ]
+define config.emphasize_audio_channels = [ 'voice']
 define config.default_music_volume = 0.5
 define config.default_sfx_volume = 0.7
 define config.default_voice_volume = 0.9

@@ -4,3 +4,5 @@
 !spec/*.zip
 .DS_Store
 *.rpyc
+*.save
+*.rpyb
