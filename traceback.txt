@@ -1,102 +1,101 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1987, in script call
-    call mapcall([7,5],stagehome)
-  File "game/Movement.rpy", line 264, in script call
-    call Returns
-  File "game/Movement.rpy", line 604, in script call
-    call Returns
-  File "game/Movement.rpy", line 603, in script
-    call screen mapA
-  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/Movement.rpy", line 327, in execute
-    screen mapB:
-  File "game/Movement.rpy", line 327, in execute
-    screen mapB:
-  File "game/Movement.rpy", line 392, in execute
-    if len(objectbelow)>1:
-  File "game/Movement.rpy", line 397, in execute
-    for sprites in spritelist:
-  File "game/Movement.rpy", line 398, in execute
-    use npcsprite(sprites)
-  File "game/Movement.rpy", line 404, in execute
-    screen npcsprite(sprites):
-  File "game/Movement.rpy", line 404, in execute
-    screen npcsprite(sprites):
-  File "game/Movement.rpy", line 407, in execute
-    image "images/rpg/overworld/[sprites.name][sprites.direction].png" xpos 0.5 ypos 0.5 at mover2((objxanchor-(sprites.position[0])*50),objyanchor-(sprites.position[1])*50), halftrans# zorder maplayering(sprites.position[1])
-Exception: DynamicImage u'images/rpg/overworld/[sprites.name][sprites.direction].png': could not find image. (u'images/rpg/overworld/Code Reddown.png')
+  File "game/script.rpy", line 1348, in script
+    with Dissolve(0.1)
+NameError: name 'currentcardFXN' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1987, in script call
-    call mapcall([7,5],stagehome)
-  File "game/Movement.rpy", line 264, in script call
-    call Returns
-  File "game/Movement.rpy", line 604, in script call
-    call Returns
-  File "game/Movement.rpy", line 603, in script
-    call screen mapA
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\ast.py", line 1949, in execute
-    self.call("execute")
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\ast.py", line 1937, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\statements.py", line 277, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\exports.py", line 2904, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 2705, in interact
+  File "game/script.rpy", line 1348, in script
+    with Dissolve(0.1)
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1389, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2251, in do_with
+    clear=clear)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 3097, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\core.py", line 3097, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/Movement.rpy", line 327, in execute
-    screen mapB:
-  File "game/Movement.rpy", line 327, in execute
-    screen mapB:
-  File "game/Movement.rpy", line 392, in execute
-    if len(objectbelow)>1:
-  File "game/Movement.rpy", line 397, in execute
-    for sprites in spritelist:
-  File "game/Movement.rpy", line 398, in execute
-    use npcsprite(sprites)
-  File "game/Movement.rpy", line 404, in execute
-    screen npcsprite(sprites):
-  File "game/Movement.rpy", line 404, in execute
-    screen npcsprite(sprites):
-  File "game/Movement.rpy", line 407, in execute
-    image "images/rpg/overworld/[sprites.name][sprites.direction].png" xpos 0.5 ypos 0.5 at mover2((objxanchor-(sprites.position[0])*50),objyanchor-(sprites.position[1])*50), halftrans# zorder maplayering(sprites.position[1])
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\sl2\sldisplayables.py", line 430, in sl2add
-    d = renpy.easy.displayable(d, scope=scope)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\easy.py", line 111, in displayable
-    return renpy.display.image.DynamicImage(d, scope=scope)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\image.py", line 570, in __init__
-    self.find_target(scope)
-  File "C:\Users\Russy\Documents\RENPY\renpy-7.0.0-sdk\renpy\display\image.py", line 651, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'images/rpg/overworld/[sprites.name][sprites.direction].png': could not find image. (u'images/rpg/overworld/Code Reddown.png')
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3194, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2094, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 490, in renpy.display.render.render_screen (gen/renpy.display.render.c:6805)
+    rv = render(root, width, height, st, st)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/transition.py", line 360, in render
+    bottom = render(self.old_widget, width, height, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/image.py", line 500, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/image.py", line 306, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 336, in render
+    surf = render(self.child, width, height, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 336, in render
+    surf = render(self.child, width, height, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen/renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 1283, in render
+    self.update(st, at)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 1265, in update
+    child, redraw = self.function(st, at, *self.args, **self.kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 1341, in condition_switch_show
+    return condition_switch_pick(switch), None
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/layout.py", line 1334, in condition_switch_pick
+    if renpy.python.py_eval_bytecode(code):
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'currentcardFXN' is not defined
 
-Windows-8-6.2.9200
-Ren'Py 7.4.0.84
+Darwin-19.3.0-x86_64-i386-64bit
+Ren'Py 7.3.5.606
 SoftWar - DEMO 1.0
-Fri Dec 20 18:56:08 2019
+Fri Feb 28 18:27:30 2020
