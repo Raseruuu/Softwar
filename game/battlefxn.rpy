@@ -444,6 +444,8 @@ screen cardflashscreen:
     key 'K_SPACE' action Return()
     key 'K_KP_ENTER' action Return()
     key 'K_SELECT' action Return()
+    key 'z' action Return()
+    key 'Z' action Return()
 screen cardflashscreenenemy:
     # key "mousedown_5" action Return()
     # key "K_PAGEDOWN" action Return()
@@ -454,6 +456,9 @@ screen cardflashscreenenemy:
     key 'K_SPACE' action Return()
     key 'K_KP_ENTER' action Return()
     key 'K_SELECT' action Return()
+    key 'z' action Return()
+    key 'Z' action Return()
+            
 
 
 label Execution:

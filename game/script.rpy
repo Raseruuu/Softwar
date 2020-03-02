@@ -1152,7 +1152,7 @@ label date2:
         l"I'm really excited to see that AI Virus you got!"
         j"Trust me, she's a total mess."
         l"Don't say that about {i}people you've just met!{/i}"
-        "I can say what I want about {i}programs I just downloaded,{/i}."
+        "I can say what I want about {i}programs I just downloaded{/i}."
         l"What does your house look like?"
         j"It's an apartment, I live alone."
         l"When we get there, I'll pass over the project files."
@@ -1313,16 +1313,19 @@ label date2:
             currentcardname = MailSaber.NAME
             currentcardATK = MailSaber.TYPE
             currentcardDEF = MailSaber.MAG
-            currentcardHIT = MailSaber.HIT
+            # currentcardHIT = MailSaber.HIT
             currentcardFXN = MailSaber.FXN
             currentcardCOST = MailSaber.COST
 
-        show cardflasher with dissolve:
+        show cardflasher onlayer overlay with dissolve:
             xalign 0.5 yalign 0.5
         i"In a Softwar, we use Battleware!!"
-        i"Choose cards in a sequence!"
-        i"I will draw cards every turn, depending on the rank of the card you used last, and return them to the bottom after an attack."
-        i"All you have to do is choose a Battleware card from my hand! We'll strike with all the data we have!"
+
+        i"I gain 8 bits and 5 cards every turn, each card in my hand will cost Bits."
+        i"You choose from those 5 cards which cards to use in a turn."
+        i"Once the you've expended enough bits, you can Execute the queue of cards!"
+
+        i"After our turn, It'll be the enemy's chance to attack, so let's strike with all the data we have!"
         j"Got it!"
         $ Lisa_m = 'sad'
         $ Lisa_e = 'mad'
@@ -1484,7 +1487,7 @@ label date2:
         $ILY_m='sad'
         play sound "sfx/Damage.wav"
         i"I didn't steal them!" with Shake((0, 0, 0, 0), 0.5, dist=10) 
-        i"I kept them safe in my online database!"
+        i"I kept them safe in my online database! What's the word... backup! I made a backup!"
         j"That's... kind of the same thing."
         $ Lisa_m='open3'
         l"Kept them safe from what?"
@@ -1731,7 +1734,7 @@ label date2:
         scene black with dissolve
         play music "bgm/Enemy_bgm_maoudamashii_cyber19.ogg" fadein 1 loop
         "Meanwhile, in a place neither I nor ILY is aware of..."
-        "There exists 2 cyber-entities, one whose appearance denotes security, order and justice, and another, strength, aggressiveness and cold hostility."
+        "There exists 2 cyber-entities, one of security, order and justice, and another, of strength, aggressiveness and cold hostility."
         "An antivirus and a virus."
         show CodeRed with dissolve 
         cv"What're your orders, boss?"
@@ -1926,6 +1929,7 @@ label date2:
         scene JD_Door with dissolve
         i"Who's there? Is that you, John?"
         scene JD_Bed3 with dissolve
+        pause 0.5
         scene JD_PC2 with dissolve
         $JohnSprite('mad')
         j"Oh it's me, alright!"
@@ -1951,7 +1955,7 @@ label date2:
             maptalks2 = 0
             enemy_encounter = False
             boxsheet = stagehome
-            playerpos = [7,5]
+            playerpos = [7,6]
             playerxpos = playerpos[0]
             playerypos = playerpos[1]
             objxanchor = ((playerpos[0]+1)*blockSize)-(blockSize/2)
@@ -1966,12 +1970,13 @@ label date2:
         i"This is the Grid!"
         i"Listen John, and listen carefully!"
         j"Gotcha."
-        i"Basically here is where we are in the grid. The Origin Point. (0,0)."
+        i"Basically here is where we are in the grid. Our home location, (192,168)!"
         "The Grid cyberspace huh.. So it follows a cartesian plane system."
         j"It's so empty.. what do we even do in here?"
-        i"Lots of things. Except, we're kind of short in time, and the demo period caught on us."
+        i"Lots of things. But I'm not going to spoil!"
         j"What?"
-        i"Nothing."
+        i"You're gonna have to come with me!"
+        j"O-kay.."
         i"So let me give you a tutorial."
         j"I get it. Arrow keys for movement, 'Z' for action, probably triggers stuff like, talking to NPCs and getting items, right?"
         $ ILY_m = 'O'
@@ -1984,7 +1989,7 @@ label date2:
         play music "bgm/ost/Grid_noyemi_K.mp3"
         hide screen mapB
 
-        call mapcall([7,5],stagehome)
+        call mapcall([7,6],stagehome)
         if playerHP<=0:
             return
         $ILY_w = False

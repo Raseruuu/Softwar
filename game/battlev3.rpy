@@ -448,10 +448,13 @@ label battlev3(PFAI,EFAI):
     return
 screen Execute:
     imagebutton idle "gui/Execute.png" hover "gui/Execute_hover.png" action  Play("sound","sound/Execute.wav"), Return("Execute") xalign 0.5 yalign 0.95 
-    
-    key 'K_RETURN' action  Play("sound","sound/Execute.wav"), Return("Execute")
-    key 'K_KP_ENTER' action  Play("sound","sound/Execute.wav"), Return("Execute")
+    key "K_BACKSPACE" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
+    key "x" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
+    key 'K_RETURN' action  Play("sound","sound/Execute.wav"), Hide("card6hover"),Return("Execute")
+    key 'K_KP_ENTER' action  Play("sound","sound/Execute.wav"), Hide("card6hover"),Return("Execute")
     imagebutton idle "images/Cards/cardreturn.png" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback() hovered Show("card6hover"), Play("sound","sfx/select.wav") unhovered Hide("card6hover") xpos 0.86 xanchor 0.5 yalign 0.95
+    key 'z' action  Play("sound","sound/Execute.wav"), Hide("card6hover"),Return("Execute")
+    key 'Z' action  Play("sound","sound/Execute.wav"), Hide("card6hover"),Return("Execute")
 screen phasemsg(Message):
     frame:
 
@@ -499,6 +502,7 @@ screen choosecardv2:
         if playerbattlecode!=[]:
             imagebutton idle "images/Cards/cardreturn.png" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback() hovered Show("card6hover"), Play("sound","sfx/select.wav") unhovered Hide("card6hover") xpos 0.86 xanchor 0.5 yalign 0.95 
             key "K_BACKSPACE" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
+            key "x" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
         else:
 
             add "images/Cards/cardblank2.png" xpos 0.86 xanchor 0.5 yalign 0.95 

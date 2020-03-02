@@ -30,10 +30,10 @@ transform vmarquee:
      linear 6.0 ypos 0.0 yanchor 1.0
      repeat     
 screen pausemenu:
-    key "p" action Return()
-    key "P" action Return()
-    # key 'x' action Return("MapTalk")
-    # key 'X' action Return("MapTalk")
+    key "a" action Return()
+    key "A" action Return()
+    key 'x' action Call("MapTalk")
+    key 'X' action Call("MapTalk")
     image "black" at pausedim
     text "{size=100}{b}SOFTWAR{/b}{/size}" at marquee ypos 0.03
     image "gui/rpgmenu/frame1.png" at pausetrans3 xalign 0.0 yalign 0.0

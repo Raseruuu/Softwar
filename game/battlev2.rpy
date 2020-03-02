@@ -278,7 +278,7 @@ init python:
     PlayerSts = []
     Enmyname = "Trojan Horse"
     #DEFINE CHARACTERS BY NAME,TYPE,HP,DECK,STATUS
-    ILY=FAI("ILY","Virus",2500,1250,300,250,deckdefault,[])
+    ILY=FAI("ILY","Virus",2500,1250,500,500,deckdefault,[])
     Trojan=FAI("Trojan Horse","Virus",3000,1500,300,250,decktrojan,[])
     Keylogger=FAI("Keylogger","Virus",500,250,300,250,deckkeylogger,[])
     Ransomware=FAI("Ransomware","Virus",600,300,300,250,deckransomware,[])
@@ -286,7 +286,7 @@ init python:
     Worm=FAI("Worm","Virus",800,400,300,250,deckrootkit,[])
     # Vira=FAI("Vira","Antivirus",3500,deckvira)
     CodeRed=FAI("Code Red","Antivirus",4000,1000,350,200,deckred,[])
-    Ave=FAI("Ave","Antivirus",3000,1500,400,200,deckave,[])
+    Ave=FAI("Ave","Antivirus",3000,1500,520,480,deckave,[])
 
 
 

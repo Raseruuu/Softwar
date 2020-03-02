@@ -468,8 +468,8 @@ screen mapA:
       key 'repeat_K_RIGHT'  action SetVariable("direction","right"),  Return("right")
       key 'repeat_K_LEFT'   action SetVariable("direction","left"),   Return("left")
     # key 'K_ESCAPE'      action Return("End")
-    key 'p'         action Return("Pause")
-    key 'P'         action Return("Pause")
+    key 'A'         action Return("Pause")
+    key 'a'         action Return("Pause")
     key 'z'             action Return("OK")
     key 'Z'             action Return("OK")
     key 'x'             action Return("MapTalk")
@@ -943,6 +943,10 @@ screen finishingflash(say):
     key 'K_SPACE' action Return()
     key 'K_KP_ENTER' action Return()
     key 'K_SELECT' action Return()
+    key 'z' action Return()
+    key 'Z' action Return()
+    key 'x' action Return()
+    key 'X' action Return()
 transform flashtrans:
     alpha 0.0
     pause 0.35

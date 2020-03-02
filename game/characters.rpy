@@ -10,7 +10,7 @@ define v = Character("Vira",callback=speaker("Vira"), color ='#f00', ctc="ctc", 
 define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed") 
 define a = Character("Ave",callback=speaker("Ave"), color='#ff8a00', image ="Ave_side", ctc="ctc", ctc_position="fixed") 
 define cv = Character("Virus Boy",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed") 
-define aa = Character("Antivirus Girl",callback=speaker("Ave"), color='#202020', ctc="ctc", ctc_position="fixed") 
+define aa = Character("Antivirus Girl",callback=speaker("Ave"), color='#ff8a00', ctc="ctc", ctc_position="fixed") 
 
 define hx = Character("Hacker X",color = '#088', image = "HackerX_side", ctc="ctc", ctc_position="fixed",callback=speaker("HackerX"))
 
@@ -22,7 +22,7 @@ define uk = Character("USB-kun",callback=speaker("USB-kun"),color='#01d', ctc="c
 ########
 init -1 python:
     ## Initialize variables
-    globals()["stopblips"] = False
+    # globals()["stopblips"] = False
     globals()["direction"] = "down"
     globals()["pdirection"] = "down"
     globals()["bg"] = "1"
@@ -71,7 +71,7 @@ init -1 python:
         global speaking
         if event == "begin":
             speaking = name
-            globals()["stopblips"]=False
+            # globals()["stopblips"]=False
             
             if (name == "John"):
                renpy.sound.play("sound/character/low.ogg", channel="blipsound", loop=True)
