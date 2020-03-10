@@ -1,8 +1,8 @@
 
 label script2:
     #ILY introduction to the Grid
-    #ILY strolls around their own personal cyberspace area: 
-    # There are a few Mini FAIS hanging around, representing computer systems inside his own device. 
+    #ILY strolls around their own personal cyberspace area:
+    # There are a few Mini FAIS hanging around, representing computer systems inside his own device.
     # Explanation of Mini FAI
 
     "Approaching outside,"
@@ -62,7 +62,7 @@ label script2:
     m"I am free to roam, anywhere, any time. You could call me a Stray."
     j"(ILY, We should go back.. I... really don't wanna interact with another Virus.)"
     i"(But we need to find SDS!)"
-    i"She's the only person around I can relate to..."
+    i"(She's the only person around I can relate to...)"
 
 
     #Approaching a road blocked by Antiviruses: Bitwulves
@@ -80,9 +80,34 @@ label script2:
     #Morning
 
     #E-mail from Lisa appears
-    l"John!! I'm going to your place today."
-    ""
-    #John meets Lisa again at Cafella, together with Hilbert
+    i"John!! You have 1 new unread e-mail! It's Lisa!"
+    "Huh... Right. We were together yesterday..."
+    "I wonder if it's true that her dad has a FAI Antivirus?"
+    j"Please open it, ILY!"
+    i"OK!"
+    #(change to lnvl) for e-mail view
+    #Show NVL window
+    l"Subject: Update on Antivirus!"
+    l"John!! I got my dad's Antivirus!!"
+    l"Her name is Vira! From Vira Internet Solutions!"
+
+    l"As I suspected, she was really a FAI Antivirus!"
+    l"I'm going to your place today."
+    l"We have to install her as soon as possible!"
+    #nvl hide
+    "So it's true. What luck! So we do have a chance at saving our company from that Virus."
+    "Vira Internet Solutions... Of course! Their brand is quite popular for their age."
+    "A company of that caliber would know about something as secret as FAI Viruses. I didn't know they were working on AI as well!"
+    "Are they simply making FAI to counteract the new Softwar system?"
+    "Huh.. We have to install it, but why at my house?"
+    "SDS is the one that needs it."
+    "What am I gonna do?"
+    "I should fix up the place!"
+    i"John!! We're getting another new friend?"
+    j"Well, yeah. But I don't think she'd be friends with you. You're a Virus, remember?"
+    i"We wouldn't know until we try!!"
+
+    #Hilbert arrives
     ""
     #
     return
