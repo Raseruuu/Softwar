@@ -2,7 +2,8 @@
 !spec/*.psd
 *.zip
 !spec/*.zip
-.DS_Store
+*.DS_Store
+*.save
 ### Ren'Py Game Files ###
 game/cache/**.**
 game/cache/**
