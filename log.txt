@@ -1,38 +1,39 @@
-Sat Mar  7 00:43:40 2020
+Wed Mar 11 01:33:05 2020
 Darwin-19.3.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.11s
-Early init took 0.01s
-Loader init took 0.06s
-Loading error handling took 0.20s
+Bootstrap to the start of init.init took 0.10s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.19s
 Loading script took 0.36s
 Loading save slot metadata. took 0.12s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.14s
-Loading analysis data took 1.81s
+Running init code took 0.12s
+Loading analysis data took 1.84s
 Analyze and compile ATL took 0.08s
 Index archives took 0.00s
-Dump and make backups. took 0.09s
+Backing up script files to '/Users/proudcloud_russel/Library/RenPy/backups/Softwar':
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.18s
+Initial gc. took 0.20s
 DPI scale factor: 1.000000
-Creating interface object took 0.20s
+Creating interface object took 0.22s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.01s
-Load screen analysis took 0.66s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.11s
 Prepare screens took 0.14s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.11s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.23s
+Interface start took 0.21s
 
 primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
@@ -198,11 +199,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 4.82228803635s
+Total time until interface ready: 4.2831158638s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017123 seconds.
-- Frame drawn at 0.033002 seconds.
-- Frame drawn at 0.064013 seconds.
-- Frame drawn at 0.079220 seconds.
-- 0.079220 seconds to render 5 frames.
+- Frame drawn at 0.017244 seconds.
+- Frame drawn at 0.030505 seconds.
+- Frame drawn at 0.055678 seconds.
+- Frame drawn at 0.072429 seconds.
+- 0.072429 seconds to render 5 frames.

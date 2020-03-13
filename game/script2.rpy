@@ -108,8 +108,15 @@ label script2:
     i"We wouldn't know until we try!!"
 
     #Hilbert arrives
-    ""
-    #
+    "Knock Knock!!"
+    "Oh no, She's here already?"
+    "I'm not ready yet! my room is still messy!!"
+    i"There's someone on the door John!"
+    j"I can hear it, thank you!"
+    "I set aside my broom and rush to the door."
+    "???""Hello? anybody home?"
+    "Eh?"
+    "I take hold of the knob and open the door quite hastily."
     return
 
 
