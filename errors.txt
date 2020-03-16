@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1321: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    xalign 0.5 yalign 0.5
-    ^
+File "game/battlev3.rpy", line 346: expected end of line
+    queue music "bgm/ost/BOSSBATTLE-V-Loop_by-StarryMarshmell_0.ogg"]
+                                                                    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Mar  2 15:36:25 2020
+Mon Mar 16 18:26:01 2020

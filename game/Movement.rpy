@@ -1,163 +1,4 @@
 
-label whatactor:
-    if actornum == '2':
-      i"That's the virus!"
-      $ John_m = "sad"
-      $ John_e = "mad"
-      j"Get Ready, Ily!"
-      hide screen mapA
-      hide screen mapB
-      return
-    elif len(actornum)>1:
-      if actornum == 'Ave':
-        if objectbelow=="Ave":
-          $ILY_m='happy'
-          $ILY_e='2'
-          i"SPECIAL MOVE: VIRUS ATTACK FROM BEHIND!!"
-        a"YOU'RE A VIRUS!! I MUST DESTROY YOU!"
-        hide screen mapB
-        hide screen mapA
-        call battlev3(ILY,Ave)
-        if playerHP<=0:
-            return
-        $ enemy_encounter=False
-        $ map_active=True
-        call mapresume
-        return 
-      elif actornum == 'CodeRed':
-        if objectbelow=="CodeRed":
-          $ILY_m='happy'
-          $ILY_e='2'
-          i"SPECIAL MOVE: VIRUS ATTACK FROM BEHIND!!"
-        c"I'm just doing my job!"
-        hide screen mapB
-        hide screen mapA
-        call battlev3(ILY,CodeRed)
-        if playerHP<=0:
-            return
-        $ enemy_encounter=False
-        $ map_active=True
-        call mapresume
-        return 
-      elif actornum == 'Heart':
-        i"Would you like to restore HP?"
-        menu:
-          "Would you like to restore HP?"
-          "Yes":
-            $playerHP=playerHPMax
-            play sound "sfx/heal.ogg"
-            "[playerName]'s Health Points have been restored."
-          "No":
-            i"OK."
-      show screen mapB
-      call screen mapA
-      call Returns
-      return
-    else:
-      show screen mapB
-      call screen mapA
-      call Returns
-    return   
-label MapTalk:
-   
-    
-    if boxsheet == stagehome:
-      $ maptalks+=1
-      if maptalks==1:
-        i"I'd love to say something virtuous, but the demo is over."
-        j"What's new?"
-        i"Well, there's a new boss over to the north!"
-        j"Already?"
-        i"She's my sworn rival!"
-        j"I just got you and you already have a rival?!"
-      elif maptalks==2:
-        i"Why are you still here?"
-        j"There has to be more to this demo, right?"
-        i"Sorry there isn't."
-      elif maptalks==3:
-        j"I'm curious what's on the other side."
-        i"It's incomplete, but it has other things."
-        j"Other things?"
-        i"Classified Information."
-      elif maptalks==4:
-        j"Ily... This game is really getting boring."
-        i"Blame Zan."
-        j"Zan?"
-        i"Zan Kizuna."
-        j"Who's that?"
-        i"Classified Information."
-        j"Okay, I've had enough of that answer."
-        i"Then why don't you go submit a complaint at {a=http://zankizuna.itch.io/Softwar}The Softwar game page?{/a}"
-        j"I'll scold them for all this subpar programming skills."
-        i"Just drop an e-mail if you wanna join team Kizuna."
-      elif maptalks==5:
-        j"What are we even waiting for here anymore?"
-        i"The Full version of Softwar."
-        j"Wait, you mean we downloaded an incomplete game?"
-        i"I thought you knew that already!"
-      elif maptalks==6:
-        i"If you wanna experience more Softwars, let's go through the doors on the sides!"
-        j"I'd rather not."
-        i"Let's gooooo!"
-
-      elif maptalks==7:
-        j"Have you ever heard of the quote \"Make Love, Not War\"?"
-        i"Yes."
-        j"Then why were you built exactly to counter this quote?"
-        i"I've come to spread that quote to all the warriors out in the battlefield."
-        j"Hmmm.. Fair enough."
-        $ maptalks = 0
-    elif boxsheet == stage1:
-      $ maptalks2+=1
-      if maptalks2==1:
-        j"Ily, what's this other room?"
-        i"It's supposed to be the neighboring network to us."
-        i"This room is full of viruses."
-        j"You're one of them, you know?"
-      elif maptalks2==2:
-        j"What the heck! So many viruses!"
-        i"They're all the same, though.."
-        j"This demo is twisted."
-        i"Post a complaint at {a=http://zankizuna.itch.io/Softwar}The Softwar game page{/a}!"
-
-      elif maptalks2==3:
-        j"Ily... There aren't any other doors here."
-        i"Help us code more or be patient."
-        j"What do you mean us?"
-        i"Oops!"
-      elif maptalks2==4:
-        i"John! You should be a Patron of Softwar!"
-        j"Sure, drop a link."
-        i"I also suggest that you join their discord server too!"
-        j"Drop a link of that too."
-        i"Here it is!  {a=http://discord.gg/yuQfAx3}Team Kizuna Discord{/a} and {a=http://patreon.com/teamkizuna}Team Kizuna Patreon{/a}"
-      elif maptalks2==5:
-        i"John! Thanks for finishing up to this far."
-        j"No problem."
-        i"Did you enjoy?"
-        j"I guess."
-        menu:
-          i"Do you want to see the credits now?"
-          "YES":
-            "See ya."
-            $ map_active = False
-            return
-          "NO":
-            "Stay around and play with me more!"
-            $ maptalks2 = 0
-
-        
-        
-
-      show screen mapB
-      call screen mapA
-      call Returns
-      return
-    else:
-      show screen mapB
-      call screen mapA
-      call Returns
-    return   
 init python:
   def placeobject(boxsheet,xpos,ypos,objectnum):
        boxsheet[ypos][xpos]= objectnum
@@ -177,19 +18,19 @@ init python:
   Where = "Home"
   startplayerpos = [1,1] #(x,y)
   #ILY'S FIRST POSITION
-  
-  playerpos = startplayerpos 
+
+  playerpos = startplayerpos
   playerxpos = playerpos[0]
   playerypos = playerpos[1]
-  
+
   Here = boxsheet[playerypos][playerxpos]
   Hereisempty = (boxsheet[playerypos][playerxpos]=='0')
-  
+
   playerxpos = playerpos[0]
   playerypos = playerpos[1]
   objxanchor = ((playerpos[0]+1)*blockSize)-(blockSize/2)
   objyanchor = ((playerpos[1]+1)*blockSize)-(blockSize/2)
-  
+
   Upisempty = (boxsheet[playerypos-1][playerxpos]=='0')
   Downisempty = (boxsheet[playerypos+1][playerxpos]=='0')
   Leftisempty = (boxsheet[playerypos][playerxpos-1]=='0')
@@ -208,23 +49,23 @@ init python:
 label initializemapvariables:
     python:
        gridpos = [192,168]
-     
+
     return
-label checkwalls:   
+label checkwalls:
    python:
       playerxpos = playerpos[0]
       playerypos = playerpos[1]
       Hereisempty = (boxsheet[playerypos][playerxpos]=='0')
       Here = boxsheet[playerypos][playerxpos]
       HereisDoor = ((Here=='a') or (Here=='b')) or ((Here=='c') or (Here=='d'))
-   
+
    python:
       objectabove = boxsheet[playerypos-1][playerxpos]
       objectbelow = boxsheet[playerypos+1][playerxpos]
       objectleft = boxsheet[playerypos][playerxpos-1]
       objectright = boxsheet[playerypos][playerxpos+1]
 
-      Upisempty = (objectabove=='0') or (objectabove=='d') or (objectabove=='c') or (objectabove=='b') or (objectabove=='a') 
+      Upisempty = (objectabove=='0') or (objectabove=='d') or (objectabove=='c') or (objectabove=='b') or (objectabove=='a')
       Downisempty = (objectbelow=='0') or (objectbelow=='d') or (objectbelow=='c') or (objectbelow=='b') or (objectbelow=='a')
       Leftisempty = (objectleft=='0') or (objectleft=='d') or (objectleft=='c') or (objectleft=='b') or (objectleft=='a')
       Rightisempty = (objectright=='0') or (objectright=='d') or (objectright=='c') or (objectright=='b') or (objectright=='a')
@@ -244,11 +85,11 @@ label checkwalls:
         actornum = objectleft
       elif direction == 'right':
         actornum = objectright
-   
+
       # return
    if HereisDoor:
       call doorjump
-   return   
+   return
 
 
 # label poschange:
@@ -273,12 +114,12 @@ label mapcall(position,stage):
             boxsheet[sprite.position[1]][sprite.position[0]]=spritename
     $ map_active=True
     label maploop:
-    
+
       show screen mapB
       call screen mapA
       call Returns
-      
-      if map_active==True: 
+
+      if map_active==True:
         jump maploop
 
       else:
@@ -339,14 +180,14 @@ image shock:
     repeat
 
 
-screen mapB:  
+screen mapB:
     vbox:
       at mover(objxanchor,objyanchor)
       for i in boxsheet:
          hbox:
            xalign 0.5 yalign 1.0
            for j in i:
-             if j !='n': 
+             if j !='n':
                image "images/rpg/tile/Tilebg.png"
 
              elif j == 'n':
@@ -357,39 +198,39 @@ screen mapB:
          hbox:
            xalign 0.5 yalign 1.0
            for j in i:
-             if j =='1': 
+             if j =='1':
                image "images/rpg/overworld/object.png"
-             elif j =='2': 
+             elif j =='2':
                image "shock"
-             elif j =='3': 
+             elif j =='3':
                image "images/rpg/overworld/object3.png"
-             elif j =='4': 
+             elif j =='4':
                image "images/rpg/overworld/object4.png"
-             elif j =='5': 
+             elif j =='5':
                image "images/rpg/overworld/object5.png"
-             elif j =='a': 
+             elif j =='a':
                image "images/rpg/overworld/objectd.png"
-             elif j =='b': 
+             elif j =='b':
                image "images/rpg/overworld/objectd.png"
-             elif j =='c': 
+             elif j =='c':
                image "images/rpg/overworld/objectd.png"
-             elif j =='d': 
+             elif j =='d':
                image "images/rpg/overworld/objectd.png"
              elif j=='0':
-               null height blockSize width blockSize  
+               null height blockSize width blockSize
              elif j == 'n':
                null height blockSize width blockSize
              elif len(j)>1:
                null height blockSize width blockSize
 ##NPC SPRITES
-    
+
 
     ##PLAYER CHARACTER
     frame:
       xpadding 15
       ypadding 15
       vbox:
-        
+
         yalign 0.1 xalign 0.1
         null width 260
         text "GRID ([gridpos[0]],[gridpos[1]])" xalign 0.5 yalign 0.05
@@ -397,14 +238,14 @@ screen mapB:
         text "{color=#fff}Running = [Running]{/color}"
         # text "{color=#fff}Here = [Here]{/color}"
         text "{color=#fff}Where = [Where]{/color}"
-        frame: 
+        frame:
             style_prefix "healthbar"
             xsize bar_size(playerHP,playerHPMax,200)
-            # xsize 
+            # xsize
         null height 7
         text "HP: [playerHP]/[playerHPMax]"
         null height 10
-    if len(objectbelow)>1:     
+    if len(objectbelow)>1:
       use playersprite(playerypos)
       for sprites in spritelist:
           use npcsprite(sprites)
@@ -412,7 +253,7 @@ screen mapB:
       for sprites in spritelist:
         use npcsprite(sprites)
       use playersprite(playerypos)
-      
+
 
 
     # zorder yvalue
@@ -420,12 +261,12 @@ screen npcsprite(sprites):
     zorder sprites.position[1]
 
     image "images/rpg/overworld/[sprites.name][sprites.direction].png" xpos 0.5 ypos 0.508 at mover2((objxanchor-(sprites.position[0])*50),objyanchor-(sprites.position[1])*50), halftrans# zorder maplayering(sprites.position[1])
-        
+
 screen playersprite(yvalue):
     zorder yvalue
     imagebutton idle "images/Characters/ILY/ILY[direction].png" action Return("jump") xpos 0.5 ypos 0.5 xanchor 0.5 yanchor 0.9 at playerjump(jumphght), blockSizetrans(blockSize) #zorder maplayering(playerypos)
 
-    
+
 transform blockSizetrans(blockSize):
   zoom blockSize*.01 transform_anchor True
 transform halftrans:
@@ -444,27 +285,27 @@ transform zoombig:
 
 transform mover(objxanchor,objyanchor):
   xpos 0.5 ypos 0.5
-  linear 0.05 xanchor objxanchor yanchor objyanchor  transform_anchor True 
+  linear 0.05 xanchor objxanchor yanchor objyanchor  transform_anchor True
 transform mover2(objxanchor,objyanchor):
   # xpos 1.0 ypos 1.0
-  linear 0.05 xanchor objxanchor yanchor objyanchor+(25)  transform_anchor True 
+  linear 0.05 xanchor objxanchor yanchor objyanchor+(25)  transform_anchor True
 # transform maplayering(yvalue):
 #   zorder yvalue
 transform playerjump(jumphght):
   xpos 0.5 ypos 0.5 xanchor 0.5 yanchor 0.7
-  linear 0.1 yoffset - jumphght 
-  linear 0.1 yoffset 0 
+  linear 0.1 yoffset - jumphght
+  linear 0.1 yoffset 0
   pause .5
-  repeat             
+  repeat
 screen mapA:
     key 'K_UP'          action SetVariable("direction","up"),     Return("up")
-    key 'K_DOWN'        action SetVariable("direction","down"),   Return("down") 
+    key 'K_DOWN'        action SetVariable("direction","down"),   Return("down")
     key 'K_LEFT'        action SetVariable("direction","left"),   Return("left")
     key 'K_RIGHT'       action SetVariable("direction","right"),  Return("right")
 
-    if anim_done: 
+    if anim_done:
       key 'repeat_K_UP'     action SetVariable("direction","up"),     Return("up")
-      key 'repeat_K_DOWN'   action SetVariable("direction","down"),   Return("down") 
+      key 'repeat_K_DOWN'   action SetVariable("direction","down"),   Return("down")
       key 'repeat_K_RIGHT'  action SetVariable("direction","right"),  Return("right")
       key 'repeat_K_LEFT'   action SetVariable("direction","left"),   Return("left")
     # key 'K_ESCAPE'      action Return("End")
@@ -477,21 +318,21 @@ screen mapA:
     # key 'x'             action ShowMenu("partylist")
     key 'r'             action Return("running")
     key 'R'             action Return("running")
-    
+
     key 'K_SPACE'       action Return("jump")
-    key 'repeat_K_SPACE'action Return("jump") 
+    key 'repeat_K_SPACE'action Return("jump")
     key 'E'             action Return("End")
     key 'e'             action Return("End")
-    
+
 transform floatmov:
     linear 0.5 yoffset -2
     linear 0.5 yoffset 2
     repeat
 transform ilymov2:
     linear 1.0 yoffset -10
-    
+
     linear 1.0 yoffset 10
-    repeat    
+    repeat
 
 label randomencounter:
      $ randomenemy = renpy.random.randint(0,100)
@@ -508,7 +349,7 @@ label randomencounter:
           $ enemy_encounter=False
           $ map_active=True
           call mapresume
-          return  
+          return
 
      return
 label Returns:
@@ -517,7 +358,7 @@ label Returns:
 
       play sound "sound/Phase.wav" channel 2
       $ card1clicked = True
-          
+
       $ playerbits-=playercard1COST
       $ playerbattlecode.append(playercard1obj)
   elif _return=="card2":
@@ -548,41 +389,41 @@ label Returns:
 
   if map_active:
    if (_return=="running"):
-    if not Running: 
+    if not Running:
      $ Running = True
     elif Running:
      $ Running = False
    if (pdirection ==_return) or Running:
-    #if Hereisempty: 
-        
+    #if Hereisempty:
+
       $ playerxpos = playerpos[0]
       $ playerypos = playerpos[1]
       $ anim_done = False
-      
+
       if Upisempty:
        if (_return=="up"):
-        
+
         $ objyanchor = objyanchor-blockSize
         $ playerpos = [playerxpos,playerypos-1]
-      if Downisempty:  
+      if Downisempty:
        if (_return=="down"):
-       
+
         $ objyanchor = objyanchor+blockSize
         $ playerpos = [playerxpos,playerypos+1]
-      if Leftisempty:  
+      if Leftisempty:
        if (_return=="left"):
-     
+
         $ objxanchor = objxanchor-blockSize
         $ playerpos = [playerxpos-1,playerypos]
-      if Rightisempty:  
+      if Rightisempty:
        if (_return=="right"):
-        
+
         $ objxanchor = objxanchor+blockSize
         $ playerpos = [playerxpos+1,playerypos]
       pause 0.02
-      $ anim_done = True 
+      $ anim_done = True
       #call wildenemy
-      
+
    if (_return=="zoomin"):
      $ blockSize = blockSize + 10
      hide screen mapA
@@ -593,7 +434,7 @@ label Returns:
         $ jumphght=blockSize*1.5
         pause 0.2
         $ jumphght=0
-        
+
    if FacingActor:
      if (_return=="OK"):
        call whatactor
@@ -603,10 +444,10 @@ label Returns:
        return
    if (_return=="Pause"):
        # "Pause"
-       call pauseshow 
-       return    
+       call pauseshow
+       return
    elif (_return=="End"):
-        $map_active=False 
+        $map_active=False
         return
    else:
        $ pdirection = direction
@@ -621,7 +462,7 @@ label Returns:
   return
   # elif (_return=="card1"):
   #       call makestats(0)
-  #       if PlayerSpd >=EnmySpd: 
+  #       if PlayerSpd >=EnmySpd:
   #         $ PlayerAttacked2nd = False
   #         play sound "sfx/swing.wav"
   #         show ring onlayer overlay:
@@ -661,7 +502,7 @@ label Returns:
   #       return
   # elif (_return=="card2"):
   #       call makestats(1)
-  #       if PlayerSpd >=EnmySpd: 
+  #       if PlayerSpd >=EnmySpd:
   #         $ PlayerAttacked2nd = False
   #         play sound "sfx/swing.wav"
   #         show ring onlayer overlay:
@@ -718,7 +559,7 @@ label Returns:
   #           linear 0.2 zoom 1.4
   #         # pause 0.4
   #         $ renpy.pause(0.4,hard=True)
-          
+
   #         call Damage #DAMAGE OPPONENT
   #         if not Battle_End:
   #             $ renpy.pause(0.1,hard=True)
@@ -733,7 +574,7 @@ label Returns:
   #             play sound "sfx/swing.wav"
   #             show ring onlayer overlay:
   #               zoom 0.0 xalign 0.5 ypos 0.7 yanchor 0.5
-  #               linear 0.2 zoom 1.6 
+  #               linear 0.2 zoom 1.6
 
   #             show card3 onlayer overlay:
   #               xalign 0.5 ypos 0.7 yanchor 0.5
@@ -747,8 +588,8 @@ label Returns:
   #       return
   # elif (_return=="card4"):
   #       call makestats(3)
-        
-  #       if PlayerSpd >=EnmySpd: 
+
+  #       if PlayerSpd >=EnmySpd:
   #         $ PlayerAttacked2nd = False
   #         call battlecry
   #         play sound "sfx/swing.wav"
@@ -763,12 +604,12 @@ label Returns:
   #           linear 0.2 zoom 1.4
   #         # pause 0.4
   #         $ renpy.pause(0.4,hard=True)
-          
+
   #         call Damage #DAMAGE OPPONENT
   #         if not Battle_End:
   #             $ renpy.pause(0.1,hard=True)
   #             call EnemyAttack
-              
+
   #       elif PlayerSpd<EnmySpd:
   #         $ PlayerAttacked2nd = True
   #         call EnemyAttack
@@ -778,7 +619,7 @@ label Returns:
   #             play sound "sfx/swing.wav"
   #             show ring onlayer overlay:
   #               zoom 0.0 xalign 0.5 ypos 0.7 yanchor 0.5
-  #               linear 0.2 zoom 1.6 
+  #               linear 0.2 zoom 1.6
 
   #             show card4 onlayer overlay:
   #               xalign 0.5 ypos 0.7 yanchor 0.5
@@ -788,7 +629,7 @@ label Returns:
   #             # pause 0.4
   #             $ renpy.pause(0.4,hard=True)
   #             call Damage #DAMAGE OPPONENT
-  
+
   #       return
   # elif (_return=="Concatenate"):
   #       call screen Concatenate
@@ -806,7 +647,7 @@ label Returns:
 #   $ EnmySpd = Enmyhand[enmychoice].SPD
 #   $ EnmyFxn = Enmyhand[enmychoice].fxn
 #   $ EnmyRank = Enmyhand[enmychoice].rank
-  
+
 #   if "SPD_Up" in PlayerSts:
 #     python:
 #       # for fxns in PlayerSts:
@@ -840,7 +681,7 @@ label Returns:
 #         hide Brksts
 #         "Enemy cannot attack with Broken Battleware!!"
 #         $ EnmySts.remove('Broken')
-      
+
 #       else:
 #         play sound "sfx/swing.wav"
 #         show ring2 onlayer overlay:
@@ -876,7 +717,7 @@ label Returns:
 #       return
 label Damage:
         # DAMAGING ENEMY USING OWN CARD
-        
+
         hide ring
         hide card1
         hide card2
@@ -894,16 +735,16 @@ label Damage:
             pause .05
             xoffset 0.13 yoffset 0.2 alpha 1.0
             pause 0.1
-            xoffset 0.-19 yoffset 0.11 
+            xoffset 0.-19 yoffset 0.11
             pause 0.4
-            linear 0.1 zoom 0.8 alpha 0.0 
+            linear 0.1 zoom 0.8 alpha 0.0
           $ renpy.pause(0.4,hard=True)
           $Battle_End = True
           hide Enemy
           hide screen stats
           hide screen choosecard
-          stop music        
-        
+          stop music
+
           # jump cardcycle
         return
 
@@ -921,7 +762,7 @@ label EnmyDamage:
           hide screen stats
           hide screen choosecard
           stop music
-            
+
           # jump cardcycle
         return
 
@@ -952,7 +793,7 @@ transform flashtrans:
     pause 0.35
     xpos 0.0 xanchor 1.0 yalign 0.5 alpha 1.0
     linear 0.1 xalign 0.5
-    pause 0.1 
+    pause 0.1
     linear 0.1 yzoom 1.1
     linear 0.08 yzoom 1.0
 image flashline:
@@ -984,22 +825,22 @@ image diamondwhite2:
 image diamondwhite2:
     "diamondwhite"
     zoom 0.9
-    
+
 transform diamondtrans:
-    
+
     alpha 0.0
     pause 0.8
     block:
         alpha 1.0
         xoffset 10 yoffset -16
-        pause 0.08 
+        pause 0.08
         xoffset 0 yoffset 20
-        pause 0.08 
+        pause 0.08
         xoffset -10 yoffset -17
-        pause 0.08 
+        pause 0.08
         repeat
 label battlecry_Ave:
-    if enemyName=="Ave": 
+    if enemyName=="Ave":
       python:
         burndmg = 0
         for fxns in PlayerSts:
@@ -1007,16 +848,16 @@ label battlecry_Ave:
             burndmg = burndmg +40
       $ playerburndamage = burndmg
       $ damagecard = (currentcardFXN[0].name =="Damage(MAG)" or currentcardFXN[1].name=="Damage(MAG)")
-      $ Magnitude = (currentcardMAG) 
+      $ Magnitude = (currentcardMAG)
       $ enemydamagetoplayer=int(enemyATK_m*Magnitude)+playerburndamage
-      if (enemydamagetoplayer>=(playerHP+playerSP)) and (damagecard==True): 
-      
+      if (enemydamagetoplayer>=(playerHP+playerSP)) and (damagecard==True):
+
         $flashuser="Ave"
         voice "voice/Ave_voice/No, I won't lose!.ogg"
         $ anim_done=False
         pause 0.1
         call screen finishingflash("No, I won't lose, It's over ILY!")
-        
+
       elif (enemyHP <=2800):# and 'POW_Up' not in PlayerFxn:
         $ avcount=avcount+1
         if avcount == 1:
@@ -1043,13 +884,13 @@ label battlecry:
         if fxns=="burn":
           burndmg = burndmg +40
     $ damagetoenemy += burndmg
-    if ((enemyHP+enemySP)<=damagetoenemy) and (damagecard==True): 
+    if ((enemyHP+enemySP)<=damagetoenemy) and (damagecard==True):
     # or EnemyHP<=(damagetoenemy+burndmg) and 'Recover' not in PlayerFxn) and 'POW_Up' not in PlayerFxn:
       voice "voice/ILY24B - Break down & disappear!.mp3"
       $ anim_done=False
       $ flashuser = "ILY"
       call screen finishingflash("Break down and disappear!")
-      
+
     elif (playerHP <=1500):# and 'POW_Up' not in PlayerFxn:
       $ vcount=vcount+1
       if vcount == 1:
@@ -1094,10 +935,10 @@ label hurtnoise:
     return
 screen notif(notiftext):
     frame:
-      null height 100 width 1280 
+      null height 100 width 1280
       text "[notiftext]" at notifanim
-      null height 100 width 1280 
-      
+      null height 100 width 1280
+
 transform notifanim:
   on show:
     yzoom 0.0
@@ -1105,8 +946,8 @@ transform notifanim:
 
 image ILY_byTorakun14:
   "images/characters/ILY/ILY nobg_by_Torakun.png"
-  zoom 0.3 
-  
+  zoom 0.3
+
 label win:
     #MAKE VICTORY ANIMATION
     # show ILY_byTorakun14:
@@ -1122,9 +963,9 @@ label lose:
     hide screen mapA
     hide screen mapB
     scene ILYgameover with pixellate
-    "I'm.. Sorry, John. " 
+    "I'm.. Sorry, John. "
     extend"I'm sorry Lisa."
-    
+
 return
 
 
@@ -1158,9 +999,9 @@ label fxnCallerp(fxn):
           zoom 1.3 xanchor 0.5 xpos 0.15 yanchor 0.5 ypos 0.1 alpha 1.0
           linear 0.1 zoom 0.98
           linear 0.2 zoom 1.0 alpha 0.0
-        
+
         $ playerHP = playerHP-burndmg
-        
+
         $ playerSts.remove('Burned')
         play sound "sfx/fire.wav"
         with Shake((0, 0, 0, 0), 0.5, dist=burndmg/10)
@@ -1196,7 +1037,7 @@ label fxnCallerp(fxn):
 #     if "Bomb" in Playercardname:
 #       play sound "sfx/sfx_exp_medium8.wav"
 #     elif (("Buster" in Playercardname) or ("Flame" in Playercardname)) or ("Shot" in Playercardname):
-#       $ blastsound = renpy.random.randint(0,1) 
+#       $ blastsound = renpy.random.randint(0,1)
 #       if blastsound ==0:
 #         play sound "sfx/sfx_exp_short_hard8.wav"
 #       elif blastsound ==1:
@@ -1204,7 +1045,7 @@ label fxnCallerp(fxn):
 #     else:
 #       play sound "sfx/slash.wav"
 
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show dmgpoint
 #     show Enemy:
@@ -1274,7 +1115,7 @@ label fxnCallerp(fxn):
 #   elif "DoubleHit" in fxn:
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/slash.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show dmgpoint
 #     show Enemy:
@@ -1292,7 +1133,7 @@ label fxnCallerp(fxn):
 #     $ renpy.pause(0.15,hard=True)
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/slash.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist*4)
 #     show dmgpoint
 #     show Enemy:
@@ -1313,7 +1154,7 @@ label fxnCallerp(fxn):
 #   elif "TripleHit" in fxn:
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/sfx_exp_short_hard9.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show dmgpoint
 #     show Enemy:
@@ -1331,7 +1172,7 @@ label fxnCallerp(fxn):
 #     $ renpy.pause(0.15,hard=True)
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/sfx_exp_short_hard9.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show dmgpoint
 #     show Enemy:
@@ -1349,7 +1190,7 @@ label fxnCallerp(fxn):
 #     $ renpy.pause(0.15,hard=True)
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/sfx_exp_short_hard8.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist*4)
 #     show dmgpoint
 #     show Enemy:
@@ -1371,13 +1212,13 @@ label fxnCallerp(fxn):
 #     #BREAK CARD
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/slash.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist*2)
-    
+
 #     if EnmyDmg < PlayerDmg:
 #       if not PlayerAttacked2nd:
 #         $ EnmySts.append('Broken')
-      
+
 #       if enmychoice ==0:
 #         show Enmycard1 onlayer overlay:
 #           xalign 0.5 yalign 0.1
@@ -1391,7 +1232,7 @@ label fxnCallerp(fxn):
 #           xoffset ((dmgdist*-1)-2) yoffset ((dmgdist)-2)
 #           pause 0.05
 #           xoffset 0 yoffset 0
-#           linear 0.1 zoom 0.7 alpha 0.0 
+#           linear 0.1 zoom 0.7 alpha 0.0
 #       elif enmychoice ==1:
 #         show Enmycard2 onlayer overlay:
 #           xalign 0.5 yalign 0.1
@@ -1405,7 +1246,7 @@ label fxnCallerp(fxn):
 #           xoffset ((dmgdist*-1)-2) yoffset ((dmgdist)-2)
 #           pause 0.05
 #           xoffset 0 yoffset 0
-#           linear 0.1 zoom 0.7 alpha 0.0 
+#           linear 0.1 zoom 0.7 alpha 0.0
 #       elif enmychoice ==2:
 #         show Enmycard3 onlayer overlay:
 #           xalign 0.5 yalign 0.1
@@ -1419,7 +1260,7 @@ label fxnCallerp(fxn):
 #           xoffset ((dmgdist*-1)-2) yoffset ((dmgdist)-2)
 #           pause 0.05
 #           xoffset 0 yoffset 0
-#           linear 0.1 zoom 0.7 alpha 0.0 
+#           linear 0.1 zoom 0.7 alpha 0.0
 #       elif enmychoice ==3:
 #         show Enmycard4 onlayer overlay:
 #           xalign 0.5 yalign 0.1
@@ -1433,8 +1274,8 @@ label fxnCallerp(fxn):
 #           xoffset ((dmgdist*-1)-2) yoffset ((dmgdist)-2)
 #           pause 0.05
 #           xoffset 0 yoffset 0
-#           linear 0.1 zoom 0.7 alpha 0.0 
-    
+#           linear 0.1 zoom 0.7 alpha 0.0
+
 #     show Enemy:
 #       linear 0.15 zoom 0.96
 #       xoffset (dmgdist) yoffset (dmgdist) alpha 0.7
@@ -1453,7 +1294,7 @@ label fxnCallerp(fxn):
 
 #   elif "Freeze" in fxn:
 #     #FREEZE TARGET
-    
+
 #     play sound "sfx/frz.wav"
 #     $ EnmySts.append("Frozen")
 #     show Frzsts:
@@ -1479,7 +1320,7 @@ label fxnCallerp(fxn):
 #     #NEGATE MISS
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/slash.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show Enemy:
 #       linear 0.15 zoom 0.96
@@ -1498,7 +1339,7 @@ label fxnCallerp(fxn):
 #     #NEGATE Attack
 #     $ EnmyHP = EnmyHP-PlayerDmg
 #     play sound "sfx/slash.wav"
-#     $ dmgdist = (PlayerDmg/20) 
+#     $ dmgdist = (PlayerDmg/20)
 #     $ dmgdist = int(dmgdist)
 #     show Enemy:
 #       linear 0.15 zoom 0.96
@@ -1527,7 +1368,7 @@ label fxnCallerp(fxn):
 #           linear 0.2 zoom 1.0 alpha 0.0
 #         $ EnmyHP = EnmyHP-burndmg
 #         $ EnmySts.remove('Burned')
-#         $ dmgdist = (burndmg/20) 
+#         $ dmgdist = (burndmg/20)
 #         $ dmgdist = int(dmgdist)
 #         show dmgpointb
 #         show Enemy:
@@ -1544,10 +1385,10 @@ label fxnCallerp(fxn):
 #           linear 0.1 zoom 1.0
 #         $ renpy.pause(0.5,hard=True)
 #         hide Brnsts
-#   call TurnEnd 
+#   call TurnEnd
 #   return
 # screen Game_menu:
-    
+
 # screen Concatenate:
 
 # label narrative
@@ -1559,9 +1400,3 @@ label fxnCallerp(fxn):
 #     if not game_ending:
 #       jump Game_cycle
 #     return
-
-
-
-
-
-

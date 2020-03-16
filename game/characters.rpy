@@ -6,16 +6,16 @@ define l = Character("Lisa",color = '#992e2c', image = "Lisa_side", callback=spe
 define info = Character("INFO",callback=speaker("INFO"), color='#fff', ctc="ctc", ctc_position="fixed")
 
 define i = Character("ILY",callback=speaker("ILY"), color='#f00', image = "ILY_side", ctc="ctc", ctc_position="fixed")
-define v = Character("Vira",callback=speaker("Vira"), color ='#f00', ctc="ctc", ctc_position="fixed") 
-define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed") 
-define a = Character("Ave",callback=speaker("Ave"), color='#ff8a00', image ="Ave_side", ctc="ctc", ctc_position="fixed") 
-define cv = Character("Virus Boy",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed") 
-define aa = Character("Antivirus Girl",callback=speaker("Ave"), color='#ff8a00', ctc="ctc", ctc_position="fixed") 
+define v = Character("Vira",callback=speaker("Vira"), color ='#f00', ctc="ctc", ctc_position="fixed")
+define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed")
+define a = Character("Ave",callback=speaker("Ave"), color='#ff8a00', image ="Ave_side", ctc="ctc", ctc_position="fixed")
+define cv = Character("Virus Boy",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed")
+define aa = Character("Antivirus Girl",callback=speaker("Ave"), color='#ff8a00', ctc="ctc", ctc_position="fixed")
 
 define hx = Character("Hacker X",color = '#088', image = "HackerX_side", ctc="ctc", ctc_position="fixed",callback=speaker("HackerX"))
 
 
-define uc = Character("USB-chan",callback=speaker("USB-chan"),color='#d10', ctc="ctc", ctc_position="fixed") 
+define uc = Character("USB-chan",callback=speaker("USB-chan"),color='#d10', ctc="ctc", ctc_position="fixed")
 define uk = Character("USB-kun",callback=speaker("USB-kun"),color='#01d', ctc="ctc", ctc_position="fixed")
 ########
 ## Functions
@@ -28,8 +28,8 @@ init -1 python:
     globals()["bg"] = "1"
     globals()["anim_done"] = True
     globals()["jumping"] = False
-    
-    
+
+
     globals()["ILY_m"] = "happy"
     globals()["ILY_p"] = "1"
     globals()["ILY_e"] = "1"
@@ -48,7 +48,7 @@ init -1 python:
     globals()["Ave_e"] = "mad"
     globals()["Ave_m"] = "frown"
     globals()["Ave_w"] = True
-    
+
 
 
 
@@ -59,20 +59,20 @@ init -1 python:
             return speak_d, .1
         else:
             return done_d, None
-            
+
     curried_while_speaking = renpy.curry(while_speaking)
-    
+
     def WhileSpeaking(name, speaking_d, done_d=Null()):
         return DynamicDisplayable(curried_while_speaking(name, speaking_d, done_d))
 
-    renpy.music.register_channel("blipsound", mixer="sfx", stop_on_mute=True, tight=False, buffer_queue=True, movie=False)     
-    
+    renpy.music.register_channel("blipsound", mixer="sfx", stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
+
     def speaker_callback(name, event, **kwargs):
         global speaking
         if event == "begin":
             speaking = name
             # globals()["stopblips"]=False
-            
+
             if (name == "John"):
                renpy.sound.play("sound/character/low.ogg", channel="blipsound", loop=True)
             elif (name == "ILY"):
@@ -97,12 +97,12 @@ init -1 python:
                renpy.sound.play("sound/character/low.ogg", channel="blipsound", loop=True)
             elif (name == 'HackerX'):
                renpy.sound.play("sound/character/low.ogg", channel="blipsound", loop=True)
-            
+
         elif (event == "slow_done" or event == "end"):
             speaking = None
-            renpy.sound.stop(channel="blipsound") 
-        
-            
+            renpy.sound.stop(channel="blipsound")
+
+
     speaker = renpy.curry(speaker_callback)
 
 
@@ -114,22 +114,22 @@ init -1 python:
         ## Only change pose if user input something
         if (pose != None):
             globals()["ILY_p"] = str(pose)
-        
+
         ## Make everything lowercase
         emotion = emotion.lower()
-        
+
         if (emotion == "happy"):
             globals()["ILY_m"] = "happy"
             globals()["ILY_e"] = '1'
-            
+
         elif (emotion == "happy2"):
             globals()["ILY_m"] = "happy2"
             globals()["ILY_e"] = '1'
-            
+
         elif (emotion == "happy3"):
             globals()["ILY_m"] = "happy3"
             globals()["ILY_e"] = '2'
-            
+
         elif(emotion == "sad"):
             globals()["ILY_m"] = "sad"
             globals()["ILY_e"] = '1'
@@ -139,64 +139,64 @@ init -1 python:
         elif(emotion == "o"):
             globals()["ILY_m"] = "o"
             globals()["ILY_e"] = '1'
-            
+
         else:
             raise ValueError("Unknown emotion entered: " + emotion)
-            
+
 
 
 
     def JohnSprite(emotion="happy"):
         ## Make everything lowercase
         emotion = emotion.lower()
-        
+
         if (emotion == "normal"):
             globals()["John_m"] = "happy"
             globals()["John_e"] = "normal"
-            
+
         elif (emotion == "sad"):
             globals()["John_m"] = "sad"
             globals()["John_e"] = "up"
-            
+
         elif (emotion == "mad"):
             globals()["John_m"] = "sad"
             globals()["John_e"] = "mad"
-            
+
         else:
             raise ValueError("Unknown emotion entered: " + emotion)
-            
-    
-    
-    
+
+
+
+
     def LisaSprite(emotion="happy"):
         ## Make everything lowercase
         emotion = emotion.lower()
-        
+
         if (emotion == "happy"):
             globals()["Lisa_m"] = "happy"
             globals()["Lisa_e"] = "normal"
-            
+
         else:
             raise ValueError("Unknown emotion entered: " + emotion)
-            
-        
-        
+
+
+
     def ViraSprite(emotion="happy"):
         ## Make everything lowercase
         emotion = emotion.lower()
-        
+
         if (emotion == "happy"):
             globals()["Vira_m"] = "happy"
             globals()["Vira_e"] = "normal"
-            
+
         elif (emotion == "sad"):
             globals()["Vira_m"] = "sad"
             globals()["Vira_e"] = "normal"
-            
+
         elif (emotion == "mad"):
             globals()["Vira_m"] = "sad"
             globals()["Vira_e"] = "mad"
-            
+
         else:
             raise ValueError("Unknown emotion entered: " + emotion)
 
@@ -216,7 +216,7 @@ image ILYjumpRpg:
 
 
 image side ILY_side:
-    
+
     ConditionSwitch(
         "ILY_w==True","ILYside2",
         "ILY_w==False",Null(width=100)
@@ -241,7 +241,7 @@ image ILY:
     linear 1.0 yoffset -10
     linear 1.0 yoffset 10
     repeat
-    
+
 image ILY big:
     "ILYFull"
     zoom 0.75
@@ -249,7 +249,7 @@ image ILY big:
     linear 1.0 yoffset -10
     linear 1.0 yoffset 10
     repeat
-    
+
 image ILY small:
     "ILYFull"
     zoom 0.3
@@ -301,7 +301,7 @@ image ILYEyes0:
         pause 8.0
     choice:
         "images/Characters/ILY/ILY_eyes.png"
-        pause 4.0      
+        pause 4.0
     choice:
         "images/Characters/ILY/ILY_eyes.png"
         pause 1.5
@@ -310,13 +310,13 @@ image ILYEyes0:
         "images/Characters/ILY/ILY_eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_eyesmclosed.png"
-        pause 0.07 
+        pause 0.07
         "images/Characters/ILY/ILY_eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_eyes.png"
         pause 1.5
     repeat
-        
+
 image ILYEyes1:
     choice:
         "images/Characters/ILY/ILY_eyes.png"
@@ -332,7 +332,7 @@ image ILYEyes1:
         pause 8.0
     choice:
         "images/Characters/ILY/ILY_eyes.png"
-        pause 4.0      
+        pause 4.0
     choice:
         "images/Characters/ILY/ILY_eyes.png"
         pause 1.5
@@ -341,13 +341,13 @@ image ILYEyes1:
         "images/Characters/ILY/ILY_eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_eyesmclosed.png"
-        pause 0.07 
+        pause 0.07
         "images/Characters/ILY/ILY_eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_eyes.png"
         pause 1.5
     repeat
-        
+
 image ILYEyes2:
     choice:
         "images/Characters/ILY/ILY_2eyes.png"
@@ -363,7 +363,7 @@ image ILYEyes2:
         pause 8.0
     choice:
         "images/Characters/ILY/ILY_2eyes.png"
-        pause 4.0      
+        pause 4.0
     choice:
         "images/Characters/ILY/ILY_2eyes.png"
         pause 1.5
@@ -372,13 +372,13 @@ image ILYEyes2:
         "images/Characters/ILY/ILY_2eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_2eyesmclosed.png"
-        pause 0.07 
+        pause 0.07
         "images/Characters/ILY/ILY_2eyesclosed.png"
         pause 0.1
         "images/Characters/ILY/ILY_2eyes.png"
         pause 1.5
     repeat
-        
+
 image ILYMouthHappy:
     "images/Characters/ILY/ILY_mmidopen.png"
     pause .08
@@ -404,8 +404,8 @@ image ILYMouthHappy:
     pause .05
     "images/Characters/ILY/ILY_mhappy3.png"
     pause .08
-    repeat 
-        
+    repeat
+
 image ILYMouthHappy2:
     "images/Characters/ILY/ILY_m2happy2.png"
     pause .08
@@ -431,8 +431,8 @@ image ILYMouthHappy2:
     pause .05
     "images/Characters/ILY/ILY_m2happy3.png"
     pause .08
-    repeat 
-        
+    repeat
+
 image ILYMouthSad:
     "images/Characters/ILY/ILY_mO2.png"
     pause .08
@@ -442,8 +442,8 @@ image ILYMouthSad:
     pause .08
     "images/Characters/ILY/ILY_msad.png"
     pause .08
-    repeat 
-        
+    repeat
+
 image ILYMouthSad2:
     "images/Characters/ILY/ILY_m2O2.png"
     pause .08
@@ -480,7 +480,7 @@ image JohnFull:
                 ),
             "images/Characters/John/John_m[John_m].png"
             ),
-        (0, 0), "images/Characters/John/John_e[John_e].png", 
+        (0, 0), "images/Characters/John/John_e[John_e].png",
         (0, 0), "JohnEyes",#eyes
         (0, 0), "images/Characters/John/John_glasses.png")
 
@@ -498,7 +498,7 @@ image JohnMouthHappy:
     "images/Characters/John/John_mhappy.png"
     pause .05
     repeat
-        
+
 image JohnMouthSad:
     "images/Characters/John/John_mspeak1.png"
     pause .08
@@ -513,7 +513,7 @@ image JohnMouthSad:
     "images/Characters/John/John_msad.png"
     pause .05
     repeat
-        
+
 image JohnEyes:
     choice:
         "images/Characters/John/John_eyes.png"
@@ -529,7 +529,7 @@ image JohnEyes:
         pause 8.0
     choice:
         "images/Characters/John/John_eyes.png"
-        pause 4.0      
+        pause 4.0
     choice:
         "images/Characters/John/John_eyes.png"
         pause 1.5
@@ -538,7 +538,7 @@ image JohnEyes:
         "images/Characters/John/John_eyesclosed.png"
         pause 0.1
         "images/Characters/John/John_eyesmclosed.png"
-        pause 0.07 
+        pause 0.07
         "images/Characters/John/John_eyesclosed.png"
         pause 0.1
         "images/Characters/John/John_eyes.png"
@@ -553,7 +553,7 @@ image JohnEyes:
 # image Lisa:
 #     "Lisafull"
 #     zoom 0.5
-        
+
 image Lisafull:
 
         LiveComposite(
@@ -568,7 +568,7 @@ image Lisafull:
                 ),
             "images/Characters/Lisa/Lisa_m[Lisa_m].png"
             ),
-        (0, 0), "images/Characters/Lisa/Lisa_e[Lisa_e].png", 
+        (0, 0), "images/Characters/Lisa/Lisa_e[Lisa_e].png",
         (0, 0), "LisaEyes",#eyes
         )
 image Lisa:
@@ -587,9 +587,9 @@ image side Lisa_side:
     ConditionSwitch(
         "Lisa_w==True","Lisa sidew",
         "Lisa_w==False",Null(width=100))
-    
-    
- 
+
+
+
 image LisaEyes:
     choice:
         "images/Characters/Lisa/Lisa_eyes.png"
@@ -605,7 +605,7 @@ image LisaEyes:
         pause 5.0
     choice:
         "images/Characters/Lisa/Lisa_eyes.png"
-        pause 4.0      
+        pause 4.0
     choice:
         "images/Characters/Lisa/Lisa_eyes.png"
         pause 1.5
@@ -614,13 +614,13 @@ image LisaEyes:
         "images/Characters/Lisa/Lisa_eclose2.png"
         pause 0.1
         "images/Characters/Lisa/Lisa_eclose1.png"
-        pause 0.07 
+        pause 0.07
         "images/Characters/Lisa/Lisa_eclose2.png"
         pause 0.1
         "images/Characters/Lisa/Lisa_eyes.png"
         pause 1.5
     repeat
-        
+
 image LisaMouthHappy:
     "images/Characters/Lisa/Lisa_mopen1.png"
     pause .05
@@ -670,7 +670,7 @@ image Vira large:
     linear 1.0 yoffset 5
     pause .5
     repeat
-    
+
 image Vira:
     "Vira large"
     # zoom 0.25
@@ -701,9 +701,9 @@ image ViraMouthHappy:
     pause .1
     "images/Characters/Vira/Vira_mhappy.png"
     pause .05
-   
+
     repeat
-        
+
 image ViraMouthSad:
     "images/Characters/Vira/Vira_mO2.png"
     pause .08
@@ -713,7 +713,7 @@ image ViraMouthSad:
     pause .08
     "images/Characters/Vira/Vira_msad.png"
     pause .08
-    repeat 
+    repeat
 
 
 
@@ -753,7 +753,7 @@ image CodeRedFull:
             "CodeRed mouth",
             "images/Characters/Code Red/CODE RED_mclosed.png"
         )
-    )   
+    )
 
 image CodeRed mouth:
     "images/Characters/Code Red/CODE RED_mopen1.png"
@@ -765,16 +765,16 @@ image CodeRed mouth:
     "images/Characters/Code Red/CODE RED_mclosed.png"
     pause .08
     repeat
-        
-     
+#CODE RED Icon
+
 image ModeRed:
     "ModeRedFull"
     linear 0.25 alpha 0.8 yoffset 20
     linear 0.25 alpha 1.0 xoffset -20
-    repeat 
+    repeat
 
 image ModeRedFull:
-    "images/Characters/Code Red/MODE RED3.png" 
+    "images/Characters/Code Red/MODE RED3.png"
     pause .05
     "images/Characters/Code Red/MODE RED4.png"
     pause .05
@@ -796,7 +796,7 @@ image Ave:
     linear 1.0 yoffset 5
     pause .5
     repeat
-        
+
 
 image Avefull:
     LiveComposite(
@@ -807,7 +807,7 @@ image Avefull:
             "Ave mouth",
             "images/Characters/Ave/Ave_m[Ave_m].png"
             ),
-        (0, 0), "images/Characters/Ave/Ave_e[Ave_e].png", 
+        (0, 0), "images/Characters/Ave/Ave_e[Ave_e].png",
         (0, 0), "AveEyes",#eyes
         (0, 0), "images/Characters/Ave/Aveshades.png",
         )
@@ -831,9 +831,9 @@ image side Ave_side:
     ConditionSwitch(
         "Ave_w==True","Ave sidew",
         "Ave_w==False",Null(width=100))
-    
-    
-    
+
+
+
 
 #########
 ## Hilbert
@@ -847,8 +847,8 @@ image side Hilbert_side:
     # ConditionSwitch(
     #     "Lisa_w==True","Lisa sidew",
     #     "Lisa_w==False",Null(width=100))
-    
-    
+
+
 #########
 ## Hacker X
 #########
@@ -858,10 +858,3 @@ image side HackerX_side:
     # ConditionSwitch(
     #     "Lisa_w==True","Lisa sidew",
     #     "Lisa_w==False",Null(width=100))
-    
-
-
-
-
-
-

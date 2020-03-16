@@ -8,6 +8,9 @@ init -3 python:
     Avesprite = SpriteinMap("Ave",[5,3],'down',"Ave")
     Heartsprite = SpriteinMap("Heart",[7,5],'down',"Heart")
     CodeRedsprite = SpriteinMap("CodeRed",[7,3],'down',"CodeRed")
+    Virasprite = SpriteinMap("Vira",[3,3],'down',"Vira")
+    Melissasprite = SpriteinMap("Vira",[3,3],'down',"Vira")
+
     spritelist = []
 
 label addsprites(gridplace):
@@ -23,15 +26,13 @@ label addsprites(gridplace):
                 if gridplace == key:
                     for sprite in mapspritesdict[gridplace]:
                         spritelist.append(sprite)
-                
             # else:
             #     spritelist = []
-                # 
+                #
         else:
             # renpy.say("","nosprites")
             spritelist=[]
-            
+
 
 
     return
-    

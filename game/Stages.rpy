@@ -9,7 +9,7 @@ init -2 python:
         return a
 
     # import numpy
-  
+
     def nextlocation(destinationstage,Door):
         newX=0
         newY=0
@@ -58,10 +58,10 @@ init -2 python:
                     founddoor=True
                 if not founddoor:
                     newY+=1
-            newY+=1    
-            # newX 
+            newY+=1
+            # newX
             # newY
-        # renpy.say("test","("+str(newX)+","+str(newY)+")")  
+        # renpy.say("test","("+str(newX)+","+str(newY)+")")
 
         return (newX,newY)
     def map_token(mapsheet):
@@ -76,9 +76,9 @@ init -2 python:
     #     newmap.append([ch for ch in rows])
 
     #   return (newmap)
-    
+
     # stage
-    
+
 
 
     # class Place:
@@ -86,7 +86,7 @@ init -2 python:
     #         self.name = name
     #         self.mapbox = mapbox
     #         self.safe = safe
-            
+
 
 
     # stageproto = [
@@ -153,7 +153,7 @@ init -2 python:
         ]
     stagehome=map_token(stagehome)
     stage1 = [
-        
+
         'nnn11111111111',
         'n1110000000001',
         'n1000000000001',
@@ -164,7 +164,7 @@ init -2 python:
         'n1110000000001',
         'nnn11111111111',
         ]
-    stage1=map_token(stage1)    
+    stage1=map_token(stage1)
     stageemptyroom = [
         'nnn111nnn',
         'n111a111n',
@@ -207,6 +207,24 @@ init -2 python:
         'nnnnnnnnn111nnnnnnnnn'
         ]
     stagek=map_token(stagek)
+    stageABCD=[
+        'nnnnnn111nnnnnn',
+        'nnnnnn1a1nnnnnn',
+        'nnnnnn101nnnnnn',
+        'nnn111101111nnn',
+        'nnn100000001nnn',
+        'nnn100000001nnn',
+        '111100000001111',
+        '1c00000000000b1',
+        '111100000001111',
+        'nnn100000001nnn',
+        'nnn100000001nnn',
+        'nnn111101111nnn',
+        'nnnnnn101nnnnnn',
+        'nnnnnn1d1nnnnnn',
+        'nnnnnn111nnnnnn'
+        ]
+    stage124578=map_token(stageABCD)
     stage124578=[
         'nnnnnn111nnnnnn',
         'nnnnnn1a1nnnnnn',
@@ -249,6 +267,212 @@ init -2 python:
         'nnnnnnnnnn1nnnnnnnnnn'
         ]
     stage369=map_token(stage369)
+    stageTemplate=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stageTemplate=map_token(stageTemplate)
+    stage_SDS=[
+        'nnnnnnnnnnnnnnnn',
+        'n11111111111111n',
+        'n11111111111111n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11000000000011n',
+        'n11111dddd11111n',
+        'n11111111111111n',
+        'nnnnnnnnnnnnnnnn'
+        ]
+    stage_SDS=map_token(stage_SDS)
+    stage_Undernet=[
+    ##The Entrance to the UNDERNET: where Z= -1
+        'nnnnnnnnnnnnnnnnnnn',
+        'nnnnnnn11111nnnnnnn',
+        'nnnnnnn11111nnnnnnn',
+        'nnnnnnn11011nnnnnnn',
+        'nnn100111011nnnn1nn',
+        'nnnn01n11011nnnnnnn',
+        'nnnnnn111011nnnnnnn',
+        'nnnnn1n11011nn1001n',
+        'nnnn1n111011nnn01nn',
+        'n1nnnnn11011nnnnnnn',
+        'nnnnnnn11011nnnn1nn',
+        'nnnnnnn11011nn1nnnn',
+        'nnnnnnn11011nnnnn1n',
+        'nnnn1nn110111nnnnnn',
+        'nnn1n1n11011nn1nnnn',
+        'nnnnnnn110111nnnnnn',
+        'nnnnnnn11011nnnnnnn',
+        'nn1nnnn11011nnnnnnn',
+        'n1n1nnn11011nnnnnnn',
+        'nnnnnnn11011n1nn1nn',
+        'nnnnnn1110111n1nnnn',
+        'nnnnn1n11011nnnnnnn',
+        'nnnnnn111011nnnnnnn',
+        'nnnnnnn11011nnnnnnn',
+        'nnnnnnn11d11nnnnnnn',
+        'nnnnnnn11111nnn1nnn',
+        'nnnnnnnnnnnn1nnnnnn'
+        ]
+    stage_Undernet=map_token(stage_Undernet)
+    stage_Cafella=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n1c00000000000000b1n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_Cafella=map_token(stage_Cafella)
+    stage_AdaU=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n1c00000000000000b1n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_AdaU=map_token(stage_AdaU)
+    stage_Bytes=[
+        'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn',
+        'n1111111111111111111111111111n',
+        'n1111111111111111111111111111n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1c00000000000000000000000011n',
+        'n1100000000000000000000000011n',
+        'n1111111111111111111111111111n',
+        'n1111111111111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_Bytes=map_token(stage_Bytes)
+    stage_Library=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n111111111111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111d11111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_Library=map_token(stage_Library)
+    stage_Battlewareshop=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n11111111a111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n1c00000000000000b1n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111d11111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_Battlewareshop=map_token(stage_Battlewareshop)
+    stage_Square=[
+        'nnnnnnnnnnnnnnnnnnnn',
+        'n111111111111111111n',
+        'n11111111a111111111n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n1c00000000000000b1n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n110000000000000011n',
+        'n111111111d11111111n',
+        'n111111111111111111n',
+        'nnnnnnnnnnnnnnnnnnnn'
+        ]
+    stage_Square=map_token(stage_Square)
     # stagek=[
     #     '1111101111111111111111111nnnnn',
     #     '1000001000000000000000001nnnnn',
@@ -369,6 +593,20 @@ init -2 python:
         'n111111111n'
     ]
     stageAC=map_token(stageAC)
+    stageBC=[
+        'n111111111n',
+        'n111111111n',
+        'n100000001n',
+        'n100000001n',
+        '11000000011',
+        '1c0000000b1',
+        '11000000011',
+        'n100000001n',
+        'n100000001n',
+        'n111111111n',
+        'n111111111n'
+    ]
+    stageBC=map_token(stageBC)
     stageBD=[
         'n111111111n',
         'n111111111n',
@@ -412,6 +650,62 @@ init -2 python:
         'n111111111n'
     ]
     stageACD=map_token(stageACD)
+    stageBCD=[
+        'n111111111n',
+        'n111111111n',
+        'n100000001n',
+        'n100000001n',
+        '11000000011',
+        '1c0000000b1',
+        '11000000011',
+        'n100000001n',
+        'n100000001n',
+        'n1111d1111n',
+        'n111111111n'
+    ]
+    stageBCD=map_token(stageBCD)
+    stageA=[
+        'n111111111n',
+        'n1111a1111n',
+        'n100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n111111111n',
+        'n111111111n'
+    ]
+    stageA=map_token(stageA)
+    stageB=[
+        'n111111111n',
+        'n111111111n',
+        'n100000001n',
+        'n100000001n',
+        'n1000000011',
+        'n10000000b1',
+        'n1000000011',
+        'n100000001n',
+        'n100000001n',
+        'n111111111n',
+        'n111111111n'
+    ]
+    stageB=map_token(stageB)
+    stageC=[
+        'n111111111n',
+        'n111111111n',
+        'n100000001n',
+        'n100000001n',
+        '1100000001n',
+        '1c00000001n',
+        '1100000001n',
+        'n100000001n',
+        'n100000001n',
+        'n111111111n',
+        'n111111111n'
+    ]
+    stageC=map_token(stageC)
     stageD=[
         'n111111111n',
         'n111111111n',
@@ -426,38 +720,213 @@ init -2 python:
         'n111111111n'
     ]
     stageD=map_token(stageD)
-    
+    #MAP OF CONNECHT
     globals()["GRID"] ={
         #x y
-        (192,168):stagehome,
-        # (193,168):stagebroken,
-        (192,167):stageAD,
-        (192,166):stageAD,
+        (188,160):stageABC,
+        (191,160):stageABC,
+        (192,160):stageABC,
+        (193,160):stageABC,
+        (194,160):stageABC,
+
+        (185,161):stageABC,
+        (186,161):stageABC,
+        (187,161):stageAC,
+        (188,161):stage_SDS,
+        (189,161):stageAB,
+        (190,161):stageACD,
+        (191,161):stageBD,
+        (192,161):stageBC,
+        (193,161):stageBC,
+        (194,161):stageBCD,
+        (195,161):stageABCD,
+
+        (184,162):stageACD,
+        (185,162):stageD,
+        (186,162):stageBD,
+        (187,162):stageBCD,
+        (188,162):stageABC,
+        (189,162):stageCD,
+        (190,162):stageA,
+        (191,162):stageAD,
+        (192,162):stageD,
+        (193,162):stageD,
+        (194,162):stageAD,
+        (195,162):stageAB,
+
+        (184,163):stageACD,
+        (185,163):stageABD,
+        (186,163):stageAC,
+        (187,163):stageAD,
+        (188,163):stageB,
+        (189,163):stageABC,
+        (190,163):stageBC,
+        (191,163):stageABCD,
+        (192,163):stageABC,
+        (193,163):stageACD,
+        (194,163):stageABD,
+        (195,163):stageC,
+        (196,163):stageABD,
+
+        (184,164):stageAC,
+        (185,164):stageABD,
+        (186,164):stageBC,
+        (187,164):stageABCD,
+        (188,164):stageBC,
+        (189,164):stageBCD,
+        (190,164):stageBC,
+        (191,164):stageAC,
+        (192,164):stageD,#MELISSA AREA
+        (193,164):stageAB,
+        (194,164):stageACD,
+        (195,164):stageBD,
+
+
+        (183,165):stageACD,
+        (184,165):stageBD,
+        (185,165):stageABC,
+        (186,165):stageCD,
+        (187,165):stageABD,
+        (188,165):stageCD,
+        (189,165):stageAB,
+        (190,165):stageCD,
+        (191,165):stageBD,
+        (192,165):stageABCD,
+        (193,165):stageCD,
+        (194,165):stageAD,
+        (195,165):stageAB,
+
+        (183,166):stageACD,
+        (184,166):stageAD,
+        (185,166):stageBD,
+        (186,166):stageAC,
+        (187,166):stageABD,
+        (188,166):stageACD,
+        (189,166):stage_Undernet,
+        (190,166):stageAD,
         (191,166):stageAD,
-        (191,167):stageAD,
+        (192,166):stageAD,
         (193,166):stageAD,
-        (193,167):stageAD,
+        (194,166):stageABD,
+        (195,166):stageC,
+        (196,166):stageABD,
+
+        (183,167):stageABCD,
+        (184,167):stageABCD,
+        (185,167):stageABC,
+        (186,167):stage_Cafella,
+        (187,167):stageACD,
+        (188,167):stageAB,
+        (189,167):stageAC,
+        (190,167):stageABD,
+        (191,167):stageACD,
+        (192,167):stageAD,
+        (193,167):stageABD,
+        (194,167):stageACD,
+        (195,167):stageBD,
+
+        (183,168):stageACD,
+        (184,168):stageABD,
+        (185,168):stageBC,
+        (186,168):stage_AdaU,
+        (187,168):stageABCD,
+        (188,168):stageBCD,
+        (189,168):stage_Bytes,
+        (190,168):stageAD,
         (191,168):stageABD,
+        (192,168):stagehome,
+        (193,168):stageACD,
+        (194,168):stageAD,
+        (195,168):stageAB,
+
+        (183,169):stageACD,
+        (184,169):stageAB,
+        (185,169):stageBC,
+        (186,169):stageBCD,
+        (187,169):stageABC,
+        (188,169):stage_Square,
+        (189,169):stageBCD,
+        (190,169):stageAC,
         (191,169):stageAB,
-        
         (192,169):stageABC,
         (193,169):stageAC,
-        (193,168):stageACD,
+        (194,169):stageABD,
+        (195,169):stageC,
+        (196,169):stageABD,
 
-        (193,165):stageCD,
-        (192,165):stage124578,
-        (191,165):stageBD,
-        (192,164):stageD,
-        
+        (183,170):stageABCD,
+        (184,170):stageBCD,
+        (185,170):stageCD,
+        (186,170):stageAD,
+        (187,170):stage_Library,
+        (188,170):stageABD,
+        (189,170):stage_Battlewareshop,
+        (190,170):stageBC,
+        (191,170):stageBC,
+        (192,170):stageBCD,
+        (193,170):stageBC,
+        (194,170):stageACD,
+        (195,170):stageBD,
+
+        (183,171):stageACD,
+        (184,171):stageAD,
+        (185,171):stageAD,
+        (186,171):stageAD,
+        (187,171):stageABD,
+        (188,171):stageACD,
+        (189,171):stageAB,
+        (190,171):stageBCD,
+        (191,171):stageBC,
+        (192,171):stageABC,
+        (193,171):stageCD,
+        (194,171):stageAD,
+        (195,171):stageAB,
+
+        (183,172):stageACD,
+        (184,172):stageABD,
+        (185,172):stageAC,
+        (186,172):stageAB,
+        (187,172):stageABCD,
+        (188,172):stageAC,
+        (189,172):stageD,
+        (190,172):stageAB,
+        (191,172):stageC,
+        (192,172):stageD,
+        (193,172):stageAB,
+        (194,172):stageABC,
+        (195,172):stageC,
+        (196,172):stageABD,
+
+        (183,173):stageACD,
+        (184,173):stageAB,
+        (185,173):stageCD,
+        (186,173):stageBD,
+        (187,173):stageAC,
+        (188,173):stageBD,
+
+        (190,173):stageBCD,
+        (191,173):stageBCD,
+
+        (193,173):stageBCD,
+        (194,173):stageBCD,
+        (195,173):stageBCD,
+
+        (184,174):stageCD,
+        (185,174):stageAB,
+        (186,174):stageAC,
+        (187,174):stageBD,
+
+        (185,175):stageBCD,
+        (186,175):stageBCD,
         }
-    
+
     mapspritesdict={
         (192,168):[Heartsprite],
-        (192,164):[Avesprite,CodeRedsprite]  
-          
+        (192,164):[Avesprite,CodeRedsprite,Virasprite]
+
         }
     mapwheredict={
-        (192,168):"Home"    
+        (192,168):"Home"
         }
 
 
@@ -465,7 +934,7 @@ init -2 python:
 
 
 label doorjump:
-     
+
     $ doordirection = Here #abcd
     # a =North
     # b =East
@@ -479,25 +948,25 @@ label doorjump:
         $gridpos[0] = gridpos[0] - 1
     elif doordirection == "d":
         $gridpos[1] = gridpos[1] + 1
-    
-    $ GRIDX= gridpos[0] 
+
+    $ GRIDX= gridpos[0]
     $ GRIDY= gridpos[1]
 
     $ Grid_D_root=digital_root(GRIDX+GRIDY)
 
-    # globals()["GRID"][GRIDX,GRIDY] in 
+    # globals()["GRID"][GRIDX,GRIDY] in
     # if thereisaroom on this position
 
     if (GRIDX,GRIDY) in globals()["GRID"]:
         $ griddestination = globals()["GRID"][(GRIDX,GRIDY)]
         $ transfercoordinates = nextlocation(griddestination,doordirection)
         call maptransfer(transfercoordinates,griddestination)
-    
+
     elif (((((Grid_D_root==1) or (Grid_D_root==2)) or (Grid_D_root==4)) or (Grid_D_root==5)) or (Grid_D_root==7)) or (Grid_D_root==8):
         $griddestination = stage124578
         $transfercoordinates = nextlocation(griddestination,doordirection)
         call maptransfer(transfercoordinates,griddestination)
-    
+
     elif ((Grid_D_root==3) or (Grid_D_root==6)) or (Grid_D_root==9):
         $griddestination = stage369
         $transfercoordinates = nextlocation(griddestination,doordirection)
@@ -510,7 +979,7 @@ label doorjump:
 
     #   call maptransfer([4,2],stage1)
     # elif Where =="Home":
-      
+
     #   $ destination = stage1
 
     #   if Here=='b':
@@ -525,8 +994,8 @@ label doorjump:
     #     $ gridpos[0] = gridpos[0] - 1
     #     $ Where = "Home"
     #     call maptransfer([12,5],destination)
-    
+
     # elif boxsheet == stage3:
     #   call maptransfer([3,14],stage1)
-    
+
     return

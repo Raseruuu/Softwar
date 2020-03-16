@@ -3,630 +3,316 @@
 While running game code:
   File "game/script.rpy", line 1992, in script call
     call mapcall([7,6],stagehome)
-  File "game/Movement.rpy", line 279, in script call
+  File "game/Movement.rpy", line 120, in script call
     call Returns
-  File "game/Movement.rpy", line 606, in script call
-    call pauseshow
-  File "game/pausemenu.rpy", line 6, in script call
-    call screen pausemenu
-  File "game/Movement.rpy", line 159, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 615, in script call
-    call randomencounter
-  File "game/Movement.rpy", line 510, in script call
-    call mapresume
-  File "game/Movement.rpy", line 295, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 443, in script call
+    call MapTalk
+  File "game/Maptalks.rpy", line 176, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
+  File "game/Movement.rpy", line 440, in script call
     call whatactor
-  File "game/Movement.rpy", line 54, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
-    call whatactor
-  File "game/Movement.rpy", line 54, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
-    call whatactor
-  File "game/Movement.rpy", line 44, in script
-    menu:
-TypeError: list indices must be integers, not unicode
+  File "game/Maptalks.rpy", line 52, in script call
+    call battlev3(ILY,Vira)
+  File "game/battlev3.rpy", line 371, in script
+    i"I'll show you... What love can do!"
+IOError: Couldn't find file 'bgm/ost/BOSSBATTLE-V_by-StarryMarshmell_0.ogg.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 1992, in script call
     call mapcall([7,6],stagehome)
-  File "game/Movement.rpy", line 279, in script call
+  File "game/Movement.rpy", line 120, in script call
     call Returns
-  File "game/Movement.rpy", line 606, in script call
-    call pauseshow
-  File "game/pausemenu.rpy", line 6, in script call
-    call screen pausemenu
-  File "game/Movement.rpy", line 159, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 615, in script call
-    call randomencounter
-  File "game/Movement.rpy", line 510, in script call
-    call mapresume
-  File "game/Movement.rpy", line 295, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 443, in script call
+    call MapTalk
+  File "game/Maptalks.rpy", line 176, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
+  File "game/Movement.rpy", line 460, in script call
     call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
+  File "game/Movement.rpy", line 440, in script call
     call whatactor
-  File "game/Movement.rpy", line 54, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
-    call whatactor
-  File "game/Movement.rpy", line 54, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 619, in script call
-    call Returns
-  File "game/Movement.rpy", line 599, in script call
-    call whatactor
-  File "game/Movement.rpy", line 44, in script
-    menu:
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1631, in execute
-    next_node(self.items[choice][2][0])
-TypeError: list indices must be integers, not unicode
+  File "game/Maptalks.rpy", line 52, in script call
+    call battlev3(ILY,Vira)
+  File "game/battlev3.rpy", line 371, in script
+    i"I'll show you... What love can do!"
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 842, in do_display
+    **display_args)
+  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Applications/renpy-7.3.5-sdk/renpy/ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Applications/renpy-7.3.5-sdk/renpy/audio/audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "/Applications/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'bgm/ost/BOSSBATTLE-V_by-StarryMarshmell_0.ogg.ogg'.
 
 Darwin-19.3.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 SoftWar - DEMO 1.0
-Wed Mar  4 14:25:06 2020
+Mon Mar 16 18:14:31 2020
