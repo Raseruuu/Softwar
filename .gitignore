@@ -2,7 +2,30 @@
 !spec/*.psd
 *.zip
 !spec/*.zip
+<<<<<<< HEAD
+*.DS_Store
+*.save
+### Ren'Py Game Files ###
+game/cache/**.**
+game/cache/**
+game/cache/
+game/saves/**.**
+game/saves/**
+game/saves/
+game/**.rpyc
+errors.txt
+traceback.txt
+log.txt
+project.json
+**-dists/
+
+### Standard Python Crap ###
+**/__pycache__/**
+**/nikola_src/cache/**
+**/nikola_src/output/**
+=======
 .DS_Store
 *.rpyc
 *.save
 *.rpyb
+>>>>>>> master

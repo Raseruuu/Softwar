@@ -284,11 +284,11 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    # scroll up for history
-    key "mousedown_4" action ShowMenu("history") 
-    key "K_PAGEUP" action ShowMenu("history")
-    key "repeat_K_PAGEUP" action ShowMenu("history")
-    key "K_AC_BACK" action ShowMenu("history")
+    # # scroll up for history
+    # key "mousedown_4" action ShowMenu("history") 
+    # key "K_PAGEUP" action ShowMenu("history")
+    # key "repeat_K_PAGEUP" action ShowMenu("history")
+    # key "K_AC_BACK" action ShowMenu("history")
 
 
     if quick_menu:

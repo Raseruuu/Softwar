@@ -2,10 +2,33 @@
 errors listed below, and try again.
 
 
-File "game/battlev2.rpy", line 253: invalid syntax
-            Firewall,Shieldbit,
-                    ^
-    
+File "game/battlev3.rpy", line 277: expected statement.
+    playerName = PFAI.name
+               ^
 
-Ren'Py Version: Ren'Py 7.4.0.84
-Sat Jan 25 19:31:53 2020
+File "game/battlev3.rpy", line 278: expected statement.
+    playerHP = PFAI.HP
+             ^
+
+File "game/battlev3.rpy", line 279: expected statement.
+    playerHPMax = PFAI.HPMax
+                ^
+
+File "game/battlev3.rpy", line 280: expected statement.
+    playerSP = PFAI.SP
+             ^
+
+File "game/battlev3.rpy", line 281: expected statement.
+    playerSPMax = PFAI.SPMax
+                ^
+
+File "game/battlev3.rpy", line 282: expected statement.
+    playerATK = PFAI.ATK
+              ^
+
+File "game/battlev3.rpy", line 283: expected statement.
+    playerDEF = PFAI.DEF
+              ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Mar 16 21:23:29 2020
