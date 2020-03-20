@@ -720,7 +720,38 @@ init -2 python:
         'n111111111n'
     ]
     stageD=map_token(stageD)
+<<<<<<< HEAD
     #MAP OF CONNECHT
+=======
+
+    Connecht_square=[
+        'nnnnnn1111111111nnnnnnnn',
+        'nnnn1100000000000010000nn',
+        'nnn10000000000000000000nn',
+        'nn100000000000000000000nn',
+        'n100000nnnn000nnnn0000001',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'n10000000000000000000001n',
+        'n10000000000000000000001n',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'n100000nnnn000nnnn000001n',
+        'nn111100000000011100000nn',
+        'n10000000000000000000001n',
+        'n10000000000000000000001n',
+        'n10000000000000000000001n',
+        'n11111111111111111111111n'
+    ]
+    Connecht_square=map_token(Connecht_square)
+
+
+
+    
+>>>>>>> master
     globals()["GRID"] ={
         #x y
         (188,160):stageABC,

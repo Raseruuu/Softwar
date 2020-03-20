@@ -115,7 +115,7 @@ init python:
 
     SpamAtk=      Card("SpamAtk",         "Mail",    0.25,    [Damage,Empty],           1)
     MailSaber=    Card("MailSaber",       "Sword",    1.0,    [Damage,Empty],           4)
-    HeartBurn=    Card("HeartBurn",       "PowerUp",   0.2,    [BoostATK,Burn_Self],    3)
+    HeartBurn=    Card("HeartBurn",       "PowerUp",   0.2,    [BoostATK,Burn_Self],    2)
     ChocolateBar= Card("ChocolateBar",    "Chocolate",0.25,   [Recover,Empty],         2)
 
 #Ave's cards

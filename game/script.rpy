@@ -299,7 +299,7 @@ label test:
         maptalks2 = 0
         enemy_encounter = False
         spritelist = []
-        boxsheet = stagehome
+        boxsheet = Connecht_square
         gridpos = [192,168]
         playerpos = [7,5]
         playerxpos = playerpos[0]
@@ -311,7 +311,7 @@ label test:
             boxsheet[sprite.position[1]][sprite.position[0]]=sprite.dialogue
     scene blue with dissolve
     $where="Home"
-    call mapcall([7,6],stagehome)
+    call mapcall([4,6],Connecht_square)
     hide screen mapB
     hide screen mapA
     if playerHP<=0:
@@ -342,7 +342,7 @@ label test:
     # hide Ave
 label demo:
     call initializemapvariables
-    # jump test
+    jump test
     $ okdesktop = False
     scene black
     pause 1.0
@@ -1964,6 +1964,7 @@ label date2:
             for sprite in spritelist:
                 boxsheet[sprite.position[1]][sprite.position[0]]=sprite.dialogue
         call addsprites(gridpos)
+        # call mapcall([10,10],stagehome)
         scene blue with dissolve
         
         show screen mapB
@@ -1989,7 +1990,11 @@ label date2:
         play music "bgm/ost/Grid_noyemi_K.mp3"
         hide screen mapB
 
+<<<<<<< HEAD
         call mapcall([7,6],stagehome)
+=======
+        call mapcall([10,10],stagehome)
+>>>>>>> master
         if playerHP<=0:
             return
         $ILY_w = False
