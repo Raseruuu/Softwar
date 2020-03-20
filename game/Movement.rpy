@@ -293,9 +293,9 @@ transform mover2(objxanchor,objyanchor):
 #   zorder yvalue
 transform playerjump(jumphght):
   xpos 0.5 ypos 0.5 xanchor 0.5 yanchor 0.7
-  linear 0.1 yoffset - jumphght
-  linear 0.1 yoffset 0
-  pause .5
+  linear 0.05 yoffset - jumphght
+  linear 0.05 yoffset 0
+  pause .1
   repeat
 screen mapA:
     key 'K_UP'          action SetVariable("direction","up"),     Return("up")
@@ -431,8 +431,8 @@ label Returns:
      $ blockSize = blockSize - 10
      hide screen mapA
    if (_return=="jump"):
-        $ jumphght=blockSize*1.5
-        pause 0.2
+        $ jumphght=blockSize*1.0
+        pause 0.1
         $ jumphght=0
 
    if FacingActor:

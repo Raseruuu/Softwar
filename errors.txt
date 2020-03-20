@@ -2,9 +2,33 @@
 errors listed below, and try again.
 
 
-File "game/battlev3.rpy", line 346: expected end of line
-    queue music "bgm/ost/BOSSBATTLE-V-Loop_by-StarryMarshmell_0.ogg"]
-                                                                    ^
+File "game/battlev3.rpy", line 277: expected statement.
+    playerName = PFAI.name
+               ^
+
+File "game/battlev3.rpy", line 278: expected statement.
+    playerHP = PFAI.HP
+             ^
+
+File "game/battlev3.rpy", line 279: expected statement.
+    playerHPMax = PFAI.HPMax
+                ^
+
+File "game/battlev3.rpy", line 280: expected statement.
+    playerSP = PFAI.SP
+             ^
+
+File "game/battlev3.rpy", line 281: expected statement.
+    playerSPMax = PFAI.SPMax
+                ^
+
+File "game/battlev3.rpy", line 282: expected statement.
+    playerATK = PFAI.ATK
+              ^
+
+File "game/battlev3.rpy", line 283: expected statement.
+    playerDEF = PFAI.DEF
+              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Mar 16 18:26:01 2020
+Mon Mar 16 21:23:29 2020

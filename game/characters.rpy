@@ -690,7 +690,9 @@ image ViraFull:
             "images/Characters/Vira/Vira_m[Vira_m].png"
         )
     )
-
+image Icon_Vira:
+    LiveCrop((280,100, 440,565), "ViraFull")
+    zoom 0.22
 
 image ViraMouthHappy:
     "images/Characters/Vira/Vira_mhappy2.png"
@@ -754,7 +756,9 @@ image CodeRedFull:
             "images/Characters/Code Red/CODE RED_mclosed.png"
         )
     )
-
+image Icon_CodeRedFull:
+    LiveCrop((280,100, 440,565), "CodeRedFull")
+    zoom 0.22
 image CodeRed mouth:
     "images/Characters/Code Red/CODE RED_mopen1.png"
     pause .08
@@ -832,7 +836,9 @@ image side Ave_side:
         "Ave_w==True","Ave sidew",
         "Ave_w==False",Null(width=100))
 
-
+image Icon_Ave:
+    LiveCrop((240,100, 440,565), "AveFull")
+    zoom 0.22
 
 
 #########

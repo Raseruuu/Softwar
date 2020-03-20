@@ -274,25 +274,13 @@ label battlev3(PFAI,EFAI):
     $ ILY_p="0"
 
     $ battle_done=False
+    $ playerName = PFAI.name
+    $ playerHP = PFAI.HP
+    $ playerSP = PFAI.SP
+    $ playerATK = PFAI.ATK
+    $ playerDEF = PFAI.DEF
+    $ playerDeck = PFAI.deck
 
-    # python:
-    #     PFAI = ILY
-    #     ILYStatsnow = {
-    #         "name":PFAI.name,
-    #         "HP":PFAI.HP,
-    #         "HPMax":PFAI.HP,
-    #         "SP":PFAI.SP,
-    #         "SPMax":PFAI.SP,
-    #         "Deck":PFAI.deck
-    #     }
-
-
-    #     playerName = ILYStatsnow["name"]
-    #     playerHP = ILYStatsnow["HP"]
-    #     playerHPMax = ILYStatsnow["HPMax"]
-    #     playerSP = ILYStatsnow["SP"]
-    #     playerSPMax = ILYStatsnow["SPMax"]
-    #     playerDeck = ILYStatsnow["Deck"]
 
     python:
         hcount=0
@@ -342,7 +330,7 @@ label battlev3(PFAI,EFAI):
     if enemyName=="Ave":
         play music "bgm/ost/BOSSBATTLE-A_by-Noyemi_K.ogg"
     elif enemyName=="Vira":
-        play music "<from 13 to 17.00>bgm/ost/BOSSBATTLE-V_by-StarryMarshmell_0.ogg"
+        play music "<from 0 to 16.9>bgm/ost/BOSSBATTLE-V_by-StarryMarshmell_0.ogg"
         queue music "bgm/ost/BOSSBATTLE-V-Loop_by-StarryMarshmell_0.ogg"
         # queue music "bgm/ost/BOSSBATTLE-V-Loop_by-StarryMarshmell_0.ogg"
 

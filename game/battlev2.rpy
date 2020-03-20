@@ -75,6 +75,7 @@ init python:
     DamageSPself = Fxn("DamageSPself(MAG)","Inflict Damage to own SP.")
     Recover = Fxn("Recover(MAG)","Increase HP.")
     Shield = Fxn("Shield(MAG)","Increase SP.")
+    Reflect = Fxn("Reflect(MAG)","Apply Reflect Status:{Negate incoming Damage; BoostATK;}")
     Burn_Self = Fxn("Burnself()","Apply Burn status to self.")
     BoostATK = Fxn("BoostATK()","Increase ATK")
     BoostDEF = Fxn("BoostDEF()","Increase DEF")
@@ -137,9 +138,10 @@ init python:
 
 
     DataDrill=    Card("DataDrill",       "Drill",   1.0,     [DamageSP,Damage],       6)
-    Firewall=     Card("Firewall",        "Wall",    0.75,    [Shield,BoostDEF],      6)
-
+    Firewall=     Card("Firewall",        "Wall",    0.75,    [Shield,BoostDEF],      4)
+    Powersol=     Card("Powersol",        "Wall",    1.0,     [Shield,BoostATK],        4)
     Shieldbit=    Card("Shieldbit",       "Wall",    0.25,     [Shield,Empty],          1)
+
     Assault=      Card("Assault",       "Tech",    1.0,       [DamageSPself,BoostATK],  2)
     Bitbuster=    Card("Bitbuster",       "Gun",    0.25,     [Damage,ReduceBit],       2)
     # Snipe=        Card("Snipe",           "Gun",    0.0,     [BoostGun,Evade],       6)
@@ -233,24 +235,31 @@ init python:
         Vshot,Vshot,
         Vshot,Vshot]
     deckvira = [
+        Firewall,
+        Firewall,Firewall,
         Firewall,DataBuster,
-        Firewall,DataBuster,
-        Firewall,DataBuster,
-        Firewall,Shieldbit,
+        DataBuster,
         Shieldbit,Shieldbit,
-        Shieldbit,Shieldbit,
-        DataForce,DataBomb
+        DataBuster,Shieldbit,
+        Shieldbit,
+        Powersol,Powersol,
+        Firewall,Firewall,
+        Shieldbit,
+        Powersol,Powersol,
+        DataForce,Firewall,
 
         ]
     deckave = [
+        DataBuster,
         DataBuster,DataBuster,
-        DataBuster,DataBuster,
-        Firewall,Firewall,
+        DataBuster,Firewall,
+        Firewall,
         Firewall,Shieldbit,
         DataBomb,DataBomb,
-        Laserbeam,Shieldbit,
+        Laserbeam,
         Shieldbit,Shieldbit,
-        Bitbuster,Bitbuster,
+        Shieldbit,Bitbuster,
+        Bitbuster,
         Assault,Assault,
         Assault,Assault]
     deckred = [
@@ -293,7 +302,7 @@ init python:
     Worm=FAI("Worm","Virus",800,400,300,250,deckrootkit,[])
     Vira=FAI("Vira","Antivirus",3500,1750,450,550,deckvira,[])
     CodeRed=FAI("Code Red","Antivirus",4000,1000,500,500,deckred,[])
-    Ave=FAI("Ave","Antivirus",3000,1500,520,480,deckave,[])
+    Ave=FAI("Ave","Antivirus",3000,1500,550,440,deckave,[])
 
 
 
@@ -301,80 +310,80 @@ init python:
     # Vira=FAI("Vira","Antivirus",4000,deckvira)
 
 
-label battlev2(PFAI,EFAI):
-
-    $okdesktop = False
-    $ map_active=False
-    $ PlayerFAI = PFAI
-    $ Playername = PlayerFAI.name
-    $ PlayerHPmax = PlayerFAI.HP
-    $ PlayerHP = PlayerHPmax
-    $ EnemyFAI = EFAI
-    $ Enmyname = EnemyFAI.name
-    $ EnmyHPmax = EnemyFAI.HP
-    $ EnmyHP = EnmyHPmax
-    $ EnmySts = []
-    $ PlayerSts = []
-    $ Battle_End = False
-    $ burndmg = 0
-    $ ILYSprite('mad')
-    $ ILY_m = 'happy3'
-    $ vcount=0
-    $ hcount=0
-    $ fxnpreview = "Damage"
-
-    $ PlayerAttacked2nd = False
-    scene battlebg
-    with pixellate
-    play music "bgm/Fight_bgm_maoudamashii_cyber14.ogg"
-    show battlering:
-        xalign 0.5 ypos 0.15 yanchor 0.5
-        block:
-            rotate 0
-            linear 15.0 rotate 360
-            repeat
-    show curve:
-        xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5
-    show curve as curve2:
-        xpos 0.5 xanchor 1.0 ypos 0.10 yanchor 0.5
-        zoom -1.0
-
-    show battleroad:
-        yalign 1.0 xalign 0.5
-    show Enemy:
-        xalign 0.5 yanchor 0.32 ypos 0.25
-    show screen decknum
-    with pixellate
-    show screen stats
-    show cardback at poscarddeck
-    # label battleinit:
-
-
-    voice "voice/ILY11C - I'll show you.mp3"
-    $ ILY_m = 'sad'
-    i"I'll show you... What love can do!"
-    label cardcycle:
-        hide card1
-        hide card2
-        hide card3
-        hide card4
-        call drawcards
-        call screen choosecard
-        hide card1
-        hide card2
-        hide card3
-        hide card4
-        call Returns
-
-        if not Battle_End:
-            jump cardcycle
-        elif Battle_End:
-            hide screen decknum
-            if PlayerHP<=0:
-                call lose
-            else:
-                call win
-    return
+# label battlev2(PFAI,EFAI):
+#
+#     $okdesktop = False
+#     $ map_active=False
+#     $ PlayerFAI = PFAI
+#     $ Playername = PlayerFAI.name
+#     $ PlayerHPmax = PlayerFAI.HP
+#     $ PlayerHP = PlayerHPmax
+#     $ EnemyFAI = EFAI
+#     $ Enmyname = EnemyFAI.name
+#     $ EnmyHPmax = EnemyFAI.HP
+#     $ EnmyHP = EnmyHPmax
+#     $ EnmySts = []
+#     $ PlayerSts = []
+#     $ Battle_End = False
+#     $ burndmg = 0
+#     $ ILYSprite('mad')
+#     $ ILY_m = 'happy3'
+#     $ vcount=0
+#     $ hcount=0
+#     $ fxnpreview = "Damage"
+#
+#     $ PlayerAttacked2nd = False
+#     scene battlebg
+#     with pixellate
+#     play music "bgm/Fight_bgm_maoudamashii_cyber14.ogg"
+#     show battlering:
+#         xalign 0.5 ypos 0.15 yanchor 0.5
+#         block:
+#             rotate 0
+#             linear 15.0 rotate 360
+#             repeat
+#     show curve:
+#         xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5
+#     show curve as curve2:
+#         xpos 0.5 xanchor 1.0 ypos 0.10 yanchor 0.5
+#         zoom -1.0
+#
+#     show battleroad:
+#         yalign 1.0 xalign 0.5
+#     show Enemy:
+#         xalign 0.5 yanchor 0.32 ypos 0.25
+#     show screen decknum
+#     with pixellate
+#     show screen stats
+#     show cardback at poscarddeck
+#     # label battleinit:
+#
+#
+#     voice "voice/ILY11C - I'll show you.mp3"
+#     $ ILY_m = 'sad'
+#     i"I'll show you... What love can do!"
+#     label cardcycle:
+#         hide card1
+#         hide card2
+#         hide card3
+#         hide card4
+#         call drawcards
+#         call screen choosecard
+#         hide card1
+#         hide card2
+#         hide card3
+#         hide card4
+#         call Returns
+#
+#         if not Battle_End:
+#             jump cardcycle
+#         elif Battle_End:
+#             hide screen decknum
+#             if PlayerHP<=0:
+#                 call lose
+#             else:
+#                 call win
+#     return
 
 
 # screen cardgallery:
