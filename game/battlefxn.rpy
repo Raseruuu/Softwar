@@ -83,14 +83,13 @@ label DamageSPplayer:
         $ playerSP-=damagetoplayer
         if playerSP<0:
             $ playerSP=0
-        
+
         $ dmgdist = ((currentcard.MAG*100)/20)
         $ dmgdist = int(dmgdist*2)
 
         show playerdmgpoint onlayer overlay
         # call hurtnoise
         with Shake((0, 0, 0, 0), 0.5, dist=dmgdist)
-        $ renpy.pause(0.6,hard=True)
         $ renpy.pause(0.6,hard=True)
     return
 label DamageSPenemy:
@@ -546,7 +545,7 @@ label PlayerEndPhase:
               burndmg = 0
               for fxns in EnmySts:
                 if fxns=="burn":
-                  burndmg = burndmg +40
+                  burndmg = burndmg +80
             show Brnsts:
               zoom 1.3 xalign 0.5 yanchor 1.0 ypos 0.45 alpha 1.0
               linear 0.1 zoom 0.98
@@ -583,7 +582,7 @@ label EnemyEndPhase:
               burndmg = 0
               for fxns in PlayerSts:
                 if fxns=="burn":
-                  burndmg = burndmg +40
+                  burndmg = burndmg +80
 
             # i"[playerName] receives [burndmg] burn damage!"
             play sound "sfx/fire.wav"

@@ -2,30 +2,30 @@
 #################
 
 # -SOFTWAR TO DO:
-    
+
 #   Add:
 #       Battleware Functions:
-                
+
 #           Slash()         Increase Slash cards for 3 turns
 #           Bomb()          Increase Bomb cards for 3 turns
 #           Blast()         Increase Blast cards for 3 turns
-#           Break()         Ignore Shield 
+#           Break()         Ignore Shield
 #
 #           Damage()        Inflict (MAG*ATK) Damage to enemy
 #           Shield()        Gain (MAG*DEF) SP
-            
+
 #           Boost(type)     Append Boost status to user for [type] cards
 #           Burn()          Append Burn status to enemy
 #           Burnself()      Burn status
 #           Freeze()      Cancel 1 execution
-#           Shock()       Reduce 
+#           Shock()       Reduce
 
 #           Negate()      Negate 1 execution
-#           Recover()     
+#           Recover()
 #           Boost()       Increase (target) Card point for (turn) turns
 #           Resist()      Gain Resistance to (Fxn) Damage
 
-        
+
 #       New Battleware:
 #           Ave's Guns
 #           SoftDrink
@@ -35,7 +35,7 @@
 #   Draw cards until 4
 # Battle Phase:
 #   Drop card to attack with
-    
+
 # Return Phase:
 #   Return Dropped card to hand
 
@@ -70,7 +70,7 @@ init python:
         ## Automatically add a small stop after punctuation to mimic the natural flow of words
         ## This is done by adding zero-width spaces
         ## This scales with CPS so it doesn't introduce annoying delays at high reading speads
-        
+
         filler = "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b"
         s = s.replace(",", "," + filler)
         s = s.replace(". ", ". " + filler)
@@ -81,7 +81,7 @@ init python:
         s = s.replace("!? ", "?! " + filler)
         s = s.replace("-- ", "-- " + filler)
         return s
-    
+
     config.replace_text = replace_text
     """
 
@@ -96,7 +96,7 @@ image cafeoutside:
 image cafedoor:
     "images/Cafella/CoffeeShop_SATURATED_22.jpg"
     zoom 0.7
-image cafeinside2: 
+image cafeinside2:
     "images/Cafella/CoffeeShop_SATURATED_24.jpg"
     zoom 0.7
 image cafeoutsideaftern:
@@ -161,7 +161,7 @@ image USBkun:
     repeat
 image Mailsaber:
     "images/Cards/MailSaber.png"
-image white_noise: 
+image white_noise:
     block:
         "images/computer/white_noise.png"
         pause 0.1
@@ -213,11 +213,11 @@ image iconalert = "images/computer/iconalert.png"
 label download_complete:
     scene blue with Dissolve(0.2)
     show Folders with dissolve
-    
+
     show whitewindow:
         zoom 0.0  xpos 0.5 xanchor 0.5 yalign 0.5
         linear 0.2 zoom 1.0
-    
+
     pause 0.5
     show dlcomp:
         alpha 0.0 xalign 0.5 yalign 0.5
@@ -228,7 +228,7 @@ label download_complete:
         alpha 0.0
         linear 0.3 alpha 1.0
     return
-    
+
 label download_hide:
     hide dlcomp
     hide dlheart
@@ -248,7 +248,7 @@ screen notifwindow(notification):
         at notifanim
         add "iconalert"
         text "{size=18}[notification]{/size}"
-    
+
 screen checks:
     vbox:
         at notifanim
@@ -256,18 +256,18 @@ screen checks:
         text "{color=#000}SOUND: {/color}{color=#0f0}CHECK{/color}"
         text "{color=#000}MIC: {/color}{color=#0f0}CHECK{/color}"
         text "{color=#000}WEB STATUS: {/color}{color=#0f0}ONLINE{/color}"
-    
+
 transform notifanim:
     xalign 0.45 yalign 0.5 alpha 0.0
     on show:
-        linear 0.2 xpos 0.5 alpha 1.0 
+        linear 0.2 xpos 0.5 alpha 1.0
     on hide:
         linear 0.2 xalign 0.55 alpha 0.0
 
 
-image black = Solid("#000") 
+image black = Solid("#000")
 image blue  = Solid("#069")
-image bg    = Solid("#035") 
+image bg    = Solid("#035")
 image Virusx= "images/rpg/Viruses/[virus].png"
 
 image ILOVEYOU:
@@ -277,8 +277,8 @@ image ILOVEYOU:
         linear 2.0 xzoom -1.0
         linear 2.0 xzoom 1.0
         repeat
-    
-image Folders: 
+
+image Folders:
         "images/computer/Folders.png"
         xalign 0.1 yalign 0.1
         block:
@@ -294,7 +294,7 @@ image Folders:
 
 label test:
     python:
-        ILY_w=True    
+        ILY_w=True
         maptalks = 0
         maptalks2 = 0
         enemy_encounter = False
@@ -305,7 +305,7 @@ label test:
         playerxpos = playerpos[0]
         playerypos = playerpos[1]
         objxanchor = ((playerpos[0]+1)*blockSize)-(blockSize/2)
-        objyanchor = ((playerpos[1]+1)*blockSize)-(blockSize/2)  
+        objyanchor = ((playerpos[1]+1)*blockSize)-(blockSize/2)
         direction = 'down'
         for sprite in spritelist:
             boxsheet[sprite.position[1]][sprite.position[0]]=sprite.dialogue
@@ -350,35 +350,35 @@ label demo:
     pause 1.0
     show text "{size=30}{color=#fff}February 14, 2018{/color}{/size}\n\n {color=#ddd}Valentine's Day{/color}" with dissolve
     pause 2.0
-    
+
     #show Email with dissolve:
     #    xalign 0.5 yalign 0.5
     #    linear 10.0 zoom 1.4 alpha 0.0
-        
+
     scene Email with dissolve_heart
-        
+
     "What's this? Someone sent me a love letter?"
     "I wonder who it's from..."
-    
+
     show Mouse:
         xalign 1.0 yalign 0
         linear 0.5 yalign 0.4 xalign 0.3
     pause 0.6
     play sound "sfx/sfx_sounds_interaction24.wav"
     pause 0.4
-    
-    
+
+
     scene white_noise with dissolve
     pause 1.0
 
     scene black with dissolve
     play music "bgm/downtime_bgm_maoudamashii_8bit17.mp3"
     show ILOVEYOU
-    
+
     pause 0.5
     "Huh? What the...?"
     "Oh crap, don't tell me..."
-    
+
     play sound "sfx/sfx_damage_hit8.wav"
 
     "*Spacebar* " with Shake((0, 0, 0, 0), 0.5, dist=5)
@@ -401,17 +401,17 @@ label demo:
     $ JohnSprite("mad")
     j "COME ON! I spent aaaaages on that!"
     "Damn, I guess I don't have a choice but to restart."
-    
+
     play sound "sfx/sfx_sounds_interaction24.wav"
     hide ILOVEYOU with dissolve
     pause 1.0
-    
+
     "Alright, and back on..."
     play sound "sfx/sfx_sounds_interaction24.wav"
     pause 1.0
-    
+
     show ILOVEYOU with dissolve
-            
+
     "No way, this can't be happening!"
     play sound "sfx/sfx_damage_hit4.wav"
     extend "*Esc* " with Shake((0, 0, 0, 0), 0.5, dist=10)
@@ -419,20 +419,20 @@ label demo:
     extend "*Esc* " with Shake((0, 0, 0, 0), 0.5, dist=10)
     play sound "sfx/sfx_damage_hit4.wav"
     extend "*Esc* " with Shake((0, 0, 0, 0), 0.5, dist=10)
-    
+
     "I can't believe it! How did I fall for an email virus?!"
     "I program software all day. I should have known better!"
     "I blame my lack of sleep. I've been up for 30 hours working on this project and I'm still not done."
-    
+
     "This looks like the end of my computer. "
     extend "And my career. "
-    extend "And any hopes of me finishing college."  
-    
-    "My computer was destroyed by an e-mail virus."  
+    extend "And any hopes of me finishing college."
+
+    "My computer was destroyed by an e-mail virus."
     "Next Tuesday is when we launch the big stuff. But it looks like I'm getting fired!"
     j "Why didn't I make a backup?!"
     "Forget a few hours, that's weeks worth of work!"
-    
+
     play sound "sfx/sfx_damage_hit4.wav"
     "*Esc* " with Shake((0, 0, 0, 0), 0.5, dist=10)
     play sound "sfx/sfx_damage_hit4.wav"
@@ -440,7 +440,7 @@ label demo:
     play sound "sfx/sfx_damage_hit4.wav"
     extend "*Enter* " with Shake((0, 0, 0, 0), 0.5, dist=10)
     j "{i}sigh{/i}"
-    
+
     hide ILOVEYOU with Dissolve(2.0)
     scene JD_Space2 with dissolve
     "I go to the window to get some fresh air."
@@ -454,12 +454,12 @@ label demo:
     j "What are you talking about?"
     h "You sent me an email called \"My confession...<3\"."
     h "Haven't read it yet, just give me a sec."
-    
+
     "What, a love letter? That's stupid, I didn't send--"
     "Wait...  Damn. It's that virus! It's sending itself to my contacts!"
     "\"Bro, don't open the attachment! It's a virus!\""
     "I hit the send button, but..."
-    
+
     play sound "sfx/sfx_coin_cluster6.wav"
     h "Wtf man, my PC's not working! I'm getting this stupid message on my screen that won't go away."
     "Too late. He's suffering just like me now. I bet every one of my contacts is experiencing the same crap."
@@ -471,29 +471,29 @@ label demo:
     "I head back to the desktop. That awful message is still controlling my screen."
     "ILOVEYOU, huh? Well, I hate you. And your creator."
     "The only love is from the jerk that loves to destroy people's computers."
-    
+
     # "Trials like this trigger me to question the meaning of life itself."
     # "Last time I questioned life was when I was with Kuya, back at the orphanage. It came to me that I had no parents."
     # "I've been taught how to live independently. Kuya taught me to fight through. He encouraged me like he was my real brother."
     # "He told me that Life has its glitches here and there. If it didn't then humans would have nothing to fix, and nothing to win."
     # "Thanks to that, I've had victories. But this particular moment seems like such a loss to me."
-    
+
     "..."
     j "{i}yawn{/i}"
     "Oh man, I've gotta get some sleep. I was hoping to finish today, but there's no point anymore."
     "I'll get back to it in the morning once I have a clearer head. When I'm not panicking about getting fired."
     "I rest my head on the table in front of the monitor and decide to let the night pass..."
-    
+
     hide ILOVEYOU with Dissolve(2.0)
     pause 2.0
-    
+
     scene white
     "I wake up, remembering last night."
     "Another dreamless night. If only the virus was just part of a dream."
     "I glance at the screen. Strangely, the screen had gone black."
     "I hadn't pulled the plug. And I live alone. I guess the computer went to sleep."
     "I clumsily stretch my arms forward to the laptop and press a random button on the keyboard."
-    
+
     $ okdesktop = True
     call download_complete
     pause 0.5
@@ -503,9 +503,9 @@ label demo:
     $ JohnSprite("normal")
     play sound "sfx/Damage.wav"
     j "Hell yeah! My PC still works!" with Shake((0, 0, 0, 0), 0.5, dist=5)
-    
+
     "Download complete? What does that mean?"
-    
+
     call download_hide
     "Oh crap, is this thing monitoring me now?"
     hide screen checks
@@ -521,7 +521,7 @@ label demo:
     pause 0.5
     hide whitewindow
     hide dlheart
-    
+
     show ILY with pixellate
     play music "bgm/ost/ILY's_Theme2.mp3"  fadeout 1 loop
     i "HELLO, USER! I am the ILOVEYOU virus!"
@@ -530,28 +530,28 @@ label demo:
     "Am I really awake? A kawaii anime girl virus is signing up to be my assistant. That's kinda sweet."
     i"Should I just call you master then?"
     "ILY, huh. The envelope on her head reminds me of last night's e-mail. I'm supposed to be mad now, but this is quite interesting."
-    
-    
-    
+
+
+
     $ ILYSprite("sad",0)
     i "Are you listening to me?"
     i "The speakers are on, aren't they? Please confirm your full name."
-    
+
     "This thing is suspicious, but it looks like it has a lot to offer."
     $plrname = 'John Doe'
     #$plrname = renpy.input(_("Input your name(Default = John Doe):")) or _("John Doe")
-    
+
     # @TODO: make sure john's sprite appears
-    
+
     $ JohnSprite("sad")
     j "[plrname]. That's my name."
-    
+
     $ ILYSprite("happy3")
     i "Identity confirmed."
-    
+
     $ ILYSprite("sad")
     i "[plrname], do you accept my offer to be your assistant? I've worked so hard just to get to your PC!"
-    
+
     menu:
         "ILY wants to be my assistant. Do I accept?"
         "Yes":
@@ -560,7 +560,7 @@ label demo:
         "No":
             "No way, this is way too suspicious."
             "Still, she IS a virus... I have to be careful with how I respond."
-    
+
     j "What is this all about? You hacked my PC, and suddenly offer some service. Nothing in this world's free."
 
     i "[plrname]. I am the ILOVEYOU virus."
@@ -568,32 +568,32 @@ label demo:
     extend" True love is...{w=0.5}{nw}"
     play sound "sfx/Damage2.wav"
     extend" Unconditional!" with Shake((0, 0, 0, 0), 0.5, dist=5)
-    
+
     "Inconcievable. If anything, conditions are the meat of every program."
     "I have little trust in what this virus can do for me, or if any of my data is safe at all after this. After all, this IS hacking."
-    
+
     $ JohnSprite("mad")
     show John eyeszoom with Dissolve(0.3):
        yzoom 0.0
        linear 0.1 yzoom 1.0
-      
+
     "I have to see it through... This \"Future Artificial Intelligence\"!"
     show John eyeszoom:
        linear 0.1 yzoom 0.0
     pause 0.1
     hide John eyeszoom
-    
+
     j "I've got many questions about you and your purpose as a... virus assistant."
-    
+
     $ ILYSprite("happy3", 0)
     i "I understand. Please ask them one at a time."
-    
+
     "I have two main concerns for now: My PC, and her. Here goes."
     $ q1_else=""
     $ q1_read_ily  = False
     $ q1_read_pc   = False
     $ q1_read_grid = False
-    
+
     label question1_demo:
       if q1_read_ily and q1_read_grid:
           play music "bgm/Enemy_bgm_maoudamashii_cyber19.ogg" fadeout 1 loop
@@ -605,13 +605,13 @@ label demo:
             $ q1_else="else "
             $ ILYSprite("happy3")
             $ JohnSprite("normal")
-            
+
             j "You're a pretty well done program."
             i "Isn't it a little too early for you to be evaluating my performance?"
             j "In the eyes of a programmer, you're already amazing."
             voice "voice/ILY22C - Giggle.mp3"
             i "Do you love me?"
-            
+
             $ ILYSprite("sad")
             $ JohnSprite("mad")
             j "No."
@@ -620,7 +620,7 @@ label demo:
             voice "voice/ILY01 - It's ILY~.mp3"
             i"It's ILY~!"
             j"What happens if I disconnect my computer from the internet now?"
-            
+
             $ ILYSprite("happy3")
             i "That's fine by me. Go on, try it."
             "If all the processing is done online, this could possibly shut down her bot brain..."
@@ -633,35 +633,35 @@ label demo:
             "Two of us? I'm alone in this room. There's no \"two of us\"."
             "Moving on..."
             j "How exactly are you going to be my assistant?"
-            
+
             $ ILYSprite("happy")
             i "I have full control over your PC! Any time you wanna command me to do stuff, just speak over the mic, I'll get it done!"
-            
+
             i "I'm a product of the Future Artificial Intelligence, or FAI Project!"
             i "FAI programs are powerful like this, but only a few are like me."
-            
+
             $ ILYSprite("happy3", 0)
             j "This \"FAI project\" stuff. Who made it? Who is your creator?"
-            
+
             $ ILYSprite("sad")
             i "I can't disclose any more information about the FAI project or my creator."
             j "How come?"
             i "Classified information."
             "I pause for a moment to think. I say it out loud;"
             j "Hackers."
-            
+
             $ ILYSprite("happy")
             i "That's a good word to sum up your situation right now."
             j "Tell me about it."
             i "I'm a hacking tool. Used by hackers. And that's what I'm here for!"
             j "Say what?"
             i "I'm going to make you a hacker!"
-            
+
             $ ILYSprite("happy3")
             j "You're kidding."
             voice "voice/ILY22C - Giggle.mp3"
             i "I can joke around, but that isn't my thought sequence right now."
-            
+
             $ ILYSprite("sad")
             j "So you're suggesting that I become a hacker?"
             play music "bgm/Enemy_bgm_maoudamashii_cyber19.ogg"  fadeout 1 loop
@@ -670,7 +670,7 @@ label demo:
             i "[plrname], I will assist you with any digital matters as your assistant... And as a hacking tool."
             i "With me, you can hack another system, for whatever reason. It isn't that simple though."
             i "Some PCs may be able to protect from hacking. That's when we go to war."
-            
+
             j "This is getting really shady."
             j "I'm... not really all that interested in hacking anybody now..."
             i "[plrname], I was made also to participate in this war. A Softwar."
@@ -679,14 +679,14 @@ label demo:
                 "Softwar, huh. I'll have to ask her about that later."
             else:
                 "I think It's finally time to ask about this Softwar."
-            
+
             play music "bgm/Conversation_bgm_maoudamashii_cyber13.ogg"  fadeout 1 loop
             $q1_read_ily = True
             jump question1_demo
 
         "My PC" if not q1_read_pc:
             $ ILYSprite("happy3")
-        
+
             j "What did you do to my PC?"
             i "I made some changes before downloading myself here!"
             i "First of all, despite infecting your computer and all, your computer is safe and usable."
@@ -697,7 +697,7 @@ label demo:
             i "Nope, it's still down."
             j "So why is it just my computer that's okay?"
             i "I already said it's because ILOVEYOU."
-            
+
             "This thing has a habit of dodging questions..."
             j "What other changes did you make?"
             i "Since I take up 14.3 gigabytes, I deleted some stuff."
@@ -708,17 +708,17 @@ label demo:
             i "You look terrible. Well I deleted 10.56709 GB from your drive to be exact."
             "Keep... Calm..."
             j "What did you delete?"
-            
+
             $ ILYSprite("happy")
             i "A folder called \"G\" and another one called \"H\"."
-            
+
             $ ILYSprite("o")
             play sound "sfx/Damage.wav"
             "G AND H!?" with Shake((0, 0, 0, 0), 0.5, dist=5)
-            
+
             $ ILYSprite("sad")
             j "Why those?"
-            
+
             $ ILYSprite("happy3")
             voice "voice/ILY22C - Giggle.mp3"
             i "They were on the top of the list of folders with most useless files with the biggest size!"
@@ -732,14 +732,14 @@ label demo:
             j "I'm fine with it. It's okay to delete those files, as long as that's all."
             i "I didn't delete anything work-related."
             j "That's perfect. Let's move on."
-            
+
             $ ILYSprite("happy")
             i "Oh yeah, the third thing! You should know about the Grid!"
             i "Every FAI program is a package to set up the computer for the Grid!"
             "The Grid...? I'll have to ask about that."
             $q1_read_pc = True
             jump question1_demo
-        
+
         "The Grid" if q1_read_pc and not q1_read_grid:
             $ ILYSprite("happy3")
             j "What's this Grid all about?"
@@ -748,7 +748,7 @@ label demo:
             i "I'm a FAI virus, so naturally, here I am. This desktop now is the Grid version of what you've been using."
             i "Not every program can enter the Grid."
             i "Think of it as another dimension aside from the usual interface you see on the computer."
-            
+
             "How come I've never heard of any of this before? It almost sounds like a conspiracy."
             i "If you ever get attacked by a regular virus, it's easy to get infected if you don't have an antivirus."
             i "However, if you get attacked by FAI virus such as myself, you're definitely getting infected."
@@ -770,15 +770,15 @@ label demo:
                 i "I should definitely start telling you about this Softwar."
             $q1_read_grid = True
             jump question1_demo
-        
+
         "Softwar" if q1_read_ily and q1_read_grid:
             j "Alright. Tell me about Softwar. You sounded serious when you mentioned it earlier."
 
             i "Only FAIs can take part in Softwars. They are battles between programs."
             i "Technically, it's really a game,"
             $ ILYSprite("sad")
-            
-            extend " but the stakes are quite serious!" 
+
+            extend " but the stakes are quite serious!"
             "A battle game, huh."
             $ ILYSprite("mad")
             i "A Softwar goes like this. A virus, with or without a user, may be transported to a target computer system."
@@ -788,7 +788,7 @@ label demo:
             i "Yes, the Attackers are viruses, and the castle is the target computer system, the Defenders."
             i "So there are 2 sides to this battle. Attackers and Defenders."
             "I don't like the idea of being an Attacker, even though I have an intelligent virus with me..."
-            
+
             j "Why would such a game exist?"
             $ ILYSprite("happy3")
             i "Softwar gives everybody a chance to protect themselves from hackers!"
@@ -799,7 +799,7 @@ label demo:
 
             $ ILYSprite("o")
             i "That's true."
-            
+
             $ ILYSprite("happy")
             extend" I'm not sure, myself! "
             i"Maybe the system is meant to keep the bad viruses from causing too much trouble!"
@@ -807,45 +807,45 @@ label demo:
             j"You speak as if viruses can be any good."
             i"I'm a good virus!"
             "Hmph. Viruses are pure evil."
-           
+
             $ ILYSprite("sad")
             j "Not convinced."
-            
+
             $ ILYSprite("happy")
             i "Personally, I think Softwar was made for a new generation of fun! Perhaps it was made for the Future AIs to gain a spotlight or two."
             j "But we're talking about people who break rules all the time. Who's to say that hackers won't find a flaw in the Softwar system?"
-            
+
             $ ILYSprite("happy3")
             i "That's true, but the battle protocol is extremely resilient to manipulation."
             i "With current technology, a game of Softwar can't be rigged. A foolproof system. A hacker's masterpiece."
-            
+
             j "Really..."
             i "The Grid, FAIs, and the Softwar system were also built without the knowledge or permission of the government, so it's best not to tell others for now."
             j "An elaborate system of AIs and Cyber battles like this will definitely be popular soon."
             i "A Softwar might happen soon in this PC, if we reconnect our Internet, so we better be careful."
             j "How exactly do I prepare for a Softwar though? Just in case?"
-            
+
             $ ILYSprite("sad")
             i "Usually you'd install antiviruses to protect from viruses..."
-            
+
             $ ILYSprite("o")
             i "But you've already been bit by the lovebug! I'm the only FAI you need!"
-            
+
             $ ILYSprite("happy")
             play sound "sfx/Damage.wav"
             extend" I can delete viruses too, you know!" with Shake((0, 0, 0, 0), 0.5, dist=5)
             "So viruses can battle viruses too, huh. That's like having an antivirus and virus in 1 program. Interesting."
-            
+
             $ ILYSprite("o")
             j "That's good to know, ILY."
             i "Have you accepted your fate?"
             j "I still can't trust you yet."
-            
+
             $ ILYSprite("happy3")
             i "Of course you can trust me! Trust is an essential part of love!"
-            
+
             # jump demo_battle
-    
+
 label date1:
     j"There are some things you have to do for me to trust you."
     "Damn, I never thought I'd see the day when I say such words... to a program. "
@@ -891,7 +891,7 @@ label date1:
     play sound "sfx/Damage.wav"
     i"Wait!!" with Shake((0, 0, 0, 0), 0.5, dist=5)
     $ILY_m='happy3'
-    extend" I wanna go surf the net." 
+    extend" I wanna go surf the net."
     j"I don't trust you enough to let you roam while I'm not around, you virus girl."
     $ILY_m='O'
     i"So you're really shutting down?"
@@ -899,7 +899,7 @@ label date1:
     j"Shutting down."
     $ILY_m='happy3'
     i"Well, have a lovely day, John! Good luck with Lisa."
-    hide ILY with pixellate 
+    hide ILY with pixellate
     $ okdesktop = False
     pause .5
     scene black with dissolve
@@ -908,7 +908,7 @@ label date1:
     extend" Did she say \"Lisa\"?"
     "She said her name."
     extend" Lisa."
-    
+
     show Lisa with dissolve:
         xalign 0.5 yalign 1.0
     "Lisa Fairfield."
@@ -922,7 +922,7 @@ label date1:
     hide Lisa with dissolve
     scene JD_PC1
     play music "bgm/downtime_bgm_maoudamashii_8bit17.mp3"
-    
+
 
 label date2:
         "Lisa had been away, since last December."
@@ -962,7 +962,7 @@ label date2:
         l"Actually, I've already got a table for us."
         $JohnSprite('sad')
         j"Wait, so I really am late?"
-        
+
         l"Yeah, by a few minutes."
         scene cafetable with dissolve
         "Something tells me the few minutes she mentioned earlier lasted longer than she's telling me."
@@ -1165,7 +1165,7 @@ label date2:
         "Here's to hoping it's presentable enough for a girl to see."
         $ okdesktop = True
         scene blue with dissolve
-        show Folders 
+        show Folders
         show ILY with dissolve
         i"Welcome back, John!"
         $ ILY_m='O'
@@ -1175,7 +1175,7 @@ label date2:
         $ Lisa_e="normal"
         l"Ah, Hello there! You're a cute Virus girl! I'm Lisa!"
         $ ILY_m='happy'
-       
+
         voice "voice/ILY07B - Thanks.mp3"
         i"Thanks!"
         extend" Nice to meet you Lisa! I'm ILY!"
@@ -1188,7 +1188,7 @@ label date2:
         $ JohnSprite('mad')
         extend"We're doing work, so you better behave."
         l"We're gonna work on our website here, ILY."
-        
+
         i"Speak over the mic if you need any help, then!"
         l"Yup. Appreciate it, Virus assistant ILY!"
         scene JD_Space2 with dissolve
@@ -1205,7 +1205,7 @@ label date2:
         extend "\"I love you\"."
         "Of course, we were talking about the ILOVEYOU Virus, but still."
         "It makes me feel embarassed. I can't even look straight at Lisa now."
-        scene JD_Bed3 
+        scene JD_Bed3
         show Lisa
         with dissolve
         $ Lisa_w=False
@@ -1213,7 +1213,7 @@ label date2:
         $JohnSprite("sad")
         j"Huh?"
         scene blue
-        show Folders 
+        show Folders
         show ILY
         with dissolve
         $ Lisa_w = True
@@ -1223,7 +1223,7 @@ label date2:
         $JohnSprite("mad")
         j"No, I don't!"
         $JohnSprite("normal")
-        j"You can place the drive now, Lisa." 
+        j"You can place the drive now, Lisa."
         l"There."
         show explorer:
             zoom 0.0 xalign 0.0 yalign 0.0
@@ -1236,7 +1236,7 @@ label date2:
         show blackwindow:
             zoom 0.0 xalign 0.0 yalign 0.0
             linear 0.25 zoom 1.0 xalign 0.8 yalign 0.5
-        
+
         j"How's this?"
         "It's not working.."
         show blackwindow:
@@ -1263,30 +1263,30 @@ label date2:
 
         scene battlebg with pixellate
         show battlering:
-            xalign 0.5 ypos 0.15 yanchor 0.5 
+            xalign 0.5 ypos 0.15 yanchor 0.5
             block:
                 rotate 0
                 linear 15.0 rotate 360
                 repeat
         show curve:
-            xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5 
+            xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5
         show curve as curve2:
-            xpos 0.5 xanchor 1.0 ypos 0.15 yanchor 0.5 
+            xpos 0.5 xanchor 1.0 ypos 0.15 yanchor 0.5
             zoom -1.0
-        
+
         show battleroad:
             yalign 1.0 xalign 0.5
         with dissolve
-    
+
         show USBchan:
-            xalign 0.88 yalign 0.5 
+            xalign 0.88 yalign 0.5
 
         show Trojan:
             xalign 0.8 yalign 0.5 zoom 1.2
         show USBkun:
             xalign 0.12 yalign 0.5 xzoom -1.0
         $ ILY_p = '0'
-        
+
         show ILY:
             xpos 0.0 xanchor 1.0
         with dissolve
@@ -1335,17 +1335,17 @@ label date2:
         $ okdesktop = False
         scene battlebg
         show battlering:
-            xalign 0.5 ypos 0.15 yanchor 0.5 
+            xalign 0.5 ypos 0.15 yanchor 0.5
             block:
                 rotate 0
                 linear 15.0 rotate 360
                 repeat
         show curve:
-            xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5 
+            xpos 0.5 xanchor 0.0 ypos 0.15 yanchor 0.5
         show curve as curve2:
-            xpos 0.5 xanchor 1.0 ypos 0.15 yanchor 0.5 
+            xpos 0.5 xanchor 1.0 ypos 0.15 yanchor 0.5
             zoom -1.0
-        
+
         show battleroad:
             yalign 1.0 xalign 0.5
         with Dissolve(0.1)
@@ -1371,18 +1371,18 @@ label date2:
         $ Lisa_e = 'normal'
         $Lisa_m = 'happy'
         l"The little programs are safe!"
-        
+
         i"Look, it's love at first sight!"
         voice "voice/ILY22 - Giggle.mp3"
         extend " *giggles*"
         $ Lisa_m = 'happy'
         l"They're a perfect match, don't you think?"
         show USBkun:
-            linear 0.7 xalign 0.7 
+            linear 0.7 xalign 0.7
             pause .3
             xzoom 1.0
         show USBchan:
-            linear 1.0 xalign 0.88 yalign 0.5 
+            linear 1.0 xalign 0.88 yalign 0.5
         l"Look, they're together now! Isn't it great to be connected?"
         uc"Thank you for saving us!"
         uk"Thanks for reuniting me with my partner!"
@@ -1399,8 +1399,8 @@ label date2:
         i"Nah, that was easy!"
         j"You HAD a hard time! You barely survived with just [playerHP] HP left!"
         play sound "sfx/Damage.wav"
-        extend" You were on the brink of erasure!" with Shake((0, 0, 0, 0), 0.5, dist=10) 
-        l"It looks like John cares for you, ILY!" 
+        extend" You were on the brink of erasure!" with Shake((0, 0, 0, 0), 0.5, dist=10)
+        l"It looks like John cares for you, ILY!"
         i"Isn't he a loving user?"
         j"I'm only concerned about our assignment, Lisa."
         l"Hey, wasn't that fun for you in the least bit?"
@@ -1416,7 +1416,7 @@ label date2:
         extend"finally something more important is happening here,"
         extend" and I assure you, it isn't about Lisa and me."
         play sound "sfx/Damage.wav"
-        extend "\nI can finally get back to work!" with Shake((0, 0, 0, 0), 0.5, dist=10) 
+        extend "\nI can finally get back to work!" with Shake((0, 0, 0, 0), 0.5, dist=10)
         extend"\nOr so I thought."
         "Just after I open the folder containing Lisa's files, my phone rings."
         play sound "sfx/sfx_coin_cluster6.wav"
@@ -1486,7 +1486,7 @@ label date2:
         j"Wait, does this mean you can really return the files you stole?"
         $ILY_m='sad'
         play sound "sfx/Damage.wav"
-        i"I didn't steal them!" with Shake((0, 0, 0, 0), 0.5, dist=10) 
+        i"I didn't steal them!" with Shake((0, 0, 0, 0), 0.5, dist=10)
         i"I kept them safe in my online database! What's the word... backup! I made a backup!"
         j"That's... kind of the same thing."
         $ Lisa_m='open3'
@@ -1595,7 +1595,7 @@ label date2:
         j"What's up with it?"
         $ okdesktop = True
         scene blue with dissolve
-        show Folders 
+        show Folders
         $ILY_p = '0'
         $ILY_w = False
         show ILY with dissolve:
@@ -1711,7 +1711,7 @@ label date2:
         $Lisa_w = True
         scene JD_Space1 with dissolve
         "This is the main event. We can finally get something done now!"
-        
+
         "I can feel it. No more interruptions this time."
         "To assure this, I must require ILY to shut up, so I can focus."
         i"You look like you're in deep thought. "
@@ -1736,7 +1736,7 @@ label date2:
         "Meanwhile, in a place neither I nor ILY is aware of..."
         "There exists 2 cyber-entities, one of security, order and justice, and another, of strength, aggressiveness and cold hostility."
         "An antivirus and a virus."
-        show CodeRed with dissolve 
+        show CodeRed with dissolve
         cv"What're your orders, boss?"
         hx"I'm glad you asked."
         cv"Well, what is it? I'm itching to destroy another website."
@@ -1817,7 +1817,7 @@ label date2:
         "Agreed. She's really a genius."
         l"That was really fun."
         l"I guess that's one of our assignments down!"
-        j"You're gonna have to go home for now."  
+        j"You're gonna have to go home for now."
         $Lisa_e = 'normal'
         l"For now?"
         j"Ah.. I meant.. We'll have to meet again tomorrow, right?"
@@ -1838,14 +1838,14 @@ label date2:
         $Lisa_w = True
         $ okdesktop = True
         scene blue
-        show Folders 
+        show Folders
         show ILY
         with dissolve
-        play music "bgm/downtime_bgm_maoudamashii_8bit17.mp3" fadeout 1 loop 
+        play music "bgm/downtime_bgm_maoudamashii_8bit17.mp3" fadeout 1 loop
         i"John, did you say you wanted your files back earlier?"
-        "What is it now, ILY?"   
+        "What is it now, ILY?"
         l"Oh right, You lost files too!"
-        $ILY_m = 'happy3'     
+        $ILY_m = 'happy3'
         i"I made a backup of them just in case!"
         $JohnSprite('mad')
         j"ILY, stop! Don't show Lisa!"
@@ -1861,7 +1861,7 @@ label date2:
         show Lisa
         with dissolve
         $Lisa_m = 'sad'
-        $Lisa_e = 'normal'     
+        $Lisa_e = 'normal'
         l"Eh?"
         $JohnSprite('normal')
         j"That was nothing."
@@ -1878,7 +1878,7 @@ label date2:
         j"We still have more to do."
         j"Thank me another time."
         l"See ya!"
-        play music "bgm/Cafella_bgm_maoudamashii_acoustic51.mp3" fadeout 1 loop 
+        play music "bgm/Cafella_bgm_maoudamashii_acoustic51.mp3" fadeout 1 loop
         i"I think you should send her back, John!"
         "ILY... stop it!"
         $Lisa_m = 'sad'
@@ -1891,7 +1891,7 @@ label date2:
         extend" just until the street where you can ride."
         l"Around Cafella! Good."
         scene black with dissolve
-        
+
         "Thus we took a walk... we reached Cafella."
         "This kind of thing is gonna happen again tomorrow, it seems."
         scene cafeoutsideaftern with dissolve
@@ -1909,14 +1909,14 @@ label date2:
         "Did I...?"
         "I didn't."
         play music "bgm/Enemy_bgm_maoudamashii_cyber19.ogg"
-        
+
         $ okdesktop = True
         scene blue with dissolve
-        show Folders 
+        show Folders
         $ILY_p = '0'
         $ILY_m = 'happy'
         $ILY_e = '2'
-        
+
         $ILY_w = False
         show ILY at sidesteps_effect("images/Characters/ILY/ILY.png", 0.5, 0.1, 0.25):
             zoom 0.5 xalign 0.5 yalign 0.8
@@ -1966,7 +1966,7 @@ label date2:
         call addsprites(gridpos)
         # call mapcall([10,10],stagehome)
         scene blue with dissolve
-        
+
         show screen mapB
         i"This is the Grid!"
         i"Listen John, and listen carefully!"
@@ -1986,15 +1986,12 @@ label date2:
         $ ILY_m = 'happy3'
         i"Well, in addition to that, You can talk to me anytime by pressing 'X'."
         j"Okay."
-        
+
         play music "bgm/ost/Grid_noyemi_K.mp3"
         hide screen mapB
 
-<<<<<<< HEAD
         call mapcall([7,6],stagehome)
-=======
         call mapcall([10,10],stagehome)
->>>>>>> master
         if playerHP<=0:
             return
         $ILY_w = False
@@ -2005,4 +2002,3 @@ label date2:
         # jump
         "NEXT SCENE"
         jump script2
-        

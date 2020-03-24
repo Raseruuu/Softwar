@@ -132,23 +132,6 @@ label script2:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 label vscodered:
     "Now, Vira and Ily are together in the Hilbert's host computer."
     "I sent Ily over without Hilbert's knowledge,{w} He couldn't possibly be up all night right now,{w} waiting for the hacker."

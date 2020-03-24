@@ -274,6 +274,13 @@ transform halftrans:
 
 transform zoombig:
     xalign 0.5 yalign 1.0
+# init python:
+#     btnhovered = 1.0
+#     profilearray = []
+transform transp:
+        alpha 0.6
+transform rpgsize:
+        zoom 0.35 alpha 1.0
 
 
 # transform maptrans:

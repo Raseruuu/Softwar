@@ -720,9 +720,8 @@ init -2 python:
         'n111111111n'
     ]
     stageD=map_token(stageD)
-<<<<<<< HEAD
+
     #MAP OF CONNECHT
-=======
 
     Connecht_square=[
         'nnnnnn1111111111nnnnnnnn',
@@ -750,8 +749,6 @@ init -2 python:
 
 
 
-    
->>>>>>> master
     globals()["GRID"] ={
         #x y
         (188,160):stageABC,

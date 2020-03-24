@@ -134,7 +134,7 @@ init python:
 
     DataBomb=     Card("DataBomb",       "Bomb",     1.0,     [Damage,Empty],          4)
     BruteForce=   Card("BruteForce",     "Force",    1.0,     [Damage,BoostATK],      8)
-    DataForce=    Card("DataForce",     "Force",    1.0,      [BoostATK,BoostDEF],       6)
+    DataForce=    Card("DataForce",     "Force",    1.0,      [BoostATK,BoostDEF],       4)
 
 
     DataDrill=    Card("DataDrill",       "Drill",   1.0,     [DamageSP,Damage],       6)
