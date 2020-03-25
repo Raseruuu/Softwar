@@ -1991,7 +1991,6 @@ label date2:
         hide screen mapB
 
         call mapcall([7,6],stagehome)
-        call mapcall([10,10],stagehome)
         if playerHP<=0:
             return
         $ILY_w = False

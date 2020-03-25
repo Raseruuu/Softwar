@@ -76,9 +76,8 @@ label whatactor:
       call Returns
     return
 label MapTalk:
-
-
-    if boxsheet == stagehome:
+    # if boxsheet == stagehome:
+    if boxsheet:    
       $ maptalks+=1
       if maptalks==1:
         i"I'd love to say something virtuous, but the demo is over."

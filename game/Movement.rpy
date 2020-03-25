@@ -88,6 +88,7 @@ label checkwalls:
 
       # return
    if HereisDoor:
+      play sound"sfx/door-fr_0009.wav"
       call doorjump
    return
 
@@ -343,7 +344,8 @@ transform ilymov2:
 
 label randomencounter:
      $ randomenemy = renpy.random.randint(0,100)
-     $ safezone=(Where=="Home")
+     # $ safezone=(Where=="Home")
+     $safezone=True #for debugging
      if ((randomenemy >99) and (safezone==False)) and not HereisDoor:
        $ enemy_encounter = True
      if enemy_encounter == True:
@@ -409,24 +411,32 @@ label Returns:
 
       if Upisempty:
        if (_return=="up"):
-
         $ objyanchor = objyanchor-blockSize
         $ playerpos = [playerxpos,playerypos-1]
+      else:
+        if _return=="up":
+            play sound "sfx/bumpintowall_X5CNQPB.mp3"
       if Downisempty:
        if (_return=="down"):
-
         $ objyanchor = objyanchor+blockSize
         $ playerpos = [playerxpos,playerypos+1]
+      else:
+        if _return=="down":
+            play sound "sfx/bumpintowall_X5CNQPB.mp3"
       if Leftisempty:
        if (_return=="left"):
-
         $ objxanchor = objxanchor-blockSize
         $ playerpos = [playerxpos-1,playerypos]
+      else:
+        if _return=="left":
+            play sound "sfx/bumpintowall_X5CNQPB.mp3"
       if Rightisempty:
        if (_return=="right"):
-
         $ objxanchor = objxanchor+blockSize
         $ playerpos = [playerxpos+1,playerypos]
+      else:
+        if _return=="right":
+          play sound "sfx/bumpintowall_X5CNQPB.mp3"
       pause 0.02
       $ anim_done = True
       #call wildenemy
