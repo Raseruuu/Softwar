@@ -38,6 +38,7 @@ init -1 python:
     globals()["John_e"] = "normal"
     globals()["John_m"] = "happy"
 
+
     globals()["Lisa_e"] = "normal"
     globals()["Lisa_m"] = "happy"
     globals()["Lisa_w"] = True
@@ -49,7 +50,9 @@ init -1 python:
     globals()["Ave_m"] = "frown"
     globals()["Ave_w"] = True
 
-
+    globals()["CodeRed_e"] = "normal"
+    globals()["CodeRed_m"] = "frown"
+    globals()["CodeRed_w"] = True
 
 
 

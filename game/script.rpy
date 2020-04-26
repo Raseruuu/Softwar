@@ -310,8 +310,8 @@ label test:
         for sprite in spritelist:
             boxsheet[sprite.position[1]][sprite.position[0]]=sprite.dialogue
     scene blue with dissolve
-    $where="Home"
-    call mapcall([4,6],Connecht_square)
+    # $where="Home"
+    # call mapcall([4,6],Connecht_square)
     hide screen mapB
     hide screen mapA
     if playerHP<=0:
@@ -342,7 +342,7 @@ label test:
     # hide Ave
 label demo:
     call initializemapvariables
-    jump test
+    # jump test
     $ okdesktop = False
     scene black
     pause 1.0
