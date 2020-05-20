@@ -464,6 +464,3 @@ init python:
 
         ## Quick buttons.
         gui.quick_button_text_size = 20
-
-
-

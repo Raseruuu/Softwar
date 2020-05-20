@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Fri Mar 27 00:11:49 2020
 Windows-8-6.2.9200
 Ren'Py 7.4.0.84
@@ -22,9 +23,35 @@ Making clean stores took 0.00s
 Initial gc. took 0.29s
 DPI scale factor: 1.000000
 Creating interface object took 0.14s
+=======
+Sat May 16 20:35:43 2020
+Darwin-19.4.0-x86_64-i386-64bit
+Ren'Py 7.3.5.606
+ 
+
+Bootstrap to the start of init.init took 0.09s
+Early init took 0.01s
+Loader init took 0.08s
+Loading error handling took 0.20s
+Loading script took 0.38s
+Loading save slot metadata. took 0.14s
+Loading persistent took 0.01s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.15s
+Loading analysis data took 1.80s
+Analyze and compile ATL took 0.07s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.19s
+DPI scale factor: 1.000000
+Creating interface object took 0.25s
+>>>>>>> 50e442b53f6a29b11cb282fa97c2c048f03a0181
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.01s
+<<<<<<< HEAD
 Load screen analysis took 0.01s
 Analyze screens took 0.03s
 Save screen analysis took 0.19s
@@ -40,15 +67,35 @@ Traceback (most recent call last):
     __import__(mod)
 ImportError: No module named gldraw
 Unknown renderer: angle
+=======
+Load screen analysis took 0.65s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.23s
+>>>>>>> 50e442b53f6a29b11cb282fa97c2c048f03a0181
 
 primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
+<<<<<<< HEAD
 Fullscreen mode.
 Screen sizes: virtual=(1280, 720) physical=(1366, 768) drawable=(1366, 768)
 Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics 605'
 Version: '4.5.0 - Build 25.20.100.6446'
 Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 60, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680L, 65280L, 255L, 0L), 'current_h': 768, 'current_w': 1366, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
+=======
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(976, 549) drawable=(1952, 1098)
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GT 650M OpenGL Engine'
+Version: '2.1 NVIDIA-14.0.32 355.11.11.10.10.143'
+Display Info: None
+>>>>>>> 50e442b53f6a29b11cb282fa97c2c048f03a0181
 Extensions:
     GL_3DFX_texture_compression_FXT1
     GL_AMD_depth_clamp_separate
@@ -291,6 +338,7 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
+<<<<<<< HEAD
 Total time until interface ready: 7.93600010872s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
@@ -299,3 +347,13 @@ Total time until interface ready: 7.93600010872s
 - Frame drawn at 0.118667 seconds.
 - Frame drawn at 0.302667 seconds.
 - 0.302667 seconds to render 5 frames.
+=======
+Total time until interface ready: 4.82178711891s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.018353 seconds.
+- Frame drawn at 0.029292 seconds.
+- Frame drawn at 0.054790 seconds.
+- Frame drawn at 0.061373 seconds.
+- 0.061373 seconds to render 5 frames.
+>>>>>>> 50e442b53f6a29b11cb282fa97c2c048f03a0181

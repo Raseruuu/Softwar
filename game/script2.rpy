@@ -5,12 +5,13 @@ label script2:
     # There are a few Mini FAIS hanging around, representing computer systems inside his own device.
     # Explanation of Mini FAI
 
-    "Approaching outside,"
+    "Approaching outside, ILY approaches an avatar standing "
 
-    j"ILY, when you talk to entity in there, they won't actually hear me right?"
+    j"ILY, when you talk to an entity in there, they won't actually hear me right?"
     i"Yeah, they won't."
     j"That's a relief."
     i"I can also whisper to you when I'm in front of them, and they won't know."
+    j"Sounds good."
 
 
     #
@@ -95,6 +96,8 @@ label script2:
     l"I'm going to your place today."
     l"We have to install her as soon as possible!"
     #nvl hide
+
+
     "So it's true. What luck! So we do have a chance at saving our company from that Virus."
     "Vira Internet Solutions... Of course! Their brand is quite popular for their age."
     "A company of that caliber would know about something as secret as FAI Viruses. I didn't know they were working on AI as well!"
@@ -117,6 +120,13 @@ label script2:
     "???""Hello? anybody home?"
     "Eh?"
     "I take hold of the knob and open the door quite hastily."
+    j"Oh, it's you.."
+
+    h"Yeah, your pal, Hilbert!"
+    j"How'd you know where I live?"
+    h""
+
+
     return
 
 

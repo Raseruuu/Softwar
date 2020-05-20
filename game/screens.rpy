@@ -16,7 +16,7 @@ style default:
     properties gui.text_properties()
     language gui.language
 
-    
+
 style text_nooutline:
     outlines [(0, "#000", 0, 0)]
 
@@ -150,11 +150,11 @@ screen say(who, what):
 
 
 image ctc:
-    xanchor 0.5 xalign 0.80 
+    xanchor 0.5 xalign 0.80
     yalign 0.98
     alpha 1.0
     subpixel True
-    
+
     "gui/ctc.png"
     block:
         easeout 0.5 alpha 0.8 yoffset 0
@@ -166,7 +166,6 @@ style window is default:
     xalign 0.5
     xfill True
 
-    
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
@@ -176,7 +175,7 @@ style window is default:
     # # xfill True
     # yalign 1.0#gui.textbox_yalign
     # # ysize 1.0#gui.textbox_height
-    
+
     # top_padding 70
     # left_padding 250
     # background "gui/textbox.png"
@@ -190,7 +189,7 @@ style namebox is default:
     ysize gui.namebox_height
 
     padding gui.namebox_borders.padding
-    
+
 style namebox_label is say_label
 
 style say_label is text_nooutline:
@@ -252,7 +251,7 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action  hover_sound "sound/hover.wav" activate_sound "sound/click.wav" 
+            textbutton i.caption action i.action  hover_sound "sound/hover.wav" activate_sound "sound/click.wav"
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -285,14 +284,14 @@ screen quick_menu():
     zorder 100
 
     # # scroll up for history
-    # key "mousedown_4" action ShowMenu("history") 
+    # key "mousedown_4" action ShowMenu("history")
     # key "K_PAGEUP" action ShowMenu("history")
     # key "repeat_K_PAGEUP" action ShowMenu("history")
     # key "K_AC_BACK" action ShowMenu("history")
 
 
     if quick_menu:
-          
+
         image "images/computer/top_menu_ground.png" xalign 0.0 yalign 0.0
         hbox:
             style_prefix "quick"
@@ -320,7 +319,7 @@ default quick_menu = True
 
 style quick_button is default:
     properties gui.button_properties("quick_button")
-    
+
 style quick_button_text is text_nooutline:
     properties gui.button_text_properties("quick_button")
 
@@ -338,7 +337,7 @@ screen navigation():
     on 'show' action Stop('blipsound')
     window:
         style_prefix "navigation"
-        
+
         vbox:
             xpos gui.navigation_xpos
             yalign 0.5
@@ -360,7 +359,7 @@ screen navigation():
             textbutton _("Load") action ShowMenu("load")
 
             null height gui.button_text_size
-            
+
             textbutton _("Settings") action ShowMenu("preferences")
             textbutton _("About") action ShowMenu("about")
 
@@ -370,9 +369,9 @@ screen navigation():
 
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
-            
+
             null height gui.button_text_size*1.5
-            
+
             textbutton _("Return"):
                 action Return()
 
@@ -389,18 +388,18 @@ style navigation_window is window:
     xalign 0
     xpos 8
     xsize 250
-    
+
     yanchor 0.0
     ypos 100
     ysize None
-    
+
     left_padding -8
     right_padding -8
     top_padding 60
     bottom_padding 20
-    
+
     background Frame("gui/frame.png", 64, 64)
-    
+
 ## Main Menu screen ############################################################
 ##
 ## Used to display the main menu when Ren'Py starts.
@@ -419,21 +418,21 @@ screen EnvLoad:
 screen EnvOpt:
     add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.75 xanchor 0.5 yanchor 0.5 at envanim
 screen EnvQuit:
-    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.80 xanchor 0.5 yanchor 0.5 at envanim    
+    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.80 xanchor 0.5 yanchor 0.5 at envanim
 screen main_menu():
     tag menu
     add "gui/main_menu/background.jpg" xalign 0.0 yalign 0.0
     add "gui/logo.png" xalign 0.5 yalign 0.2
     vbox:
-       
+
         xalign 0.53 yalign 0.785
         textbutton "{color=000}Run( );{/color}" action Start(), Hide("EnvRun") hovered Show("EnvRun") unhovered Hide("EnvRun")
         textbutton "{color=000}Load( );{/color}" action ShowMenu("load"), Hide("EnvLoad") hovered Show("EnvLoad") unhovered Hide("EnvLoad")
         textbutton "{color=000}Options( );{/color}"  action ShowMenu("preferences"), Hide("EnvOpt") hovered Show("EnvOpt") unhovered Hide("EnvOpt")
         textbutton "{color=000}Quit( );{/color}" action Quit(confirm=not main_menu), Hide("EnvQuit") hovered Show("EnvQuit") unhovered Hide("EnvQuit")
-            
-     
-       
+
+
+
 
 
     # ## This ensures that any other menu screen is replaced.
@@ -535,7 +534,7 @@ screen game_menu(title, scroll=None, scroll_y=None):
 
                     vpgrid:
                         cols 1
-                        
+
                         if scroll_y != None:
                             yinitial scroll_y
                         else:
@@ -562,7 +561,7 @@ screen game_menu(title, scroll=None, scroll_y=None):
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
- 
+
 
 
 
@@ -577,12 +576,12 @@ style game_menu_outer_frame is empty:
 style game_menu_navigation_frame is empty:
     xsize 280
     yfill True
-    
+
 
 style game_menu_content_frame is empty:
     left_margin 0
     right_margin 8
-    
+
     left_padding 32
     right_padding 32
     top_padding 52
@@ -663,7 +662,7 @@ style about_label is gui_label
 
 style about_label_text is gui_label_text:
     size gui.label_text_size
-    
+
 style about_text is gui_text
 
 
@@ -786,7 +785,7 @@ style slot_button is gui_button:
 
 style slot_button_text is gui_button_text:
     properties gui.button_text_properties("slot_button")
-    
+
 style slot_time_text is slot_button_text
 style slot_name_text is slot_button_text
 
@@ -987,7 +986,7 @@ init -5 python:
         def __call__(self):
             if self.confirm:
                 layout.yesno_screen("Do you want to rewind to this point?", RollbackConfirm(self.history_entry, confirm=False))
-                
+
             else:
                 checkpoints = renpy.get_identifier_checkpoints(self.history_entry.rollback_identifier)
                 renpy.rollback(force=True, checkpoints=checkpoints)
@@ -1002,7 +1001,7 @@ screen history():
 
     ## Avoid predicting this screen, as it can be very large.
     predict False
-    
+
     ## @TODO: Problem with crolling if you use the arrow keys
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), scroll_y=1.0):
@@ -1013,14 +1012,14 @@ screen history():
                 ysize None
                 action RollbackConfirm(h)
                 hover_background "#ddd"
-                    
-                
+
+
                 window:
                     ## This lays things out properly if history_height is None.
                     has fixed:
                         yfit True
 
-                    
+
                     if h.who:
 
                         label h.who:
@@ -1066,7 +1065,7 @@ style history_label is gui_label:
 
 style history_label_text is gui_label_text:
     xalign 0.5
-    
+
 ## Disable the hover and click sounds
 style history_button is empty
 style history_button_text is empty
