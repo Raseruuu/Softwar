@@ -26,7 +26,7 @@ label script2:
     ##Arrived at a checkpoint: meet Melissa
 
     i"John, Here's the new friend I told you about!"
-    "A fellow humanoid."
+    "A fellow humanoid avatar."
     "So far, there have been a few humanoids passing by, just like ILY. I wonder what's so special about this one?"
     j"Is she a FAI?"
     i"She is."
@@ -73,7 +73,7 @@ label script2:
     # Melissa returns
     m"It's a dead end here.."
     m"It's Bitwulf. An Antivirus. They've made it their job to look for Viruses and fight them in Softwars."
-    j"Antiviruses?"
+
 
 
     #After this, John decides to review the day in his head and go to sleep.
@@ -122,9 +122,13 @@ label script2:
     "I take hold of the knob and open the door quite hastily."
     j"Oh, it's you.."
 
-    h"Yeah, your pal, Hilbert!"
-    j"How'd you know where I live?"
-    h""
+    h"Your pal, Hilbert!"
+    h"If you were wondering just how I was able to find your house, well..."
+    h"It was my sheer hacking ability."
+    j"You snuck into my internship registration papers at SDS."
+    h"... I did."
+    j""
+
 
 
     return
