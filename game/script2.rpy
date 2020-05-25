@@ -5,7 +5,7 @@ label script2:
     # There are a few Mini FAIS hanging around, representing computer systems inside his own device.
     # Explanation of Mini FAI
 
-    "Approaching outside, ILY approaches an avatar standing "
+    "Approaching outside, ILY approaches an avatar standing by a corner."
 
     j"ILY, when you talk to an entity in there, they won't actually hear me right?"
     i"Yeah, they won't."
@@ -120,30 +120,40 @@ label script2:
     "???""Hello? anybody home?"
     "Eh?"
     "I take hold of the knob and open the door quite hastily."
-    j"Oh, it's you.."
-
+    j"It's just Hilbert."
     h"Your pal, Hilbert!"
-    h"If you were wondering just how I was able to find your house, well..."
-    h"It was my sheer hacking ability."
+    h"I knew it! This is where you live!"
+    "Hilbert suddenly appears as I open the door. "
+    j"How'd you know?"
+    h"Well of course! I'm a hacker!"
+    "Hhmmmmm.. I don't think so."
     j"You snuck into my internship registration papers at SDS."
-    h"... I did."
-    j"So what... brings you here?"
+    h"N-no!!"
+    "Right, it's his dad's company that I got Internship into, after all."
+    j"You can't fool me!"
+    h"Ehh!!"
+    j"Why are you even here now?"
+    "Lisa was supposed to come today, I don't have time to-"
     h"Straight to the questions already?"
     h"Aren't you gonna let me in first?"
+    #John: "not enjoying this" face
     j"..."
     i"Who is it, John?"
+    "Crap! Hilbert shouldn't see ILY! I should close the computer! He'd be so confused!"
     "Hilbert insists to get in, as I hold him out by the the door with a small opening gap."
-    j"You stay here."
-    h"Is someone in there? You told me you lived alone."
+    j"You stay right there."
+    h"Is someone in there? I thought you lived alone."
     j"Nobody."
     "I shut the door before he can get to react."
-    "I almost forgot I haven't talked to him about ILY!"
+    #Moving next to computer
     j"ILY, can you umm... be quiet for a sec?"
     i"I refuse."
     j"What?"
     h"Hey John?"
     h"Nice place you got here."
-    j"You! How?"
+    j"HEY! Aren't you trespassing?"
+    h"Come on, we're friends!"
+    j"How?"
     h"You left the door unlocked so I came in."
     "I really did?"
     "..."
@@ -176,21 +186,25 @@ label script2:
     j"No, that isn't my AI."
     h"You didn't develop this?"
     j"No. I stopped working on my AI some time ago."
+
+
     "Can you move away? I haven't welcomed you in here yet."
     "Nah, I can't even say that out loud."
     h"Hey, chill man."
     "It must really show in my face how distressed I am right now."
-    "I take a seat down and rest my head on my right hand."
+    "I take a seat down and rest my chin on my right hand."
     j"Sit here."
     h"... Okay."
+    h"John. it's been crazy lately, hasn't it?"
+    h"The virus attack on SDS.."
 
 
 
 
-    h"I need help."
-    "Oh, so that's it."
-    h"It's SDS."
-    j"The virus attacks?"
+
+
+
+
 
 
 
