@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 170: style property yalign appears twice.
-    yalign gui.textbox_yalign
-          ^
+File "game/battlefxn.rpy", line 311: expected statement.
+    EnmySts.pop("Email")
+                        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Apr  6 14:55:55 2020
+Wed Jun 10 20:28:33 2020

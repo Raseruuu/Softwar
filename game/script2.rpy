@@ -180,8 +180,9 @@ label script2:
     "Hilbert moves closer to my computer."
 
     #Transition to ILY screen
-    h"Hello there, I'm Hilbert, one of John's friends!"
+    h"Hello there, I'm Hilbert, John's best friend!"
     i"Confirmed. You are indeed Hilbert, from John's contacts."
+    j"I don't know about \"Best friend\"."
     h"Hey! She recognized my face!"
     j"Yeah, she's pretty high tech."
     h"You've been hiding a program this advanced?"

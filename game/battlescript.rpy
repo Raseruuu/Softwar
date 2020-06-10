@@ -16,6 +16,7 @@ image fxnREC = "images/cards/fxn-Recover.png"
 image Frzsts = "images/battle/Frozen.png"
 image Brksts = "images/battle/Broken.png"
 image Brnsts = "images/battle/Burned.png"
+image Emailsts = "images/battle/Emailed.png"
 image BoostATKsts = "images/battle/BoostATK.png"
 image BoostDEFsts = "images/battle/BoostDEF.png"
 
@@ -41,7 +42,7 @@ image Blueframe:
         "images/computer/m2.png"
         pause .05
         repeat
-        
+
 image playerdmgpoint:
     Text("{size=80}[damagetoplayer]{/size}")
     choice:
@@ -333,7 +334,7 @@ image dmgpointb:
 #         (169,260),Text("{color=#FFF}{font=font/adventpro-bold.ttf}{size=16}RANK {/color}{color=#FFFF00}[Enmycard4.rank]{/color}{/font}{/size}")
 #                 # (160,272),Text("{color=#FFF}{font=font/adventpro-bold.ttf}{size=16}16-BIT{/color}{/font}{/size}")
 #     )
-    
+
 
 # image Enmycard2 = "images/Cards/[Enmycard2name].png"
 image battlebg = Solid("#1a1a1a")
@@ -346,18 +347,18 @@ image cardflasher:
         (0,0),"images/Cards/Cardblank.png",
         (11,12),"images/Cards/[currentcard.NAME].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[currentcard.NAME]{/color}{/font}{/size}"),
-        
+
         (17,240),
             ConditionSwitch(
                 "currentcardFXN[0].name!='N'",
-                    (Text("{size=14}[currentcardFXN[0].name];{/size}")),
+                    (Text("{size=12}[currentcardFXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
         (17,258),
             ConditionSwitch(
                 "currentcardFXN[1].name!='N'",
-                    (Text("{size=14}[currentcardFXN[1].name];{/size}")),
+                    (Text("{size=12}[currentcardFXN[1].name]{/size}")),
                 "True",
 
 
@@ -375,18 +376,18 @@ image card1:
         (0,0),"images/Cards/Cardblank.png",
         (11,12),"images/Cards/[playercard1name].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[playercard1name]{/color}{/font}{/size}"),
-        
-        (17,240),
+
+        (13,240),
             ConditionSwitch(
                 "playercard1FXN[0].name!='N'",
-                    (Text("{size=14}[playercard1FXN[0].name];{/size}")),
+                    (Text("{size=12}[playercard1FXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
-        (17,258),
+        (13,252),
             ConditionSwitch(
                 "playercard1FXN[1].name!='N'",
-                    (Text("{size=14}[playercard1FXN[1].name];{/size}")),
+                    (Text("{size=12}[playercard1FXN[1].name]{/size}")),
                 "True",
                     Null()
                     ),
@@ -401,18 +402,18 @@ image card2:
         (0,0),"images/Cards/Cardblank.png",
         (11,12),"images/Cards/[playercard2name].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[playercard2name]{/color}{/font}{/size}"),
-        
-        (17,240),
+
+        (13,240),
             ConditionSwitch(
                 "playercard2FXN[0].name!='N'",
-                    (Text("{size=14}[playercard2FXN[0].name];{/size}")),
+                    (Text("{size=12}[playercard2FXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
-        (17,258),
+        (13,252),
             ConditionSwitch(
                 "playercard2FXN[1].name!='N'",
-                    (Text("{size=14}[playercard2FXN[1].name];{/size}")),
+                    (Text("{size=12}[playercard2FXN[1].name]{/size}")),
                 "True",
                     Null()
                     ),
@@ -427,18 +428,18 @@ image card3:
         (0,0),"images/Cards/Cardblank.png",
         (11,12),"images/Cards/[playercard3name].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[playercard3name]{/color}{/font}{/size}"),
-        
-        (17,240),
+
+        (13,240),
             ConditionSwitch(
                 "playercard3FXN[0].name!='N'",
-                    (Text("{size=14}[playercard3FXN[0].name];{/size}")),
+                    (Text("{size=12}[playercard3FXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
-        (17,258),
+        (13,252),
             ConditionSwitch(
                 "playercard3FXN[1].name!='N'",
-                    (Text("{size=14}[playercard3FXN[1].name];{/size}")),
+                    (Text("{size=12}[playercard3FXN[1].name]{/size}")),
                 "True",
                     Null()
                     ),
@@ -453,18 +454,18 @@ image card4:
         (0,0),"images/Cards/Cardblank.png",
         (11,12),"images/Cards/[playercard4name].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[playercard4name]{/color}{/font}{/size}"),
-        
-        (17,240),
+
+        (13,240),
             ConditionSwitch(
                 "playercard4FXN[0].name!='N'",
-                    (Text("{size=14}[playercard4FXN[0].name];{/size}")),
+                    (Text("{size=12}[playercard4FXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
-        (17,258),
+        (13,252),
             ConditionSwitch(
                 "playercard4FXN[1].name!='N'",
-                    (Text("{size=14}[playercard4FXN[1].name];{/size}")),
+                    (Text("{size=12}[playercard4FXN[1].name]{/size}")),
                 "True",
                     Null()
                     ),
@@ -479,18 +480,18 @@ image card5:
         (0,0),"images/Cards/Cardblank.png",
         (11,12 ),"images/Cards/[playercard5name].png",
         (11,214),Text("{color=#FFFF00}{font=font/adventpro-bold.ttf}{size=20}[playercard5name]{/color}{/font}{/size}"),
-        
-        (17,240),
+
+        (13,240),
             ConditionSwitch(
                 "playercard5FXN[0].name!='N'",
-                    (Text("{size=14}[playercard5FXN[0].name];{/size}")),
+                    (Text("{size=12}[playercard5FXN[0].name]{/size}")),
                 "True",
                     Null()
                     ),
-        (17,258),
+        (13,252),
             ConditionSwitch(
                 "playercard5FXN[1].name!='N'",
-                    (Text("{size=14}[playercard5FXN[1].name];{/size}")),
+                    (Text("{size=12}[playercard5FXN[1].name]{/size}")),
                 "True",
                     Null()
                     ),
@@ -509,7 +510,7 @@ image card5:
 #         (57,268),Text("{color=#ae81f2}{font=font/adventpro-bold.ttf}{size=20}[card2c.POW]{/color}{/font}{/size}"),
 #         (132,268),Text("{color=#ae81f2}{font=font/adventpro-bold.ttf}{size=20}[card2c.SPD]{/color}{/font}{/size}"),
 #         (169,260),Text("{color=#FFF}{font=font/adventpro-bold.ttf}{size=12}RANK {/color}{color=#FFFF00}[card2c.rank]{/color}{/font}{/size}")
-        
+
 #         )
 #     # zoom 0.5
 # image card3:
@@ -546,34 +547,34 @@ image Trojan:
     "images/battle/Enemies/Trojan Horse.png"
     linear 1.0 yoffset 10
     linear 1.0 yoffset -10
-    repeat    
+    repeat
 image cardflip1:
     "images/cards/cardback.png"
     xzoom 1.0
     linear 0.2 xzoom 0.0
     "card1"
-    xzoom 0.0 
+    xzoom 0.0
     linear 0.2 xzoom 1.0
 image cardflip2:
     "images/cards/cardback.png"
     xzoom 1.0
     linear 0.2 xzoom 0.0
     "card2"
-    xzoom 0.0 
+    xzoom 0.0
     linear 0.2 xzoom 1.0
 image cardflip3:
     "images/cards/cardback.png"
     xzoom 1.0
     linear 0.2 xzoom 0.0
     "card3"
-    xzoom 0.0 
+    xzoom 0.0
     linear 0.2 xzoom 1.0
 image cardflip4:
     "images/cards/cardback.png"
     xzoom 1.0
     linear 0.2 xzoom 0.0
     "card4"
-    xzoom 0.0 
+    xzoom 0.0
     linear 0.2 xzoom 1.0
 
 transform poscarddeck:
@@ -586,23 +587,23 @@ transform card1pos:
     xalign 0.30
     yalign 0.95
 
-    
+
 transform card2pos:
     xalign 0.43
     yalign 0.95
-    
+
 transform card3pos:
     xalign 0.57
     yalign 0.95
-    
+
 transform card4pos:
     xalign 0.70
     yalign 0.95
-    
+
 transform choosecardsize:
     zoom 0.4
 
-    
+
 
 
 # label drawcards:
@@ -625,7 +626,7 @@ transform choosecardsize:
 #         $ Drawnumber = 3
 #     elif PlayerRank == 'D':
 #         $ Drawnumber = 4
-        
+
 #     if mydeck == 0:
 #         "NO Battleware in Deck!"
 #         "GAME OVER."
@@ -637,7 +638,7 @@ transform choosecardsize:
 #         hide screen stats
 #         hide screen choosecard
 #         stop music
-            
+
 #           # jump cardcycle
 #         return
 #     if len(mydeck)>0 and Drawnumber >=1:
@@ -659,7 +660,7 @@ transform choosecardsize:
 #         $ decknum = len(mydeck)
 #     #draw 3rd card
 #     if len(mydeck)>0  and Drawnumber >=3:
-        
+
 #         $ myhand.append(mydeck[0])
 #         $ card3c = mydeck[0]
 #         $ card3name = mydeck[0].name
@@ -721,16 +722,16 @@ transform choosecardsize:
 #             pause .05
 #             xoffset 0.13 yoffset 0.2 alpha 1.0
 #             pause 0.1
-#             xoffset 0.-19 yoffset 0.11 
+#             xoffset 0.-19 yoffset 0.11
 #             pause 0.4
-#             linear 0.1 zoom 0.8 alpha 0.0 
+#             linear 0.1 zoom 0.8 alpha 0.0
 #         $ renpy.pause(0.4,hard=True)
 #         $Battle_End = True
 #         hide Enemy
 #         hide screen stats
 #         hide screen choosecard
-#         stop music        
-        
+#         stop music
+
 #           # jump cardcycle
 
 #     return
@@ -744,14 +745,14 @@ label Enemydisappear:
         pause .05
         xoffset 0.13 yoffset 0.2 alpha 1.0
         pause 0.1
-        xoffset 0.-19 yoffset 0.11 
+        xoffset 0.-19 yoffset 0.11
         pause 0.4
-        linear 0.1 zoom 0.8 alpha 0.0 
+        linear 0.1 zoom 0.8 alpha 0.0
     return
 
 label TurnEnd:
-    
-    
+
+
     ##RETURN CARDS FROM HAND TO DECK
     # if selectedcard=="card1":
     if len(myhand) >=1:
@@ -782,10 +783,10 @@ init -2 python:
         barsize = int(barwidth*float(value)/float(maxvalue))
         if value > maxvalue:
             barsize=int(barwidth*float(maxvalue)/float(maxvalue))
-        return barsize 
+        return barsize
 screen stats:
     style_prefix "battlestats"
-    frame: 
+    frame:
         xpos 0.95 ypos 0.05 xanchor 1.0 yanchor 0.0
         xsize 240
         vbox:
@@ -797,7 +798,7 @@ screen stats:
                 vbox:
                     text "HP: [EnmyHP]/[EnmyHPmax]"
                     null height 10
-                    frame: 
+                    frame:
                         style_prefix "healthbar"
                         xsize bar_size(EnmyHP,EnmyHPmax,100)
                         ysize 8
@@ -810,7 +811,7 @@ screen stats:
                             for fillers in range(0,21-len(EnmySts)):
                                     null width 13
 
-    frame: 
+    frame:
         xpos 0.05 ypos 0.05 xanchor 0.0 yanchor 0.0
         xsize 320
         vbox:
@@ -823,9 +824,9 @@ screen stats:
                 vbox:
                     text "HP: [PlayerHP]/[PlayerHPmax]"
                     null height 10
-                    frame: 
+                    frame:
                         style_prefix "healthbar"
-                     
+
                         xsize bar_size(PlayerHP,PlayerHPmax, 100)
                         ysize 8
                     hbox:
@@ -833,7 +834,7 @@ screen stats:
                         grid 7 3:
                             for fxns in PlayerSts:
                                 image "images/battle/[fxns].png" at fxnicon
-                            for fillerz in range(0,21-len(PlayerSts)): 
+                            for fillerz in range(0,21-len(PlayerSts)):
                                 null width 13
 transform fxnicon:
     zoom 0.07
@@ -854,7 +855,7 @@ style battlestats_frame is gui_frame:
     left_padding 16
     bottom_padding 16
     top_padding 8
-    
+
 style battlestats_text is text_nooutline:
     color '#000'
 
@@ -879,14 +880,14 @@ style fxn_text is text_nooutline:
 style healthbar_frame is gui_frame:
     background Frame("images/battle/bar.png", 4, 4, tile=gui.frame_tile)
     ysize 35
-    
+
     right_padding 0
     left_padding 0
     bottom_padding 0
     top_padding 0
 
 image curve:
-    "images/battle/curve1.png"    
+    "images/battle/curve1.png"
     pause .15
     "images/battle/curve2.png"
     pause .15
@@ -898,33 +899,33 @@ image curve:
 screen decknum:
     text "{color=#FFF}Deck: [decknum]{/color}" xpos 1162 xalign 0.5 ypos 400 yanchor 1.0
 
-screen choosecard:
-    #CLIMAX GAUGE
-
-    if len(myhand) >=1:
-        imagebutton idle "card1" action Hide("card1"), Return("card1") hovered Show("card1"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[0].fxn) unhovered Hide("card1") at card1pos,choosecardsize 
-    if len(myhand) >=2:
-        imagebutton idle "card2" action Hide("card2"), Return("card2") hovered Show("card2"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[1].fxn) unhovered Hide("card2") at card2pos,choosecardsize
-    if len(myhand) >=3:
-        imagebutton idle "card3" action Hide("card3"), Return("card3") hovered Show("card3"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[2].fxn) unhovered Hide("card3") at card3pos,choosecardsize
-    if len(myhand) >=4:
-        imagebutton idle "card4" action Hide("card4"), Return("card4") hovered Show("card4"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[3].fxn) unhovered Hide("card4") at card4pos,choosecardsize
-    frame:
-        style_prefix "battlestats"
-        xalign 0.03 yalign 0.9
-        vbox:
-            text "Function"
-            null height 10
-            frame:
-                style_prefix "fxn"
-                vbox:
-                    
-                    text "[fxnpreview]():"
-                    hbox:
-                        null width 16
-                        image "fxndescription"
-            
-                        
+# screen choosecard:
+#     #CLIMAX GAUGE
+#
+#     if len(myhand) >=1:
+#         imagebutton idle "card1" action Hide("card1"), Return("card1") hovered Show("card1"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[0].fxn) unhovered Hide("card1") at card1pos,choosecardsize
+#     if len(myhand) >=2:
+#         imagebutton idle "card2" action Hide("card2"), Return("card2") hovered Show("card2"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[1].fxn) unhovered Hide("card2") at card2pos,choosecardsize
+#     if len(myhand) >=3:
+#         imagebutton idle "card3" action Hide("card3"), Return("card3") hovered Show("card3"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[2].fxn) unhovered Hide("card3") at card3pos,choosecardsize
+#     if len(myhand) >=4:
+#         imagebutton idle "card4" action Hide("card4"), Return("card4") hovered Show("card4"),Play("sound","sfx/select.wav"), SetVariable("fxnpreview",myhand[3].fxn) unhovered Hide("card4") at card4pos,choosecardsize
+#     frame:
+#         style_prefix "battlestats"
+#         xalign 0.03 yalign 0.9
+#         vbox:
+#             text "Function"
+#             null height 10
+#             frame:
+#                 style_prefix "fxn"
+#                 vbox:
+#
+#                     text "[fxnpreview]():"
+#                     hbox:
+#                         null width 16
+#                         image "fxndescription"
+#
+#
 image fxndescription:
     ConditionSwitch(
         "'Freeze' in fxnpreview",Text("Add Freeze to Attack (x1)."),
@@ -938,7 +939,7 @@ image fxndescription:
         "'Saber_Up' in fxnpreview",Text("Increase Self \"Saber\" named Battleware POW for 3 turns. Effect fades each turn."),
         "'Damage' in fxnpreview",Text("Decrease Target HP.")
         )
-    
+
     # frame:
     #     hbox:
     #         xalign 0.5 yalign 0.9
@@ -966,6 +967,6 @@ transform cardtrans2:
 #     #     zoom 0.6
 #     #     linear 0.05 zoom 1.0
 #     on hide:
-#         linear 0.2 zoom 1.2 alpha 0.0 
+#         linear 0.2 zoom 1.2 alpha 0.0
 
-# # 
+# #

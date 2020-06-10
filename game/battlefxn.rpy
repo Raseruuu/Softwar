@@ -12,10 +12,10 @@ init python:
 image bit:
     "gui/Bit.png"
     zoom 4.0
+label RemoveEmailDamageenemy:
+    $EnmySts.remove("email")
 label Damageenemy:
-
   $ Magnitude = (currentcardMAG)
-
   $ damagetoenemy=int(playerATK_m*Magnitude)
   if currentcardTYPE == "Sword":
     play sound "sfx/slash.wav"
@@ -248,6 +248,17 @@ label Burnself:
     $ renpy.pause(0.6,hard=True)
     hide Brnsts
     return
+label Emailenemy:
+    play sound "sfx/sfx_coin_cluster6.wav"
+    # $ EnmySts.append("burn")
+    $ EnmySts=statusAppend(EnmySts,"email")
+    show Emailsts:
+      zoom 1.3 xalign 0.5 yanchor 1.0 ypos 0.45 alpha 1.0
+      linear 0.1 zoom 0.98
+      linear 0.2 zoom 1.0 alpha 0.0
+    $ renpy.pause(0.6,hard=True)
+    hide Emailsts
+    return
 label BoostATK:
 
     play sound "sfx/sfx_sounds_powerup16.wav"
@@ -261,7 +272,20 @@ label BoostATK:
       linear 0.2 zoom 1.0 alpha 0.0
     $ renpy.pause(0.6,hard=True)
     hide BoostATKsts
+    return
+label BoostDEF:
 
+    play sound "sfx/sfx_sounds_powerup16.wav"
+    $ Magnitude=currentcardMAG
+    # $ PlayerSts.append("BoostATK")
+    $ PlayerSts=statusAppend(PlayerSts,"BoostDEF")
+    call updatestats_player
+    show BoostDEFsts onlayer overlay:
+      zoom 1.3 xpos 0.15 xanchor 0.5 yanchor 1.0 ypos 0.45 alpha 1.0
+      linear 0.1 zoom 0.98
+      linear 0.2 zoom 1.0 alpha 0.0
+    $ renpy.pause(0.6,hard=True)
+    hide BoostDEFsts
     return
 label BoostMAGenemy:
     play sound "sfx/sfx_sounds_powerup16.wav"
@@ -277,6 +301,16 @@ label BoostMAGenemy:
     hide BoostMAGsts
     return
 
+label ForEachEmail:
+    $loopingcard=True
+    $fxnindex+=1
+    $ runfxnstring = currentcardFXN[fxnindex].name
+    label EmailLoop:
+        if "email" in EnmySts:
+            call functioneffects(runfxnstring)
+
+            jump EmailLoop
+    return
 
 label BoostATKenemy:
     play sound "sfx/sfx_sounds_powerup16.wav"
@@ -344,7 +378,7 @@ image shieldlight = "images/battle/Shield_light.png"
 label Shieldplayer:
     play sound "sfx/healx.ogg"
     $ Magnitude = (currentcardMAG)
-    $ shieldtoplayer=int(playerDEF*Magnitude)
+    $ shieldtoplayer=int(playerDEF_m*Magnitude)
     python:
         playerSP+=shieldtoplayer
         # if playerSP>=playerSPMax:
@@ -519,6 +553,7 @@ label Execution:
         call screen cardflashscreen
         ##
         $fxnindex=0
+        $loopingcard=False
         label runfunctions:
             $ runfxnstring = currentcardFXN[fxnindex].name
             label hitloop:
@@ -526,6 +561,7 @@ label Execution:
             $fxnindex+=1
             if fxnindex==1:
                 jump runfunctions
+
         hide cardflash
         hide ring
         $runnumber+=1
@@ -718,6 +754,8 @@ label enemyattack:
 label functioneffects(runfxnstring):
     if runfxnstring=="Damage(MAG)":
         call Damageenemy
+    elif runfxnstring=="  RemoveEmail()\n  Damage(MAG)":
+        call RemoveEmailDamageenemy
     elif runfxnstring=="DamageSP(MAG)":
         call DamageSPenemy
     elif runfxnstring=="DamageSPself(MAG)":
@@ -728,8 +766,12 @@ label functioneffects(runfxnstring):
         call Recoverplayer
     elif runfxnstring=="Burn()":
         call Burnenemy
+    elif runfxnstring=="Email()":
+        call Emailenemy
     elif runfxnstring=="Burnself()":
         call Burnself
+    elif runfxnstring=="while E has Email:":
+        call ForEachEmail
     elif runfxnstring=="BoostATK()":
         call BoostATK
     elif runfxnstring=="BoostDEF()":

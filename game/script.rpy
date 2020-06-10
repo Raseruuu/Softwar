@@ -195,7 +195,7 @@ transform bounce:
 ## Flashback
 ##  Kids Lisa Talks with John: Refer to each respectively: Girl, and Boy.
     # Year 2000, before ILOVEYOU Virus spread
-    # Girl and Boy are 6 years old
+    # Girl and Boy are 7 years old
     # Boy asks girl about her parents' jobs
     # Girl mentions her father's programming career.
     # Girl explains programming
@@ -320,7 +320,7 @@ label test:
         zoom 1.1
     # call var_init
     # call iptest\
-
+    show screen Card
     show Vira with dissolve:
         xanchor 0.5 xpos 0.85
     v"Lorem Ipsum dolor sit amet consectetur adipiscing elit."

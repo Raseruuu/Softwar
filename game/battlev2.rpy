@@ -68,15 +68,17 @@ init python:
     Freeze = Fxn("Freeze()","Negate 1 execution")
     # Break = Fxn("Break","Break 1 execution")
     Breach = Fxn("Breach()","Inflict SP-Ignoring Damage.")
-
-    Burn = Fxn("Burn()","Apply Burn status to opponent.")
-    Damage = Fxn("Damage(MAG)","Inflict Damage.")
+    ForEachEmail=Fxn("while E has Email:","repeat next Function")
+    Email=Fxn("Email()","Append Email token to opponent.")
+    Burn = Fxn("Burn()","Append Burn token to opponent.")
+    Damage = Fxn("Damage(MAG)","Inflict MAG * ATK Damage.")
+    RemovEmailDamage = Fxn("  RemoveEmail()\n  Damage(MAG)","Remove Email. Inflict MAG * ATK Damage.")
     DamageSP = Fxn("DamageSP(MAG)","Inflict Damage to SP.")
     DamageSPself = Fxn("DamageSPself(MAG)","Inflict Damage to own SP.")
     Recover = Fxn("Recover(MAG)","Increase HP.")
     Shield = Fxn("Shield(MAG)","Increase SP.")
     Reflect = Fxn("Reflect(MAG)","Apply Reflect Status:{Negate incoming Damage; BoostATK;}")
-    Burn_Self = Fxn("Burnself()","Apply Burn status to self.")
+    Burn_Self = Fxn("Burnself()","Append Burn status to self.")
     BoostATK = Fxn("BoostATK()","Increase ATK")
     BoostDEF = Fxn("BoostDEF()","Increase DEF")
     AntiAntiDamage = Fxn("AntiAntiDamage()","Remove all AntiDamage from your opponent")
@@ -113,8 +115,8 @@ init python:
 
 #ILY's cards
 
-    SpamAtk=      Card("SpamAtk",         "Mail",    0.25,    [Damage,Empty],           1)
-    MailSaber=    Card("MailSaber",       "Sword",    1.0,    [Damage,Empty],           4)
+    SpamAtk=      Card("SpamAtk",         "Mail",    0.25,    [Damage,Email],           1)
+    MailSaber=    Card("MailSaber",       "Sword",    0.40,    [ForEachEmail,RemovEmailDamage],   4)
     HeartBurn=    Card("HeartBurn",       "PowerUp",   0.2,    [BoostATK,Burn_Self],    2)
     ChocolateBar= Card("ChocolateBar",    "Chocolate",0.25,   [Recover,Empty],         2)
 
@@ -167,13 +169,17 @@ init python:
     # MegaBomb=    ("MegaBomb",    700,    70)
     # GigaBomb=    ("GigaBomb",    1500,   60)
     #ILY's Deck at the beginning of the game.
-    #20 Cards Per deck
+    #24 Cards Per deck
     deckdefault = [
         VirusFlame,VirusFlame,
+        VirusFlame,HeartBurn,
         SpamAtk,DataSaber,
         DataSaber,DataSaber,
         SpamAtk,ChocolateBar,
         ChocolateBar,MailSaber,
+        SpamAtk,MailSaber,
+        ChocolateBar,MailSaber,
+        SpamAtk,DataForce,
         HeartBurn,Shieldbit,
         HeartBurn,BreakSaber,
         XAxess,SpamAtk]
