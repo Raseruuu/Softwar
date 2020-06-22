@@ -9,7 +9,7 @@ init -3 python:
     Heartsprite = SpriteinMap("Heart",[7,5],'down',"Heart")
     CodeRedsprite = SpriteinMap("CodeRed",[7,3],'down',"CodeRed")
     Virasprite = SpriteinMap("Vira",[3,3],'down',"Vira")
-    Melissasprite = SpriteinMap("Vira",[3,3],'down',"Vira")
+    Melissasprite = SpriteinMap("Melissa",[5,3],'down',"Melissa")
 
     spritelist = []
 

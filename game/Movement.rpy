@@ -345,7 +345,7 @@ transform ilymov2:
 label randomencounter:
      $ randomenemy = renpy.random.randint(0,100)
      # $ safezone=(Where=="Home")
-     $safezone=True #for debugging
+     # $safezone=True #for debugging
      if ((randomenemy >99) and (safezone==False)) and not HereisDoor:
        $ enemy_encounter = True
      if enemy_encounter == True:

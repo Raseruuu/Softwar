@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 2002, in script
-    "NEXT SCENE"
-AttributeError: 'StoreModule' object has no attribute '_history'
+  File "game/script2.rpy", line 38, in script
+    m"Hi there, ILY. Welcome back to the GRID."
+Exception: Sayer 'm' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 2002, in script
-    "NEXT SCENE"
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 708, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 1345, in say
-    who(what, *args, **kwargs)
-  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 1150, in __call__
-    self.do_done(who, what)
-  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 830, in do_done
-    self.add_history("adv", who, what, multiple=multiple)
-  File "/Applications/renpy-7.3.5-sdk/renpy/character.py", line 1216, in add_history
-    if not renpy.store._history:  # @UndefinedVariable
-AttributeError: 'StoreModule' object has no attribute '_history'
+  File "game/script2.rpy", line 38, in script
+    m"Hi there, ILY. Welcome back to the GRID."
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 678, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 576, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'm' is not defined.
 
 Darwin-19.5.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 SoftWar - DEMO 1.0
-Thu Jun 11 00:51:49 2020
+Thu Jun 11 12:47:57 2020

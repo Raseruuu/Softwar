@@ -19,7 +19,6 @@ init -2 python:
             # search and get indexes of letter d
             gridmap = destinationstage
             for maprows in gridmap:
-
                 if "d" in maprows:
                     newX=maprows.index("d")
                     founddoor=True
@@ -101,7 +100,7 @@ init -2 python:
     #     "1000000000000001",
     #     "1111111111111111"
     #     ]
-    # stage1 = tokenize(stage)
+    # stageproto = map_token(stage)
     stage0 = [
      #0  0     1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17
         '1111111',
@@ -317,7 +316,7 @@ init -2 python:
         'nnnnnnnnnnnnnnnnnnn',
         'nnnnnnn11111nnnnnnn',
         'nnnnnnn11111nnnnnnn',
-        'nnnnnnn11011nnnnnnn',
+        'nnnnnnn11u11nnnnnnn',
         'nnn100111011nnnn1nn',
         'nnnn01n11011nnnnnnn',
         'nnnnnn111011nnnnnnn',
@@ -950,7 +949,8 @@ init -2 python:
 
     mapspritesdict={
         (192,168):[Heartsprite],
-        (192,164):[Avesprite,CodeRedsprite,Virasprite]
+        # (192,164):[Avesprite,CodeRedsprite,Virasprite]
+        (192,164):[Melissasprite,CodeRedsprite,Virasprite]
 
         }
     mapwheredict={

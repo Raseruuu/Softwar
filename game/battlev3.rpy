@@ -547,12 +547,5 @@ screen card6hover:
 
 
 
-
-
-screen eyesflash:
-    image "" at eyesflashtransform
-
-transform eyesflashtransform:
-    yzoom 0.0
 label ConcatenationExec:
     ""
