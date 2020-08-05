@@ -58,6 +58,7 @@ label checkwalls:
       Hereisempty = (boxsheet[playerypos][playerxpos]=='0')
       Here = boxsheet[playerypos][playerxpos]
       HereisDoor = ((Here=='a') or (Here=='b')) or ((Here=='c') or (Here=='d'))
+      HereisEventDoor = (Here=='e')
 
    python:
       objectabove = boxsheet[playerypos-1][playerxpos]
@@ -90,9 +91,14 @@ label checkwalls:
    if HereisDoor:
       play sound"sfx/door-fr_0009.wav"
       call doorjump
+   if HereisEventDoor:
+      play sound"sfx/door-fr_0009.wav"
+      call eventdoor(chapternum)
    return
 
-
+label eventdoor(labelname):
+    $renpy.Jump("[chapternum]")
+    return
 # label poschange:
 #     ""
 #     return

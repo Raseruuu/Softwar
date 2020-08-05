@@ -66,6 +66,8 @@ label whatactor:
             "[playerName]'s Health Points have been restored."
           "No":
             i"OK."
+      elif actornum == 'Melissa':
+         call script2
       show screen mapB
       call screen mapA
       call Returns
@@ -74,6 +76,9 @@ label whatactor:
       show screen mapB
       call screen mapA
       call Returns
+    return
+label PlatformTalk:
+    "Uguu"
     return
 label MapTalk:
     # if boxsheet == stagehome:

@@ -1,47 +1,47 @@
-Wed Jun 17 23:47:59 2020
+Thu Aug  6 00:01:17 2020
 Darwin-19.5.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.10s
-Early init took 0.01s
-Loader init took 0.06s
-Loading error handling took 0.04s
-Loading script took 0.37s
-Loading save slot metadata. took 0.13s
+Bootstrap to the start of init.init took 0.09s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.05s
+Loading script took 0.67s
+Loading save slot metadata. took 0.11s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.14s
-Loading analysis data took 1.88s
+Loading analysis data took 1.78s
 Analyze and compile ATL took 0.09s
 Index archives took 0.00s
 Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.22s
+Initial gc. took 0.19s
 DPI scale factor: 1.000000
-Creating interface object took 0.22s
+Creating interface object took 0.21s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.01s
-Load screen analysis took 7.24s
+Load screen analysis took 7.29s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.14s
+Prepare screens took 0.13s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.68s
+Save bytecode. took 0.66s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.24s
+Interface start took 0.25s
 
 primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
-Fullscreen mode.
-Screen sizes: virtual=(1280, 720) physical=(1440, 900) drawable=(2880, 1800)
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1042, 586) drawable=(2084, 1172)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GT 650M OpenGL Engine'
 Version: '2.1 NVIDIA-14.0.32 355.11.11.10.10.143'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 60, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 0), 'hw': False, 'masks': (16711680, 65280, 255, 4278190080), 'current_h': 900, 'current_w': 1440, 'shifts': (16, 8, 0, 24), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
+Display Info: None
 Extensions:
     
     GL_APPLE_aux_depth_stencil
@@ -198,11 +198,18 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 12.062404871s
+Total time until interface ready: 12.1909909248s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.018736 seconds.
-- Frame drawn at 0.084093 seconds.
-- Frame drawn at 0.097071 seconds.
-- Frame drawn at 0.112935 seconds.
-- 0.112935 seconds to render 5 frames.
+- Frame drawn at 0.018344 seconds.
+- Frame drawn at 0.033718 seconds.
+- Frame drawn at 0.069660 seconds.
+- Frame drawn at 0.090461 seconds.
+- 0.090461 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.01s

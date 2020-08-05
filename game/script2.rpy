@@ -1,12 +1,6 @@
 
-label script2:
-    #ILY introduction to the Grid
-    #ILY strolls around their own personal cyberspace area:
-    # There are a few Mini FAIS hanging around, representing computer systems inside his own device.
-    # Explanation of Mini FAI
-
-    "Approaching outside, ILY approaches an avatar standing by a corner."
-
+label prescript2:
+    #Call Scene after approaching tile on Connecht, North of Home area
     j"ILY, when you talk to an entity in there, they won't actually hear me right?"
     i"Yeah, they won't."
     j"That's a relief."
@@ -34,7 +28,16 @@ label script2:
     i"I'm actually not sure myself."
     i"(But she does know a lot about the area.)"
     i"Her name's Melissa!"
-    #show Melissa
+
+label script2:
+    #ILY introduction to the Grid
+    #ILY strolls around their own personal cyberspace area:
+    # There are a few Mini FAIS hanging around, representing computer systems inside his own device.
+    # Explanation of Mini FAI
+
+
+    show Melissa:
+        xalign 0.5
     m"Hi there, ILY. Welcome back to the GRID."
     i"Hey Melissa!"
     "I'll have to say.. this FAI is looking quite... fashionable."
@@ -202,18 +205,6 @@ label script2:
     j"Is that what you came here for?"
     h"I need your help John."
     ""
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     return

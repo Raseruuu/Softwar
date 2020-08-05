@@ -51,6 +51,12 @@ init -1 python:
     globals()["Ave_m"] = "frown"
     globals()["Ave_w"] = True
 
+    globals()["Melissa_e"] = "normal"
+    globals()["Melissa_m"] = "happy"
+    globals()["Melissa_w"] = True
+
+
+
     globals()["CodeRed_e"] = "normal"
     globals()["CodeRed_m"] = "frown"
     globals()["CodeRed_w"] = True
@@ -90,6 +96,8 @@ init -1 python:
             elif (name == 'CodeRed'):
                renpy.sound.play("sound/character/low.ogg", channel="blipsound", loop=True)
             elif (name == 'Vira'):
+               renpy.sound.play("sound/character/high.ogg", channel="blipsound", loop=True)
+            elif (name == 'Melissa'):
                renpy.sound.play("sound/character/high.ogg", channel="blipsound", loop=True)
             elif (name == 'Ave'):
                renpy.sound.play("sound/character/sfx-blipfemale.wav", channel="blipsound", loop=True)
@@ -794,12 +802,33 @@ image ModeRedFull:
     pause .05
     repeat
 
+#########
+## Ave
+#########
+image Melissa:
+    "Melissafull"
+    yanchor 0.9 ypos 1.0 zoom 0.9
+    linear 1.0 yoffset 0
+    pause .5
+    linear 1.0 yoffset 5
+    pause .5
+    repeat
 
+image MelissaFull:
+    "images/Characters/Melissa/Melissa.png"
+    zoom 2.2
+image Melissa sidew:
+    LiveCrop((280,100, 300,385), "MelissaFull")
+    zoom 0.56
+image side Melissa_side:
+    ConditionSwitch(
+        "Melissa_w==True","Melissa sidew",
+        "Melissa_w==False",Null(width=100))
 #########
 ## Ave
 #########
 image Ave:
-    "Avefull"
+    "AveFull"
     yanchor 0.9 ypos 1.0 zoom 0.9
     linear 1.0 yoffset 0
     pause .5

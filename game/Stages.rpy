@@ -950,13 +950,15 @@ init -2 python:
     mapspritesdict={
         (192,168):[Heartsprite],
         # (192,164):[Avesprite,CodeRedsprite,Virasprite]
-        (192,164):[Melissasprite,CodeRedsprite,Virasprite]
+        (192,164):[Melissasprite]
 
         }
     mapwheredict={
         (192,168):"Home"
         }
-
+# label eventdoor:
+#     ""
+#     return
 
 
 

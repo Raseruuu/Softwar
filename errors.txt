@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/battlefxn.rpy", line 311: expected statement.
-    EnmySts.pop("Email")
-                        ^
+File "game/characters.rpy", line 100: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 10 20:28:33 2020
+Wed Aug  5 22:18:05 2020

@@ -2,7 +2,7 @@
 #################
 
 # -SOFTWAR TO DO:
-
+# URVANG
 #   Add:
 #       Battleware Functions:
 
@@ -13,7 +13,7 @@
 #
 #           Damage()        Inflict (MAG*ATK) Damage to enemy
 #           Shield()        Gain (MAG*DEF) SP
-
+ 
 #           Boost(type)     Append Boost status to user for [type] cards
 #           Burn()          Append Burn status to enemy
 #           Burnself()      Burn status
