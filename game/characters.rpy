@@ -1,3 +1,13 @@
+style uguu:
+    xpos 0.6
+    xanchor 0.0
+    ypos 0.4
+    yanchor 0.5
+    background Frame("gui/frame.png", 64, 64)
+style uguu2:
+    xpos 0.6 top_padding 4 right_padding 4 left_padding 4
+    background Frame("gui/frame.png", 64, 64)
+
 define narrator = Character(ctc="ctc", ctc_position="fixed", callback=speaker("N"))
 define j = Character("John", color = '#0b99f4', image = "John_Side", callback = speaker("John"), ctc="ctc", ctc_position="fixed")
 
@@ -6,8 +16,9 @@ define l = Character("Lisa",color = '#992e2c', image = "Lisa_side", callback=spe
 define info = Character("INFO",callback=speaker("INFO"), color='#fff', ctc="ctc", ctc_position="fixed")
 
 define i = Character("ILY",callback=speaker("ILY"), color='#f00', image = "ILY_side", ctc="ctc", ctc_position="fixed")
-define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed")
-define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00',image ="CodeRed_side", ctc="ctc", ctc_position="fixed")
+define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed", window_style="uguu")
+# define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed")
+define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00',image ="CodeRed_side", ctc="ctc", ctc_position="fixed",what_style="narrow_comic", window_style="comic")
 define a = Character("Ave",callback=speaker("Ave"), color='#ff8a00', image ="Ave_side", ctc="ctc", ctc_position="fixed")
 define m = Character("Melissa",callback=speaker("Melissa"), color='#ff8a00', image ="Melissa_side", ctc="ctc", ctc_position="fixed")
 define cv = Character("Virus Boy",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed")
@@ -46,6 +57,7 @@ init -1 python:
 
     globals()["Vira_m"] = "happy"
     globals()["Vira_e"] = "mad"
+    globals()["Vira_w"] = False
 
     globals()["Ave_e"] = "mad"
     globals()["Ave_m"] = "frown"

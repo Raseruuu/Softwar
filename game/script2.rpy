@@ -25,9 +25,9 @@ label prescript2:
     j"Is she a FAI?"
     i"She is."
     j"I see. What kind of FAI is she?"
-    i"I'm actually not sure myself."
+    i"(I'm actually not sure myself.)"
     i"(But she does know a lot about the area.)"
-    i"Her name's Melissa!"
+    i"(Her name's Melissa!)"
 
 label script2:
     #ILY introduction to the Grid

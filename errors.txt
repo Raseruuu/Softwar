@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/characters.rpy", line 100: indentation mismatch.
+File "game/characters.rpy", line 2: style property alpha is not known.
+    alpha 0.5
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug  5 22:18:05 2020
+Sun Aug  9 00:01:26 2020

@@ -4,7 +4,7 @@ init python:
         "name":PFAI.name,
         "HP":PFAI.HP,
         "HPMax":PFAI.HP,
-        "SP":PFAI.SP,
+        "SP":0,
         "SPMax":PFAI.SP,
         "ATK":PFAI.ATK,
         "DEF":PFAI.DEF,
@@ -17,7 +17,7 @@ init python:
     playerName = ILYStatsnow["name"]
     playerHP = ILYStatsnow["HP"]
     playerHPMax = ILYStatsnow["HPMax"]
-    playerSP = ILYStatsnow["SP"]
+    playerSP = 0
     playerSPMax = ILYStatsnow["SPMax"]
     playerATK = ILYStatsnow["ATK"]
     playerDEF = ILYStatsnow["DEF"]
@@ -292,10 +292,10 @@ label battlev3(PFAI,EFAI):
         random.shuffle(playerDeck)
         # playerstats = ILYStatsnow
         battle_done = False
-        enemyfirst =False
+        enemyfirst =renpy.random.random()
         map_active=False
         playerbattlecode=[]
-        playerSP = ILYStatsnow["SPMax"]
+        playerSP = 0
         playerATK_m = playerATK
         playerDEF_m = playerDEF
 
@@ -306,7 +306,7 @@ label battlev3(PFAI,EFAI):
             "name":EFAI.name,
             "HP":EFAI.HP,
             "HPMAX":EFAI.SP,
-            "SP":EFAI.SP,
+            "SP":0,
             "SPMAX":EFAI.SP,
             "Deck":EFAI.deck,
             "ATK":EFAI.ATK,
@@ -317,7 +317,7 @@ label battlev3(PFAI,EFAI):
         enemyHP = EnemyFAIstats["HP"]
         enemyHPMax = EnemyFAIstats["HP"]
         enemySP = EnemyFAIstats["SP"]
-        enemySPMax = EnemyFAIstats["SP"]
+        enemySPMax = EnemyFAIstats["SPMAX"]
         enemyDeck = EnemyFAIstats["Deck"]
         enemyATK = EnemyFAIstats["ATK"]
         enemyDEF = EnemyFAIstats["DEF"]
@@ -373,8 +373,8 @@ label battlev3(PFAI,EFAI):
     #Start Dialogue
     $ phasenum=0
     label battleloop:
-        # if enemyfirst:
-        #     call enemyattack
+        if enemyfirst:
+            call enemyattack
         if not battle_done:
             pass
         # elif battle_done:

@@ -419,8 +419,16 @@ screen EnvOpt:
     add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.75 xanchor 0.5 yanchor 0.5 at envanim
 screen EnvQuit:
     add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.80 xanchor 0.5 yanchor 0.5 at envanim
+
+
+label setvolume:
+  $ renpy.music.set_volume(0.5)
+  return
+
 screen main_menu():
+
     tag menu
+    on 'show' action Play("music","bgm/Cafella_bgm_maoudamashii_acoustic51.mp3")
     add "gui/main_menu/background.jpg" xalign 0.0 yalign 0.0
     add "gui/logo.png" xalign 0.5 yalign 0.2
     vbox:

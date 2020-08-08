@@ -13,7 +13,7 @@
 #
 #           Damage()        Inflict (MAG*ATK) Damage to enemy
 #           Shield()        Gain (MAG*DEF) SP
- 
+
 #           Boost(type)     Append Boost status to user for [type] cards
 #           Burn()          Append Burn status to enemy
 #           Burnself()      Burn status
@@ -342,7 +342,7 @@ label test:
     # hide Ave
 label demo:
     call initializemapvariables
-    # jump test
+    jump test
     $ okdesktop = False
     scene black
     pause 1.0
@@ -510,12 +510,12 @@ label demo:
     "Oh crap, is this thing monitoring me now?"
     hide screen checks
 
-    show text "ALL SYSTEMS READY" at notifanim
+    show text "{color=000}ALL SYSTEMS READY{/color}" at notifanim
     "..."
     hide text
     show dlheart with Dissolve(0.1):
         xalign 0.5 yalign 0.52
-    show text "{color=#b51b1b}INITIATING FUTURE A.I.:\nILOVEYOU VIRUS 2.0{/color}" at notifanim
+    show text "{color=#b51b1b}INITIATING FUTURE A.I.:\nILOVEYOU VIRUS v2.0{/color}" at notifanim
     "This is still part of the ILOVEYOU virus? Well, damn."
     hide text
     pause 0.5
@@ -668,12 +668,15 @@ label demo:
             i "I'm not suggesting. It is your destiny."
             "Serious words for someone that looks so cute."
             i "[plrname], I will assist you with any digital matters as your assistant... And as a hacking tool."
-            i "With me, you can hack another system, for whatever reason. It isn't that simple though."
+            i "With me, you can hack another system, for whatever reason."
+            i "It isn't that simple, though."
             i "Some PCs may be able to protect from hacking. That's when we go to war."
 
             j "This is getting really shady."
             j "I'm... not really all that interested in hacking anybody now..."
-            i "[plrname], I was made also to participate in this war. A Softwar."
+            $ILY_e='2'
+            i "[plrname], I was made also to participate in this war."
+            extend" A Softwar."
 
             if not q1_read_grid:
                 "Softwar, huh. I'll have to ask her about that later."
@@ -850,8 +853,10 @@ label date1:
     j"There are some things you have to do for me to trust you."
     "Damn, I never thought I'd see the day when I say such words... to a program. "
     "I'm actually being a huge idiot for buying into what this virus says."
-    "18 years ago,{w=.3} the ILOVEYOU Virus destroyed a heck load of PCs."
-    extend" To think this program would call herself by that name...\n It's driving me crazy."
+    "18 years ago,{w=.3}{nw}"
+    extend" the ILOVEYOU Virus destroyed a heck load of PCs."
+    extend" To think this program would call herself by that name...{w=.3}{nw}"
+    extend" It's driving me crazy."
     "This PC is all I have,"
     extend" so I'll have to make do with all this."
     "More importantly, I have an appointment today."
@@ -874,7 +879,8 @@ label date1:
     extend" I knew it, John's going to a date!" with Shake((0, 0, 0, 0), 0.5, dist=5)
     $ ILY_p = '0'
     $ ILYSprite('sad')
-    j"We're meeting for business sake only,{w=.3} okay?"
+    j"We're meeting for business sake only,{w=.3}{nw}"
+    extend" okay?"
     j"I'm shutting down this PC..."
     "..."
     $ ILYSprite('happy3')
@@ -934,11 +940,13 @@ label date2:
         "What am I thinking?"
         extend" This is ILY's fault for putting that idea into my head!"
         scene JD_Door with dissolve
-        "It's a meeting, not a date. {w=.5}"
+        "It's a meeting, not a date. {w=.5}{nw}"
         play sound "sfx/Damage.wav"
         extend"Totally not a date!" with Shake((0, 0, 0, 0), 0.5, dist=5)
         scene black with dissolve
-        "As I head toward our meeting place.. {w=.3}My thoughts are filled with Lisa, {w=.3}and whatever she wanted to tell me."
+        "As I head toward our meeting place.. {w=.3}{nw}"
+        extend"My thoughts are filled with Lisa, {w=.3}{nw}"
+        extend"and whatever she wanted to tell me."
         scene cafeoutside
         play music "bgm/Cafella_bgm_maoudamashii_acoustic51.mp3"
         "I walk towards the cafe. There she is, waiting for me by the entrance."
@@ -965,7 +973,7 @@ label date2:
 
         l"Yeah, by a few minutes."
         scene cafetable with dissolve
-        "Something tells me the few minutes she mentioned earlier lasted longer than she's telling me."
+        "Something tells me the \"few minutes\" she mentioned earlier lasted longer than she's telling me."
         "Here's some concrete evidence... 2 ice cold coffee shakes are already on the table she's pointing at."
         "She's so thoughtful and responsible.. "
         $ Lisa_e = 'mad'
@@ -1015,7 +1023,7 @@ label date2:
         extend" but I'm sure you can handle it."
         j"I see."
         scene cafeoutside2 with dissolve
-        "After that we discussed a lot."
+        "After that, we discussed a lot."
         "Time passed quickly as I stared at her, jotting down notes regarding our assignment."
         "We've sipped our last drops of coffee."
         $Lisa_w = True
@@ -1199,7 +1207,7 @@ label date2:
         extend" It's not that I like her or anything, I just think I'm lucky to have a nice programmer girl as a friend."
         "She's also very reliable and smart."
         extend" The type you don't see just anywhere."
-
+        "She does remind me of an old internet friend I haven't seen in a while.."
         "I have now introduced her to this, one hell of a program."
         "The sudden twist of events urged me to utter these words to Lisa:\n"
         extend "\"I love you\"."

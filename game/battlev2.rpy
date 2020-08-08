@@ -299,7 +299,8 @@ init python:
     EnmySts = []
     PlayerSts = []
     Enmyname = "Trojan Horse"
-    #DEFINE CHARACTERS BY NAME,TYPE,HP,DECK,STATUS
+    #DEFINE CHARACTERS BY
+            # NAME,TYPE,HP,SP,ATK,DEF,DECK,STATUS
     ILY=FAI("ILY","Virus",2500,1250,500,500,deckdefault,[])
     Trojan=FAI("Trojan Horse","Virus",3000,1500,300,250,decktrojan,[])
     Keylogger=FAI("Keylogger","Virus",500,250,300,250,deckkeylogger,[])
