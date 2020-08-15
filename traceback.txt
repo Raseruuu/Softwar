@@ -1,43 +1,536 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing the padding property of style uguu2:
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
-    __update()
-  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
-    renpy.style.rebuild()
-TypeError: 'int' object has no attribute '__getitem__'
+While running game code:
+  File "game/script.rpy", line 1990, in script call
+    call mapcall([7,6],stagehome)
+  File "game/Movement.rpy", line 127, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 430, in script call
+    call whatactor
+  File "game/Maptalks.rpy", line 73, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 430, in script call
+    call whatactor
+  File "game/Maptalks.rpy", line 36, in script call
+    call battlev3(ILY,CodeRed)
+  File "game/battlev3.rpy", line 394, in script
+    call screen choosecardv3(playerhand)
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/card.rpy", line 27, in execute
+    screen choosecardv3(handcards):
+  File "game/card.rpy", line 27, in execute
+    screen choosecardv3(handcards):
+  File "game/card.rpy", line 29, in execute
+    frame:
+  File "game/card.rpy", line 32, in execute
+    frame:
+  File "game/card.rpy", line 34, in execute
+    for cardobj in handcards:
+  File "game/card.rpy", line 35, in execute
+    if (handcards[indexx].COST<=playerbits):
+  File "game/card.rpy", line 36, in execute
+    use Card(cardobj,((indexx*138 )+300,520),Return("card"+str(indexx+1)))
+Exception: Required parameter zoomvalue has no value.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Applications/renpy-7.3.5-sdk/renpy/bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "/Applications/renpy-7.3.5-sdk/renpy/main.py", line 578, in main
-    run(restart)
-  File "/Applications/renpy-7.3.5-sdk/renpy/main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "/Applications/renpy-7.3.5-sdk/renpy/translation/__init__.py", line 558, in init_translation
-    renpy.store._init_language()  # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "/Applications/renpy-7.3.5-sdk/renpy/translation/__init__.py", line 646, in change_language
-    i()
-  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
-    __update()
-  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
-    renpy.style.rebuild()
-  File "style.pyx", line 795, in renpy.style.rebuild
-  File "style.pyx", line 788, in renpy.style.build_styles
-  File "style.pyx", line 709, in renpy.style.build_style
-  File "style.pyx", line 706, in renpy.style.build_style
-  File "gen/style_functions.pyx", line 1617, in style_functions.padding_property
-  File "include/style_common.pxi", line 30, in style_functions.index_0
-    return v[0]
-TypeError: 'int' object has no attribute '__getitem__'
+  File "game/script.rpy", line 1990, in script call
+    call mapcall([7,6],stagehome)
+  File "game/Movement.rpy", line 127, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 430, in script call
+    call whatactor
+  File "game/Maptalks.rpy", line 73, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
+  File "game/Movement.rpy", line 430, in script call
+    call whatactor
+  File "game/Maptalks.rpy", line 36, in script call
+    call battlev3(ILY,CodeRed)
+  File "game/battlev3.rpy", line 394, in script
+    call screen choosecardv3(playerhand)
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1949, in execute
+    self.call("execute")
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 2905, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-7.3.5-sdk/renpy/ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/screen.py", line 430, in visit_all
+    callback(self)
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/screen.py", line 440, in per_interact
+    self.update()
+  File "/Applications/renpy-7.3.5-sdk/renpy/display/screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/card.rpy", line 27, in execute
+    screen choosecardv3(handcards):
+  File "game/card.rpy", line 27, in execute
+    screen choosecardv3(handcards):
+  File "game/card.rpy", line 29, in execute
+    frame:
+  File "game/card.rpy", line 32, in execute
+    frame:
+  File "game/card.rpy", line 34, in execute
+    for cardobj in handcards:
+  File "game/card.rpy", line 35, in execute
+    if (handcards[indexx].COST<=playerbits):
+  File "game/card.rpy", line 36, in execute
+    use Card(cardobj,((indexx*138 )+300,520),Return("card"+str(indexx+1)))
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 122, in apply
+    raise Exception("Required parameter %s has no value." % name)
+Exception: Required parameter zoomvalue has no value.
 
-Darwin-19.5.0-x86_64-i386-64bit
+Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 SoftWar - DEMO 1.0
-Sun Aug  9 00:09:16 2020
+Sat Aug 15 12:46:21 2020

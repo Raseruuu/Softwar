@@ -16,9 +16,9 @@ define l = Character("Lisa",color = '#992e2c', image = "Lisa_side", callback=spe
 define info = Character("INFO",callback=speaker("INFO"), color='#fff', ctc="ctc", ctc_position="fixed")
 
 define i = Character("ILY",callback=speaker("ILY"), color='#f00', image = "ILY_side", ctc="ctc", ctc_position="fixed")
-define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed", window_style="uguu")
+define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed")
 # define v = Character("Vira",callback=speaker("Vira"), color ='#f00',image ="Vira_side", ctc="ctc", ctc_position="fixed")
-define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00',image ="CodeRed_side", ctc="ctc", ctc_position="fixed",what_style="narrow_comic", window_style="comic")
+define c = Character("Code Red",callback=speaker("CodeRed"), color='#f00',image ="CodeRed_side", ctc="ctc", ctc_position="fixed")
 define a = Character("Ave",callback=speaker("Ave"), color='#ff8a00', image ="Ave_side", ctc="ctc", ctc_position="fixed")
 define m = Character("Melissa",callback=speaker("Melissa"), color='#ff8a00', image ="Melissa_side", ctc="ctc", ctc_position="fixed")
 define cv = Character("Virus Boy",callback=speaker("CodeRed"), color='#f00', ctc="ctc", ctc_position="fixed")

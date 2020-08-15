@@ -286,12 +286,6 @@ image Folders:
             linear 1.0 yoffset -2
             repeat
 
-
-
-
-
-
-
 label test:
     python:
         ILY_w=True
@@ -320,7 +314,13 @@ label test:
         zoom 1.1
     # call var_init
     # call iptest\
-    show screen Card
+    $hands=[VirusFlame,XAxess,DataDrill,MailSaber,BreakSaber]
+
+    call screen choosecardv3(hands)
+    $ index=0
+
+    # call screen Card(DataForce,(0,0),Return())
+
     show Vira with dissolve:
         xanchor 0.5 xpos 0.85
     v"Lorem Ipsum dolor sit amet consectetur adipiscing elit."
@@ -342,7 +342,7 @@ label test:
     # hide Ave
 label demo:
     call initializemapvariables
-    jump test
+    # jump test
     $ okdesktop = False
     scene black
     pause 1.0
@@ -1314,19 +1314,8 @@ label date2:
         "The Trojan approaches ILY anyway, and here I was getting worried over the threat that the Trojan would harm the poor program."
         "Maybe this Future AI... isn't very intelligent?"
         i"John! I need your help! Let's destroy the Virus Together!"
-        $ currentcard=MailSaber
-        # $playercard1name = 'MailSaber'
-        python:
-            currentcardobj =MailSaber
-            currentcardname = MailSaber.NAME
-            currentcardATK = MailSaber.TYPE
-            currentcardDEF = MailSaber.MAG
-            # currentcardHIT = MailSaber.HIT
-            currentcardFXN = MailSaber.FXN
-            currentcardCOST = MailSaber.COST
 
-        show cardflasher onlayer overlay with dissolve:
-            xalign 0.5 yalign 0.5
+        show screen Card(DataSaber,((2*138 )+300,200),NullAction(),1.0)
         i"In a Softwar, we use Battleware!!"
 
         i"I gain 8 bits and 5 cards every turn, each card in my hand will cost Bits."

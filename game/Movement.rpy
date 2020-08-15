@@ -368,38 +368,6 @@ label randomencounter:
      return
 label Returns:
 #   if not running:
-  if _return=="card1":
-
-      play sound "sound/Phase.wav" channel 2
-      $ card1clicked = True
-
-      $ playerbits-=playercard1COST
-      $ playerbattlecode.append(playercard1obj)
-  elif _return=="card2":
-      play sound "sound/Phase.wav" channel 2
-      $ card2clicked = True
-      $ playerbits-=playercard2COST
-      $ playerbattlecode.append(playercard2obj)
-  elif _return=="card3":
-      play sound "sound/Phase.wav" channel 2
-      $ card3clicked = True
-      $ playerbits-=playercard3COST
-      $ playerbattlecode.append(playercard3obj)
-  elif _return=="card4":
-      play sound "sound/Phase.wav" channel 2
-      $ card4clicked = True
-      $ playerbits-=playercard4COST
-      $ playerbattlecode.append(playercard4obj)
-  elif _return=="card5":
-      play sound "sound/Phase.wav" channel 2
-      $ card5clicked = True
-      $ playerbits-=playercard5COST
-      $ playerbattlecode.append(playercard5obj)
-  elif _return=="Return_card":
-      if playerbattlecode != []:
-        $ playerbattlecode.pop(-1)
-  elif _return=="Execute":
-      call Execution
 
   if map_active:
    if (_return=="running"):

@@ -391,8 +391,8 @@ label battlev3(PFAI,EFAI):
 
         label Codephase:
 
-            call screen choosecardv2
-            call Returns
+            call screen choosecardv3(playerhand)
+            call BattleReturns
             $ card1usable = (playercard1COST<=playerbits) and (card1clicked==False)
             $ card2usable = (playercard2COST<=playerbits) and (card2clicked==False)
             $ card3usable = (playercard3COST<=playerbits) and (card3clicked==False)
@@ -403,7 +403,7 @@ label battlev3(PFAI,EFAI):
                 jump Codephase
             else:
                 call screen Execute
-                call Returns
+                call BattleReturns
                 # if not enemyfirst:
                 #     call enemyattack
             #Execute button runs "Execution" label
@@ -436,9 +436,43 @@ label battlev3(PFAI,EFAI):
                     linear 0.1 zoom 0.8 alpha 0.0
                 $ renpy.pause(0.4,hard=True)
                 call win
-
-
     return
+
+label BattleReturns:
+
+     if _return=="card1":
+         play sound "sound/Phase.wav" channel 2
+         $ card1clicked = True
+         $ playerbits-=playercard1COST
+         $ playerbattlecode.append(playercard1obj)
+     elif _return=="card2":
+         play sound "sound/Phase.wav" channel 2
+         $ card2clicked = True
+         $ playerbits-=playercard2COST
+         $ playerbattlecode.append(playercard2obj)
+     elif _return=="card3":
+         play sound "sound/Phase.wav" channel 2
+         $ card3clicked = True
+         $ playerbits-=playercard3COST
+         $ playerbattlecode.append(playercard3obj)
+     elif _return=="card4":
+         play sound "sound/Phase.wav" channel 2
+         $ card4clicked = True
+         $ playerbits-=playercard4COST
+         $ playerbattlecode.append(playercard4obj)
+     elif _return=="card5":
+         play sound "sound/Phase.wav" channel 2
+         $ card5clicked = True
+         $ playerbits-=playercard5COST
+         $ playerbattlecode.append(playercard5obj)
+     elif _return=="Return_card":
+         if playerbattlecode != []:
+           $ playerbattlecode.pop(-1)
+     elif _return=="Execute":
+         call Execution
+     if (playerHP<=0):
+        return
+     return
 screen Execute:
     imagebutton idle "gui/Execute.png" hover "gui/Execute_hover.png" action  Play("sound","sound/Execute.wav"), Return("Execute") xalign 0.5 yalign 0.95
     key "K_BACKSPACE" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
@@ -473,7 +507,11 @@ transform zoomBattlecards:
 screen choosecardv2:
         if (playercard1COST<=playerbits) and (card1clicked==False):
             ###TODO:: ADD HOVER DESCRIPTION Layered Images
-            imagebutton idle "card1" action Play("sound","sound/Phase.wav"), Hide("card1hover"), Return("card1") hovered Show("card1hover"), Play("sound","sfx/select.wav") unhovered Hide("card1hover") at zoomBattlecards xpos 0.26 xanchor 0.5 yalign 0.95
+            imagebutton idle "card1":
+                action Play("sound","sound/Phase.wav"), Hide("card1hover"), Return("card1")
+                hovered Show("card1hover"), Play("sound","sfx/select.wav")
+                unhovered Hide("card1hover")
+                at zoomBattlecards xpos 0.26 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.26 xanchor 0.5 yalign 0.95
         if (playercard2COST<=playerbits) and (card2clicked==False):
