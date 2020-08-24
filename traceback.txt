@@ -225,10 +225,12 @@ While running game code:
     call Returns
   File "game/Movement.rpy", line 450, in script call
     call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
   File "game/Movement.rpy", line 430, in script call
     call whatactor
-  File "game/Maptalks.rpy", line 36, in script call
-    call battlev3(ILY,CodeRed)
+  File "game/Maptalks.rpy", line 52, in script call
+    call battlev3(ILY,Vira)
   File "game/battlev3.rpy", line 394, in script
     call screen choosecardv3(playerhand)
   File "renpy/common/000statements.rpy", line 531, in execute_call_screen
@@ -476,10 +478,12 @@ Full traceback:
     call Returns
   File "game/Movement.rpy", line 450, in script call
     call Returns
+  File "game/Movement.rpy", line 450, in script call
+    call Returns
   File "game/Movement.rpy", line 430, in script call
     call whatactor
-  File "game/Maptalks.rpy", line 36, in script call
-    call battlev3(ILY,CodeRed)
+  File "game/Maptalks.rpy", line 52, in script call
+    call battlev3(ILY,Vira)
   File "game/battlev3.rpy", line 394, in script
     call screen choosecardv3(playerhand)
   File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1949, in execute
@@ -533,4 +537,4 @@ Exception: Required parameter zoomvalue has no value.
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 SoftWar - DEMO 1.0
-Sat Aug 15 12:46:21 2020
+Tue Aug 18 23:57:41 2020
