@@ -1,4 +1,3 @@
-*.psd
 !spec/*.psd
 *.zip
 !spec/*.zip
