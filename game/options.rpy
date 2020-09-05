@@ -184,10 +184,6 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
-    ## To archive files, classify them as 'archive'.
-
-    build.classify('game/**.png', 'archive')
-    build.classify('game/**.jpg', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
@@ -200,7 +196,9 @@ init python:
     build.archive("images", "all")
     build.archive("sfx", "all")
     build.archive("bgm", "all")
-    
+    ## To archive files, classify them as 'archive'.
+
+
     # Put script files into the scripts archive.
     build.classify("game/**.rpy", "scripts")
     build.classify("game/**.rpyc", "scripts")
@@ -208,6 +206,8 @@ init python:
     # Put images into the images archive.
     build.classify("game/**.jpg", "images")
     build.classify("game/**.png", "images")
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
 
     # Put sounds into the sfx, bgm archive.
     build.classify("game/**.wav", "sfx")

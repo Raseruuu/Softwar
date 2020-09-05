@@ -292,7 +292,7 @@ label battlev3(PFAI,EFAI):
         random.shuffle(playerDeck)
         # playerstats = ILYStatsnow
         battle_done = False
-        enemyfirst =renpy.random.random()
+        enemyfirst =renpy.random.choice([True,False])
         map_active=False
         playerbattlecode=[]
         playerSP = 0
@@ -383,21 +383,19 @@ label battlev3(PFAI,EFAI):
         call screen Activate_Battleware
         play sound "sound/Phase.wav" channel 1
         python:
-            card1clicked = False
-            card2clicked = False
-            card3clicked = False
-            card4clicked = False
-            card5clicked = False
 
+            clickedcard=[False,False,False,False,False]
         label Codephase:
 
-            call screen choosecardv3(playerhand)
+            # call screen choosecardv3(playerhand)
+            call screen choosecardv2
+
             call BattleReturns
-            $ card1usable = (playercard1COST<=playerbits) and (card1clicked==False)
-            $ card2usable = (playercard2COST<=playerbits) and (card2clicked==False)
-            $ card3usable = (playercard3COST<=playerbits) and (card3clicked==False)
-            $ card4usable = (playercard4COST<=playerbits) and (card4clicked==False)
-            $ card5usable = (playercard5COST<=playerbits) and (card5clicked==False)
+            $ card1usable = (playercard1COST<=playerbits) and (clickedcard[0]==False)
+            $ card2usable = (playercard2COST<=playerbits) and (clickedcard[1]==False)
+            $ card3usable = (playercard3COST<=playerbits) and (clickedcard[2]==False)
+            $ card4usable = (playercard4COST<=playerbits) and (clickedcard[3]==False)
+            $ card5usable = (playercard5COST<=playerbits) and (clickedcard[4]==False)
             $ cardusable = (((card1usable) or (card2usable)) or ((card3usable) or (card4usable))) or (card5usable)
             if (playerbits > 0) and cardusable:
                 jump Codephase
@@ -442,27 +440,27 @@ label BattleReturns:
 
      if _return=="card1":
          play sound "sound/Phase.wav" channel 2
-         $ card1clicked = True
+         $ clickedcard[0] = True
          $ playerbits-=playercard1COST
          $ playerbattlecode.append(playercard1obj)
      elif _return=="card2":
          play sound "sound/Phase.wav" channel 2
-         $ card2clicked = True
+         $ clickedcard[1] = True
          $ playerbits-=playercard2COST
          $ playerbattlecode.append(playercard2obj)
      elif _return=="card3":
          play sound "sound/Phase.wav" channel 2
-         $ card3clicked = True
+         $ clickedcard[2] = True
          $ playerbits-=playercard3COST
          $ playerbattlecode.append(playercard3obj)
      elif _return=="card4":
          play sound "sound/Phase.wav" channel 2
-         $ card4clicked = True
+         $ clickedcard[3] = True
          $ playerbits-=playercard4COST
          $ playerbattlecode.append(playercard4obj)
      elif _return=="card5":
          play sound "sound/Phase.wav" channel 2
-         $ card5clicked = True
+         $ clickedcard[4] = True
          $ playerbits-=playercard5COST
          $ playerbattlecode.append(playercard5obj)
      elif _return=="Return_card":
@@ -505,7 +503,7 @@ label showphasemsg(msg):
 transform zoomBattlecards:
     zoom 0.6
 screen choosecardv2:
-        if (playercard1COST<=playerbits) and (card1clicked==False):
+        if (playercard1COST<=playerbits) and (clickedcard[0]==False):
             ###TODO:: ADD HOVER DESCRIPTION Layered Images
             imagebutton idle "card1":
                 action Play("sound","sound/Phase.wav"), Hide("card1hover"), Return("card1")
@@ -514,19 +512,19 @@ screen choosecardv2:
                 at zoomBattlecards xpos 0.26 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.26 xanchor 0.5 yalign 0.95
-        if (playercard2COST<=playerbits) and (card2clicked==False):
+        if (playercard2COST<=playerbits) and (clickedcard[1]==False):
             imagebutton idle "card2" action Play("sound","sound/Phase.wav"), Hide("card2hover"), Return("card2")  hovered Show("card2hover"), Play("sound","sfx/select.wav") unhovered Hide("card2hover") at zoomBattlecards xpos 0.38 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.38 xanchor 0.5 yalign 0.95
-        if (playercard3COST<=playerbits) and (card3clicked==False):
+        if (playercard3COST<=playerbits) and (clickedcard[2]==False):
             imagebutton idle "card3" action Play("sound","sound/Phase.wav"), Hide("card3hover"), Return("card3")  hovered Show("card3hover"), Play("sound","sfx/select.wav") unhovered Hide("card3hover") at zoomBattlecards xpos 0.5 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.5 xanchor 0.5 yalign 0.95
-        if (playercard4COST<=playerbits) and (card4clicked==False):
+        if (playercard4COST<=playerbits) and (clickedcard[3]==False):
             imagebutton idle "card4" action Play("sound","sound/Phase.wav"), Hide("card4hover"), Return("card4")  hovered Show("card4hover"), Play("sound","sfx/select.wav") unhovered Hide("card4hover") at zoomBattlecards xpos 0.62 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.62 xanchor 0.5 yalign 0.95
-        if (playercard5COST<=playerbits) and (card5clicked==False):
+        if (playercard5COST<=playerbits) and (clickedcard[4]==False):
             imagebutton idle "card5" action Play("sound","sound/Phase.wav"), Hide("card5hover"), Return("card5") hovered Show("card5hover"), Play("sound","sfx/select.wav") unhovered Hide("card5hover") at zoomBattlecards xpos 0.74 xanchor 0.5 yalign 0.95
         else:
             add "images/Cards/cardblank2.png" xpos 0.74 xanchor 0.5 yalign 0.95

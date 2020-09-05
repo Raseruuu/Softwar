@@ -524,6 +524,7 @@ label demo:
 
     show ILY with pixellate
     play music "bgm/ost/ILY's_Theme2.mp3"  fadeout 1 loop
+    $ persistent.has_met_ILY=True
     i "HELLO, USER! I am the ILOVEYOU virus!"
     i "Call me ILY! "
     extend "I'm signing up to be your personal assistant!\nI'd like to confirm your name!"

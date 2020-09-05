@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#fd0'
+define gui.accent_color = '#f2b007'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#fff'
@@ -33,11 +33,11 @@ define gui.idle_color = '#fff'
 define gui.idle_small_color = gui.idle_color #'#aaf'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#aaf'
+define gui.hover_color = '#c67eed'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#fd0'
+define gui.selected_color = '#f2b007'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#f88'
@@ -63,7 +63,7 @@ define gui.text_spacing = 2
 ## The font used for character names.
 #define gui.name_text_font = "font/alpha_echo.ttf"
 define gui.name_text_font = "font/lucon.ttf"
-define gui.name_text_size = 30
+define gui.name_text_size = 24
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "font/lucon.ttf"
@@ -83,8 +83,8 @@ define gui.title_text_size = 50
 
 ## The images used for the main and game menus.
 #define gui.main_menu_background = "gui/main_menu.png"
-define gui.main_menu_background = "gui/game_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "gui/game_menu/game_menu.png"
+define gui.game_menu_background = "gui/game_menu/game_menu.png"
 
 ## Should we show the name and version of the game?
 define gui.show_name = True
@@ -96,8 +96,8 @@ define gui.show_name = True
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 200
-define gui.textbox_width = 800
+define gui.textbox_height = 185
+define gui.textbox_width = 920
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -106,8 +106,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = -35
-define gui.name_ypos = -15
+define gui.name_xpos = 0
+define gui.name_ypos = -14
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -130,8 +130,8 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 168
-define gui.dialogue_ypos = 30
+define gui.dialogue_xpos = 60
+define gui.dialogue_ypos = 32
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 720
@@ -222,16 +222,16 @@ define gui.choice_button_text_hover_color = "#ffffff"
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 276
-define gui.slot_button_height = 206
-define gui.slot_button_borders = Borders(10, 10, 10, 10)
+define gui.slot_button_width = 301
+define gui.slot_button_height = 170
+define gui.slot_button_borders = Borders(10, 5, 5, 5)
 define gui.slot_button_text_size = 14
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 256
-define config.thumbnail_height = 144
+define config.thumbnail_width = 276
+define config.thumbnail_height = 156
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 3
@@ -269,7 +269,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## The spacing between file slots.
-define gui.slot_spacing = 10
+define gui.slot_spacing = 20
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0

@@ -162,14 +162,14 @@ image ctc:
 
 
 style window is default:
-    xalign 0.5
-    xfill True
+    xpos 258 xanchor 0.0
 
-    yalign gui.textbox_yalign
+    yalign 0.98
     ysize gui.textbox_height
+    xsize gui.textbox_width
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
-
+    # background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background HBox(Frame("gui/frameopaque.png", 72, 32),Null(width =100), Frame("gui/frameopaque.png", 72, 32))
     # xalign 0.0
     # # xfill True
     # yalign 1.0#gui.textbox_yalign
@@ -313,7 +313,6 @@ screen quick_menu():
 ## the player has not explicitly hidden the interface.
 init python:
     config.overlay_screens.append("quick_menu")
-
 default quick_menu = True
 
 style quick_button is default:
@@ -333,8 +332,8 @@ style quick_button_text is text_nooutline:
 ## to other menus, and to start the game.
 
 screen navigation():
-    on 'show' action Stop('blipsound')
     window:
+        at slideindown3
         style_prefix "navigation"
 
         vbox:
@@ -350,34 +349,35 @@ screen navigation():
                 textbutton _("Start") action Start()
 
             else:
-                textbutton _("Main Menu") action MainMenu()
+                textbutton _("MainMenu();") action MainMenu()
                 null height gui.button_text_size
-                textbutton _("History") action ShowMenu("history")
-                textbutton _("Save") action ShowMenu("save")
+                # textbutton _("History();") action ShowMenu("history")
+                textbutton _("Save();") action ShowMenu("save")
 
-            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load();") action ShowMenu("load")
 
             null height gui.button_text_size
 
-            textbutton _("Settings") action ShowMenu("preferences")
-            textbutton _("About") action ShowMenu("about")
+            textbutton _("Options();") action ShowMenu("preferences")
+            textbutton _("About();") action ShowMenu("about")
 
             if renpy.variant("pc"):
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+                # textbutton _("Help();") action ShowMenu("help")
 
                 ## The quit button is banned on iOS and unnecessary on Android.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Quit();") action Quit(confirm=not main_menu)
 
             null height gui.button_text_size*1.5
 
-            textbutton _("Return"):
+            textbutton _("Return();"):
                 action Return()
 
 
 style navigation_button is gui_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+
 
 style navigation_button_text is gui_button_text:
     properties gui.button_text_properties("navigation_button")
@@ -397,7 +397,7 @@ style navigation_window is window:
     top_padding 60
     bottom_padding 20
 
-    background Frame("gui/frame.png", 64, 64)
+    background Frame("gui/frame3.png", 72, 32)
 
 ## Main Menu screen ############################################################
 ##
@@ -411,28 +411,82 @@ transform envanim:
 
 
 screen EnvRun:
-    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.65 xanchor 0.5 yanchor 0.5 at envanim
+    add "gui/main_menu/Envelope.png" xpos 0.75 ypos 0.65 xanchor 0.5 yanchor 0.5 at envanim
 screen EnvLoad:
-    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.70 xanchor 0.5 yanchor 0.5 at envanim
+    add "gui/main_menu/Envelope.png" xpos 0.75 ypos 0.70 xanchor 0.5 yanchor 0.5 at envanim
 screen EnvOpt:
-    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.75 xanchor 0.5 yanchor 0.5 at envanim
+    add "gui/main_menu/Envelope.png" xpos 0.75 ypos 0.75 xanchor 0.5 yanchor 0.5 at envanim
 screen EnvQuit:
-    add "gui/main_menu/Envelope.png" xpos 0.43 ypos 0.80 xanchor 0.5 yanchor 0.5 at envanim
+    add "gui/main_menu/Envelope.png" xpos 0.75 ypos 0.80 xanchor 0.5 yanchor 0.5 at envanim
 
 
 label setvolume:
   $ renpy.music.set_volume(0.5)
   return
-
+transform gamesize:
+    zoom 0.33
+transform flashbang:
+    alpha 0.0
+    pause 1.5
+    alpha 1.0
+    linear 0.1 alpha 0.0
+transform slideinright:
+    alpha 0.0 xoffset 20
+    pause 0.5
+    ease 0.2 alpha 1.0 xoffset 0
+transform slideinright2:
+    alpha 0.0 xoffset 20
+    pause 0.7
+    ease 0.2 alpha 1.0 xoffset 0
+transform navigationtransform:
+    alpha 0.0 xoffset 20
+    pause 1.5
+    ease 0.1 alpha 1.0 xoffset 0
+transform slideinleft:
+    alpha 0.0 xoffset -50
+    pause 1.5
+    ease 0.2 alpha 1.0 xoffset 0
+transform phantomtrans:
+    alpha 0.0 xoffset -20
+    pause 1.7
+    ease 0.8 alpha 1.0 xoffset 0
+    block:
+        choice:
+            alpha 0.5 xoffset -20 yoffset 10
+            pause 0.1
+        choice:
+            alpha 0.6 xoffset 20 yoffset -10
+            pause 0.1
+        choice:
+            alpha 1.0 xoffset 0 yoffset -0
+            pause 1.0
+        repeat
+transform navigationtransformL:
+    alpha 0.0 xoffset -20
+    pause 1.5
+    ease 0.1 alpha 1.0 xoffset 0
 screen main_menu():
 
     tag menu
-    on 'show' action Play("music","bgm/Cafella_bgm_maoudamashii_acoustic51.mp3")
-    add "gui/main_menu/background.jpg" xalign 0.0 yalign 0.0
-    add "gui/logo.png" xalign 0.5 yalign 0.2
-    vbox:
+    timer 1.5:
+        action Play("music","bgm/Credits_bgm_maoudamashii_8bit08.mp3")
+    add "gui/main_menu/main menu bglayer1.png"
+    if persistent.has_met_ILY:
+        add "gui/main_menu/main menu ILYphantom.png" at phantomtrans
+        add "gui/main_menu/main menu ILY text.png" at  phantomtrans
+    add "gui/main_menu/main menu bglayer2.png" at slideinright
+    add "gui/main_menu/main menu Softwar Logo.png" at slideinright2
+    if persistent.has_met_ILY:
+        add "gui/main_menu/main menu ILY.png" at slideinleft
+    add "gui/main_menu/main menu TeamKizuna.png" at navigationtransformL
 
-        xalign 0.53 yalign 0.785
+    # add "gui/logo.png" xalign 0.5 yalign 0.2
+    add "white" at flashbang
+
+
+    vbox:
+        xalign 0.9 yalign 0.785
+        at navigationtransform
         textbutton "{color=000}Run( );{/color}" action Start(), Hide("EnvRun") hovered Show("EnvRun") unhovered Hide("EnvRun")
         textbutton "{color=000}Load( );{/color}" action ShowMenu("load"), Hide("EnvLoad") hovered Show("EnvLoad") unhovered Hide("EnvLoad")
         textbutton "{color=000}Options( );{/color}"  action ShowMenu("preferences"), Hide("EnvOpt") hovered Show("EnvOpt") unhovered Hide("EnvOpt")
@@ -498,16 +552,26 @@ style main_menu_version is main_menu_text:
 ## The scroll parameter can be None, or one of "viewport" or "vpgrid". When
 ## this screen is intended to be used with one or more children, which are
 ## transcluded (placed) inside it.
+transform slideindown:
+    yoffset -20 alpha 0.0
+    pause 0.1
+    ease 0.15 yoffset 0 alpha 1.0
+transform slideindown2:
+    yoffset -20 alpha 0.0
+    pause 0.26
+    ease 0.15 yoffset 0 alpha 1.0
+transform slideindown3:
+    yoffset -20 alpha 0.0
+    pause 0.18
+    ease 0.15 yoffset 0 alpha 1.0
 
 screen game_menu(title, scroll=None, scroll_y=None):
 
     style_prefix "game_menu"
 
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
-
+    add gui.game_menu_background xalign 0.0 yalign 0.0
+    add "gui/game_menu/options whiteframe.png" at slideindown xalign 0.0 ypos 0.0 yanchor 0.02
+    add "gui/game_menu/[title].png" at gamesize, slideindown
     frame:
         style "game_menu_outer_frame"
 
@@ -519,7 +583,8 @@ screen game_menu(title, scroll=None, scroll_y=None):
 
             frame:
                 style "game_menu_content_frame"
-
+                at slideindown2
+                xpos 0.0
                 if scroll == "viewport":
 
                     viewport:
@@ -532,7 +597,8 @@ screen game_menu(title, scroll=None, scroll_y=None):
                         else:
                             yinitial 1.0
 
-                        side_yfill True
+                        side_yfill False
+                        xfill False
 
                         vbox:
                             transclude
@@ -559,13 +625,12 @@ screen game_menu(title, scroll=None, scroll_y=None):
 
                     transclude
 
-    use navigation
 
     #label title
-    label 'Menu'
-    label title:
-        xpos 320
-
+    # label 'Menu'
+    # label title:
+    #     xpos 320
+    use navigation
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
 
@@ -575,7 +640,7 @@ screen game_menu(title, scroll=None, scroll_y=None):
 
 
 style game_menu_outer_frame is empty:
-    bottom_padding 30
+    bottom_padding 20
     top_padding 100
 
     background "gui/overlay/game_menu.png"
@@ -587,16 +652,16 @@ style game_menu_navigation_frame is empty:
 
 style game_menu_content_frame is empty:
     left_margin 0
-    right_margin 8
+    right_margin 4
 
-    left_padding 32
-    right_padding 32
-    top_padding 52
+    left_padding 28
+    right_padding 28
+    top_padding 42
     bottom_padding 16
-    background Frame("gui/frame.png", 64, 64, tile=gui.frame_tile)
+    background Frame("gui/frame3.png",72, 32, tile=gui.frame_tile)
 
 style game_menu_viewport is gui_viewport:
-    xsize 920
+    xsize 900
 
 
 style game_menu_scrollbar is gui_vscrollbar
@@ -725,7 +790,7 @@ screen file_slots(title):
                 style_prefix "slot"
 
                 xalign 0.5
-                yalign 0.5
+                yalign 0.4
 
                 spacing gui.slot_spacing
 
@@ -740,7 +805,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("Empty Slot")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -1275,7 +1340,7 @@ screen confirm(message, yes_action, no_action):
 
 
 style confirm_frame is gui_frame:
-    background Frame("gui/frame.png", 64, 64, tile=gui.frame_tile)
+    background Frame("gui/frameopaque.png", 72, 32, tile=gui.frame_tile)
     #padding gui.confirm_frame_borders.padding
     top_padding 52
     bottom_padding 20

@@ -33,10 +33,18 @@ screen choosecardv3(handcards):
             style "cardframe"
             for cardobj in handcards:
                 if (handcards[indexx].COST<=playerbits):
-                    use Card(cardobj,((indexx*138 )+300,520),Return("card"+str(indexx+1)))
+                    if (not clickedcard[indexx]):
+                        use Card(cardobj,((indexx*138 )+300,520),Return("card"+str(indexx+1)),0.6)
+                    else:
+                        add "images/Cards/cardblank2.png" pos ((indexx*138 )+300,520)
                 else:
                     add "images/Cards/cardblank2.png" pos ((indexx*138 )+300,520)
                 $indexx+=1
+            if playerbattlecode!=[]:
+                imagebutton idle "images/Cards/cardreturn.png" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback() hovered Show("card6hover"), Play("sound","sfx/select.wav") unhovered Hide("card6hover") xpos 0.86 xanchor 0.5 yalign 0.95
+                key "K_BACKSPACE" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
+                key "x" action Play("sound","sound/Phase.wav"), Hide("card6hover"), Rollback()
+
 
 # screen Card(cardobj,position,cardAction):
 #     frame:

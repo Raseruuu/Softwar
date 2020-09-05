@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1330: is not terminated with a newline. (Check strings and parenthesis.)
-            show screen Card(cardobj,((2*138 )+300,200,None())
+File "game/screens.rpy", line 574: u'slideindown' is not a keyword argument or valid child for the add statement.
+    add "gui/game_menu/[title].png" at gamesize slideindown
+                                                           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Aug 14 05:04:21 2020
+Sun Sep  6 01:18:32 2020
